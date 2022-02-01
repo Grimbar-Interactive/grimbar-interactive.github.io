@@ -20,8 +20,9 @@ export class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<NavBar contentType={this.state.contentState} changeStateMethod={this.changeContentState}/>
-				<ContentContainer contentType={this.state.contentState}/>
+				{/* <NavBar contentType={this.state.contentState} changeStateMethod={this.changeContentState}/>
+				<ContentContainer contentType={this.state.contentState}/> */}
+				<h1>Under Construction...</h1>
 			</div>
 		)
 	}
