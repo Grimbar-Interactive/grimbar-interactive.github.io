@@ -3,7 +3,7 @@ import React from 'react';
 export class Games extends React.Component {
     render() {
         return (
-            <Game title='Trove Ball'/>
+            <h1>Under Construction...</h1>
         )
     }
 }
