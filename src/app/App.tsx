@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavBar } from '../navigation';
-import { ContentContainer, ContentType } from '../content';
+import { ContentContainer, ContentType, TempLandingPage } from '../content';
 
 type AppState = {
 	contentState: ContentType;
@@ -19,10 +19,10 @@ export class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<NavBar contentType={this.state.contentState} changeStateMethod={this.changeContentState}/>
-				<ContentContainer contentType={this.state.contentState}/>
-			</div>
+			<TempLandingPage/>
 		)
 	}
 }
+
+//<NavBar contentType={this.state.contentState} changeStateMethod={this.changeContentState}/>
+//<ContentContainer contentType={this.state.contentState}/>
