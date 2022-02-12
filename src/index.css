@@ -44,6 +44,8 @@ body,
 
 #temp-landing-page img {
   text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 #temp-landing-page #contact {
@@ -52,6 +54,7 @@ body,
   bottom: 20px;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+  display:block;
 }
 
 #temp-landing-page a:link, a:visited {
