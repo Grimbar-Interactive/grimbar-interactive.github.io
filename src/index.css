@@ -3,11 +3,17 @@
   src: url('../public/Montserrat-ExtraLight.ttf');
 }
 
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../public/MontserratBold-p781R.otf')
+}
+
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
+  background-color: #272e38;
 }
 
 /* include border and padding in element width and height */
@@ -22,42 +28,4 @@ body,
   font-family: 'Montserrat-ExtraLight';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#temp-landing-page {
-  height: 100%;
-  width: 100%;
-
-  margin: auto;
-  padding: 10px;
-
-  background-color: #181E26;
-  color: #E6D4D4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#temp-landing-page h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-}
-
-#temp-landing-page img {
-  text-align: center;
-  width: 100%;
-  height: auto;
-}
-
-#temp-landing-page #contact {
-  position: fixed;
-  left: 50%;
-  bottom: 20px;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-  display:block;
-}
-
-#temp-landing-page a:link, a:visited {
-  color: #E6D4D4;
-  text-decoration: underline;
 }

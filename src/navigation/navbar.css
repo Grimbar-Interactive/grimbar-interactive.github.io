@@ -1,0 +1,99 @@
+#nav-bar {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181E26;
+    position: fixed;
+    grid-template-columns: 2fr 5fr 75px;
+    grid-template-areas: "logos navbar return";
+    display: grid;
+    row-gap: 0px;
+    height: 175px;
+    transition: all 0.125s;
+}
+
+#logo-container {
+    margin: 0px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    grid-area: logos;
+}
+
+#grimbar-logo {
+    height: 150px;
+    margin: 10px;
+    transition: all 0.125s;
+}
+
+#grimbar-name {
+    height: 75px;
+    opacity: 100;
+    transition: slide-in 0.125s;
+}
+
+#icons {
+    grid-area: return;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#return-up {
+    height: 50px;
+    color: #E6D4D4;
+    opacity: 0;
+    transition: all 0.125s;
+    margin: 25px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px
+}
+
+nav {
+    grid-area: navbar;
+    justify-self: end;
+}
+
+.navbutton {
+    margin: 0px 10px;
+    border: none;
+    font-family: 'Montserrat-ExtraLight';
+    background-color: inherit;
+    color: #E6D4D4;
+    font-size: 25px;
+    display: inline-block;
+    padding: 20px 0px;
+}
+
+.navbutton:hover {
+    color: #969DA7;
+    cursor: pointer;
+}
+
+.navbutton::after {
+    content: '';
+    margin-top: 10px;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #969DA7;
+    transition: width .3s;
+}
+
+.navbutton:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.icon {
+    display: none;
+    height: 50px;
+    margin: 25px;
+    grid-area: return;
+    justify-self: end;
+}
+
+#mobileNav {
+    display: none;
+}

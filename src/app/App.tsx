@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavBar } from '../navigation';
-import { ContentContainer, ContentType, TempLandingPage } from '../content';
+import { Footer } from '../footer';
+import { ContentContainer, ContentType} from '../content';
 
 type AppState = {
 	contentState: ContentType;
@@ -8,21 +9,25 @@ type AppState = {
 
 export class App extends React.Component {
 	state: AppState = {
-    contentState: ContentType.Types[0]
+    contentState: ContentType.Types[0],
   };
 
   changeContentState = (state: ContentType) => {
     this.setState({
-      contentState: state
+      contentState: state,
     });
   }
 
+
+
 	render() {
 		return (
-			<TempLandingPage/>
+      <div>
+        <NavBar contentType={this.state.contentState} changeStateMethod={this.changeContentState}/>
+        <ContentContainer contentType={this.state.contentState}/>
+        <Footer />
+      </div>
 		)
 	}
 }
 
-//<NavBar contentType={this.state.contentState} changeStateMethod={this.changeContentState}/>
-//<ContentContainer contentType={this.state.contentState}/>

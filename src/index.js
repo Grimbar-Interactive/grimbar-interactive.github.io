@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './navigation/navbar.css';
+import './navigation/navbar-mobile.css';
+import './content/content.css';
+import './content/content-mobile.css';
+import './footer/footer.css';
+import './footer/footer-mobile.css';
 import { App } from './app';
 import reportWebVitals from './reportWebVitals';
 

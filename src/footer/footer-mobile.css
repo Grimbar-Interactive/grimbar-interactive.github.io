@@ -1,0 +1,19 @@
+@media only screen and (max-width: 600px) {   
+    .footer p {
+        margin-right: 0px;
+        font-size: 12px;
+    }
+
+    .footer .image-container {
+        margin-right: 0px;
+        width: 50%;
+        text-align: end;
+    }
+    
+    .footer img {
+        height: 30px;
+        margin: 5px;
+    }
+
+    
+}

@@ -1,0 +1,123 @@
+.home-page {
+  background-image: url("../../public/images/Homepage-Cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Montserrat-Bold';
+  color:#E6D4D4;
+  text-align: center;
+  padding: calc(40px);
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.home-page .text-box {
+  padding: 20px;
+  width: 75%;
+  margin: 15vh auto;
+  text-shadow: 4px 4px 4px  #181E26;
+}
+
+.home-page h1 {
+  font-size: 80px;
+}
+
+.home-page p {
+  font-size: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-page {
+  padding-top: 200px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  color: #E6D4D4;
+}
+
+.team-page h1 {
+  font-family: 'Montserrat-Bold';
+}
+
+.team-page p {
+  color: #969DA7;
+  font-size: 20px;
+}
+
+.teamEven .teamOdd {
+  width: 75%;
+  justify-content: center;
+  align-items: center;;
+}
+
+.teamEven {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-areas: 'pic info';
+  grid-gap: 40px;
+  text-align: left;
+  padding: 20px;
+  /* border-top: groove 6px #E6D4D4; */
+  /* border-left: groove 6px #e6d4d49f; */
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.teamOdd {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-areas: 'info pic';
+  grid-gap: 40px;
+  text-align: right;
+  padding: 20px;
+  /* border-top: groove 6px #E6D4D4; */
+  /* border-right: groove 6px #e6d4d49f; */
+  border-radius: 20px;
+}
+
+#teamMemberInfo {
+  grid-area: info;
+  overflow-wrap: normal;
+}
+
+.team-page img{
+  border-radius: 30px;
+  height: 450px;
+  grid-area: pic;
+  justify-self: center;
+  box-shadow: 0px 0px 5px 5px #181E26;
+  /* border-top: groove 10px #181E26;;
+  border-left: groove 10px #181E26;; */
+}
+
+.team-page .teamEven img:hover {
+  box-shadow: -20px 0px 5px 5px #181E26;
+  transition: all 0.25s;
+  margin-left: 30px;
+  /* margin-top: 20px */
+}
+
+.team-page .teamOdd img:hover {
+  box-shadow: 20px 0px 5px 5px #181E26;
+  transition: all 0.25s;
+  margin-right: 30px;
+  /* margin-top: 20px */
+}
+
+.underConstruction {
+  text-align: center;
+  margin: 0 auto;
+  color: #E6D4D4;
+  height: calc(100vh - 100px);
+  padding: 30vh 0;
+}
+
+.underConstruction img {
+  height: 200px;
+}
+

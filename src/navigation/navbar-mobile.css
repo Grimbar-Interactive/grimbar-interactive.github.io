@@ -1,0 +1,68 @@
+@media only screen and (max-width: 1400px) {    
+    #nav-bar {
+        height: 100px;
+    }
+
+    #grimbar-logo {
+        height: 75px;
+    }
+
+    #grimbar-name {
+        height: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {   
+    #nav-bar {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 400px;
+        grid-template-areas: "logos return"
+                            "mobilenavbar mobilenavbar";
+    }
+
+
+    .icon {
+        display: inline-block;
+    }
+
+    #desktopNav {
+        display: none;
+    }
+
+    #mobileNav {
+        display: none;
+        grid-area: mobilenavbar;
+        background-color: #181e26c7;
+        text-align: right;
+        padding: 20px;
+        margin: 0;
+        height: 400px;
+        border-bottom: solid 5px #181E26;
+        border-left: solid 5px #181E26;
+    }
+
+    #mobileNav .navbutton {
+        display: block;
+        background-color: transparent;
+    }
+
+}
+
+@media only screen and (max-width: 600px) { 
+    .icon {
+        float: left;
+    }
+
+    #grimbar-name {
+        height: 40px;
+    }
+
+    #grimbar-logo {
+        height: 50px;
+    }
+
+    #return-up {
+        bottom: 100px;
+    }
+}
