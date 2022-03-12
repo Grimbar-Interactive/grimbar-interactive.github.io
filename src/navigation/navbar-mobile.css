@@ -57,4 +57,13 @@
     #return-up {
         bottom: 100px;
     }
+
+    #grimbar-logo {
+        height: 55px;
+    }
+
+    #grimbar-name {
+        height: 35px;
+    }
+
 }
