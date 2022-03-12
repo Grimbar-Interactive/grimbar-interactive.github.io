@@ -5,22 +5,18 @@ import { ContentType } from '../content';
 window.addEventListener('scroll',(event) => {
 	if (window.pageYOffset > 50 && window.innerWidth < 1400) {
 		document.getElementById('return-up').setAttribute("style", "opacity: 100");
-		document.getElementById('grimbar-logo').setAttribute("style", "height: 75px");
-		document.getElementById('nav-bar').setAttribute("style", "height: 100px");
-		document.getElementById('grimbar-name').setAttribute("style", "height: 50px");
 	} else if (window.pageYOffset > 50) {
 		document.getElementById('return-up').setAttribute("style", "opacity: 100");
 		document.getElementById('grimbar-logo').setAttribute("style", "height: 75px");
 		document.getElementById('nav-bar').setAttribute("style", "height: 100px");
 		document.getElementById('grimbar-name').setAttribute("style", "height: 50px");
 	} else if (window.pageYOffset <= 50 && window.innerWidth < 1400) {
-		document.getElementById('grimbar-name').setAttribute("style", "opacity: 100");
 		document.getElementById('return-up').setAttribute("style", "opacity: 0");
 	} else if (window.pageYOffset <= 50) {
 		document.getElementById('return-up').setAttribute("style", "opacity: 0");
 		document.getElementById('grimbar-logo').setAttribute("style", "height: 150px");
 		document.getElementById('nav-bar').setAttribute("style", "height: 175px");
-		document.getElementById('grimbar-name').setAttribute("style", "opacity: 100");
+		document.getElementById('grimbar-name').setAttribute("style", "height: 75px");
 	}
 });
 

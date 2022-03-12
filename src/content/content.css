@@ -85,7 +85,7 @@
   overflow-wrap: normal;
 }
 
-.team-page img{
+.team-page .headshot{
   border-radius: 30px;
   height: 450px;
   grid-area: pic;
@@ -95,18 +95,23 @@
   border-left: groove 10px #181E26;; */
 }
 
-.team-page .teamEven img:hover {
+.team-page .teamEven .headshot:hover {
   box-shadow: -20px 0px 5px 5px #181E26;
   transition: all 0.25s;
   margin-left: 30px;
   /* margin-top: 20px */
 }
 
-.team-page .teamOdd img:hover {
+.team-page .teamOdd .headshot:hover {
   box-shadow: 20px 0px 5px 5px #181E26;
   transition: all 0.25s;
   margin-right: 30px;
   /* margin-top: 20px */
+}
+
+#teamMemberInfo img {
+  height: 50px;
+  margin: 10px 20px 10px 0px;
 }
 
 .underConstruction {

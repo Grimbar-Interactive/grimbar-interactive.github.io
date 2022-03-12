@@ -8,6 +8,11 @@ type teamMember = {
     photoURL: string,
     photoClass: string,
     textClass: string,
+    portfolio: string,
+    email: string,
+    linkedIn: string,
+    twitter: string,
+    github: string
 }
 
 const team: teamMember[] = [{
@@ -18,6 +23,11 @@ const team: teamMember[] = [{
         photoURL: './images/Jacob_Headshot.jpg', 
         photoClass: 'photo0',
         textClass: 'text0', 
+        portfolio: 'jacobfdunbar.com',
+        email: 'jacob@grimbar.dev',
+        linkedIn: 'https://www.linkedin.com/in/jacob-dunbar-b6b5b2bb/',
+        twitter: 'https://twitter.com/JacobFDunbar',
+        github: 'https://github.com/jacobfdunbar'
     },{
         name: 'Amanda Grimm',
         position: 'Full-Stack Engineer & Consultant',
@@ -25,7 +35,12 @@ const team: teamMember[] = [{
         info2: 'After a few years working in the themed entertainment buisness as a Technical Designer and Engineer, Amanda is excited to join the world of Web and Software Development.',
         photoURL: './images/Amanda_Headshot.jpg',
         photoClass: 'photo1',
-        textClass: 'text1'
+        textClass: 'text1',
+        portfolio: 'amandagrimm.com',
+        email: 'amanda@grimbar.dev',
+        linkedIn: 'https://www.linkedin.com/in/amanda-grimm-69228680/',
+        twitter: '',
+        github: 'https://github.com/amandagrimm95'
     },{
         name: 'Luna',
         position: 'Head of Office Morale',
@@ -33,7 +48,12 @@ const team: teamMember[] = [{
         info2: 'From keeping a close eye on our monitors to make sure all of our work is up to par, to helping out with typing every once in a while, she is never too far from the action!',
         photoURL: './images/Luna_Headshot.jpg',
         photoClass: 'photo2',
-        textClass: 'text2'
+        textClass: 'text2',
+        portfolio: '',
+        email: '',
+        linkedIn: '',
+        twitter: '',
+        github: ''
     }    
     ]
 
@@ -43,8 +63,12 @@ type TeamMemberProps = {
 }
 
 class TeamMember extends React.Component <TeamMemberProps, {}> {
-
     render() {
+        let linkedIn = (team[this.props.i].linkedIn !== '' ? <a href={team[this.props.i].linkedIn} target="blank"><img src="./images/linkedin-square.png" alt="linkedin"/></a> : '');
+        let github = (team[this.props.i].github !== '' ? <a href={team[this.props.i].github} target="blank"><img src="./images/github-square.png" alt="github"/></a> : '');
+        let twitter = (team[this.props.i].twitter !== '' ? <a href={team[this.props.i].twitter} target="blank"><img src="./images/twitter-square.png" alt="twitter"/></a> : '');
+        
+
         return (
             <div className={this.props.evenOdd}>
                 <div id='teamMemberInfo'>
@@ -52,8 +76,13 @@ class TeamMember extends React.Component <TeamMemberProps, {}> {
                     <h2>{team[this.props.i].position}</h2>
                     <p>{team[this.props.i].info1}</p>
                     <p>{team[this.props.i].info2}</p>
+                    <p id="teamEmail">{team[this.props.i].email}</p>
+                    {/* <p>{team[this.props.i].portfolio}</p> */}
+                    {linkedIn}
+                    {github}
+                    {twitter}
                 </div>
-                <img src={team[this.props.i].photoURL} alt={team[this.props.i].name} />
+                <img className="headshot" src={team[this.props.i].photoURL} alt={team[this.props.i].name} />
             </div>
         )
     }
