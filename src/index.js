@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import './components/navigation/navbar.css';
-import './components/navigation/navbar-mobile.css';
 import './components/content/content.css';
 import './components/content/content-mobile.css';
-import './components/footer/footer.css';
-import './components/footer/footer-mobile.css';
-import { App } from './components/app';
+import { App } from 'components';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <BrowserRouter>

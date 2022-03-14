@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ContentType } from '../content';
+import './navbar.css';
+import './navbar-mobile.css';
 
-
-window.addEventListener('scroll',(event) => {
+window.addEventListener('scroll', event => {
 	if (window.pageYOffset > 50 && window.innerWidth < 1400) {
 		document.getElementById('return-up').setAttribute("style", "opacity: 100");
 	} else if (window.pageYOffset > 50) {
@@ -27,18 +27,20 @@ type NavBarState = {
 
 let navMenuVisible: boolean = false;
 
-export class NavBar extends React.Component<ContentType, NavBarState> {
-	constructor (props: object) {
+export default class NavBar extends React.Component<{}, NavBarState> {
+	constructor(props: object) {
 		super(props)
 		this.returnUp = this.returnUp.bind(this);
 		this.burgerMenu = this.burgerMenu.bind(this);
 	}
 
 	returnUp() {
-		window.scroll(  
-			{top: 0,
-			left: 0, 
-			behavior: 'smooth'}
+		window.scroll(
+			{
+				top: 0,
+				left: 0,
+				behavior: 'smooth'
+			}
 		);
 	}
 
@@ -55,20 +57,23 @@ export class NavBar extends React.Component<ContentType, NavBarState> {
 		}
 	}
 
-	renderButton(type: ContentType) {
-		return <NavButton key={type.id} contentType={type} clickAction={() => this.props.changeStateMethod(type)}/>;
+	renderButton(key: string, url: string) {
+		return <NavButton key={key} buttonName={key} url={url} />
 	}
-	
+
 	render() {
-		var buttons = [];
-		for (let t of ContentType.Types) {
-			buttons.push(this.renderButton(t));
-		}
+		var buttons = [
+			this.renderButton('Home', '/'),
+			this.renderButton('Games', '/games'),
+			this.renderButton('Web Development', '/webdevelopment'),
+			this.renderButton('Team', '/team')
+		];
+
 		return (
 			<div id="nav-bar">
 				<div id="logo-container">
-					<img id="grimbar-logo" src="./images/Grimbar_Interactvive_Logo_Image_Only.png" alt="Grimbar Interactive Logo" onClick={() => this.props.changeStateMethod(ContentType.Types[0])}/>
-					<img id="grimbar-name" src="./images/Grimbar_Interactvive_Logo_Name_Only.png" alt="Grimbar Interactive Logo" onClick={() => this.props.changeStateMethod(ContentType.Types[0])}/>
+					<img id="grimbar-logo" src="./images/Grimbar_Interactvive_Logo_Image_Only.png" alt="Grimbar Interactive Logo"/>
+					<img id="grimbar-name" src="./images/Grimbar_Interactvive_Logo_Name_Only.png" alt="Grimbar Interactive Logo"/>
 				</div>
 				<nav id="desktopNav">{buttons}</nav>
 				<nav id="mobileNav">{buttons}</nav>
@@ -77,26 +82,24 @@ export class NavBar extends React.Component<ContentType, NavBarState> {
 					<img className="icon" onClick={this.burgerMenu} src="./images/bars-solid.png" alt="Menu Bar" />
 				</div>
 			</div>
-			
 		);
 	}
 }
 
 type NavButtonProps = {
-	contentType: ContentType;
-	clickAction: Function;
+	buttonName: string;
+	url: string;
 }
 
 class NavButton extends React.Component<NavButtonProps> {
 	onButtonPressed() {
-		//this.props.clickAction();
 		document.getElementById('mobileNav').setAttribute("style", "display: none");
 		navMenuVisible = false;
 	}
 
 	render() {
 		return (
-			<Link key={this.props.contentType.displayName} to={this.props.contentType.url} className="navbutton" onClick={() => this.onButtonPressed()}>{this.props.contentType.displayName}</Link>
+			<Link key={this.props.buttonName} to={this.props.url} className="navbutton" onClick={() => this.onButtonPressed()}>{this.props.buttonName}</Link>
 		);
 	}
 }

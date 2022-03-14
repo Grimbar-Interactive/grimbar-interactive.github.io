@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "baseUrl": "src"
+  },
+  "include": ["src"],
+  "exclude": ["build"]
+}

@@ -1,19 +1,9 @@
 import React from 'react';
-import { Footer } from '../footer';
 import { Route, Routes } from 'react-router-dom';
-import { Home, Games, WebDevelopment, Team } from '../../routes';
+import { Footer } from 'components';
+import { Home, Games, WebDevelopment, Team } from 'routes';
 
-export class App extends React.Component {
-	// state: AppState = {
-  //   contentState: ContentType.Types[0],
-  // };
-
-  // changeContentState = (state: ContentType) => {
-  //   this.setState({
-  //     contentState: state,
-  //   });
-  // }
-
+export default class App extends React.Component {
 	render() {
 		return (
       <div>
@@ -28,4 +18,3 @@ export class App extends React.Component {
 		)
 	}
 }
-
