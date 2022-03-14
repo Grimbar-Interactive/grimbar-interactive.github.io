@@ -1,19 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './navigation/navbar.css';
-import './navigation/navbar-mobile.css';
-import './content/content.css';
-import './content/content-mobile.css';
-import './footer/footer.css';
-import './footer/footer-mobile.css';
-import { App } from './app';
+import './components/navigation/navbar.css';
+import './components/navigation/navbar-mobile.css';
+import './components/content/content.css';
+import './components/content/content-mobile.css';
+import './components/footer/footer.css';
+import './components/footer/footer-mobile.css';
+import { App } from './components/app';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

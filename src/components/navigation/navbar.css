@@ -64,6 +64,7 @@ nav {
     font-size: 25px;
     display: inline-block;
     padding: 20px 0px;
+    text-decoration: none;
 }
 
 .navbutton:hover {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ContentType } from '../content';
 
 
@@ -88,14 +89,14 @@ type NavButtonProps = {
 
 class NavButton extends React.Component<NavButtonProps> {
 	onButtonPressed() {
-		this.props.clickAction();
+		//this.props.clickAction();
 		document.getElementById('mobileNav').setAttribute("style", "display: none");
 		navMenuVisible = false;
 	}
 
 	render() {
 		return (
-			<h3 className="navbutton" onClick={() => this.onButtonPressed()}>{this.props.contentType.displayName}</h3>
+			<Link key={this.props.contentType.displayName} to={this.props.contentType.url} className="navbutton" onClick={() => this.onButtonPressed()}>{this.props.contentType.displayName}</Link>
 		);
 	}
 }
