@@ -4,19 +4,19 @@ import { ContentType } from '../content';
 
 window.addEventListener('scroll',(event) => {
 	if (window.pageYOffset > 50 && window.innerWidth < 1400) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 100");
+		document.getElementById('return-up')!.setAttribute("style", "opacity: 100");
 	} else if (window.pageYOffset > 50) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 100");
-		document.getElementById('grimbar-logo').setAttribute("style", "height: 75px");
-		document.getElementById('nav-bar').setAttribute("style", "height: 100px");
-		document.getElementById('grimbar-name').setAttribute("style", "height: 50px");
+		document.getElementById('return-up')!.setAttribute("style", "opacity: 100");
+		document.getElementById('grimbar-logo')!.setAttribute("style", "height: 75px");
+		document.getElementById('nav-bar')!.setAttribute("style", "height: 100px");
+		document.getElementById('grimbar-name')!.setAttribute("style", "height: 50px");
 	} else if (window.pageYOffset <= 50 && window.innerWidth < 1400) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 0");
+		document.getElementById('return-up')!.setAttribute("style", "opacity: 0");
 	} else if (window.pageYOffset <= 50) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 0");
-		document.getElementById('grimbar-logo').setAttribute("style", "height: 150px");
-		document.getElementById('nav-bar').setAttribute("style", "height: 175px");
-		document.getElementById('grimbar-name').setAttribute("style", "height: 75px");
+		document.getElementById('return-up')!.setAttribute("style", "opacity: 0");
+		document.getElementById('grimbar-logo')!.setAttribute("style", "height: 150px");
+		document.getElementById('nav-bar')!.setAttribute("style", "height: 175px");
+		document.getElementById('grimbar-name')!.setAttribute("style", "height: 75px");
 	}
 });
 
@@ -24,7 +24,7 @@ type NavBarState = {
 	menuVisible: boolean,
 }
 
-let navMenuVisible: boolean = false;
+let navMenuVisible = false;
 
 export class NavBar extends React.Component<ContentType, NavBarState> {
 	constructor (props: object) {
@@ -45,10 +45,10 @@ export class NavBar extends React.Component<ContentType, NavBarState> {
 	burgerMenu() {
 		if (window.innerWidth <= 1000) {
 			if (navMenuVisible === true) {
-				document.getElementById('mobileNav').setAttribute("style", "display: none");
+				document.getElementById('mobileNav')!.setAttribute("style", "display: none");
 				navMenuVisible = false;
 			} else if (navMenuVisible === false) {
-				document.getElementById('mobileNav').setAttribute("style", "display: block");
+				document.getElementById('mobileNav')!.setAttribute("style", "display: block");
 				navMenuVisible = true;
 			}
 		}
@@ -59,8 +59,8 @@ export class NavBar extends React.Component<ContentType, NavBarState> {
 	}
 	
 	render() {
-		var buttons = [];
-		for (let t of ContentType.Types) {
+		const buttons = [];
+		for (const t of ContentType.Types) {
 			buttons.push(this.renderButton(t));
 		}
 		return (
@@ -89,7 +89,7 @@ type NavButtonProps = {
 class NavButton extends React.Component<NavButtonProps> {
 	onButtonPressed() {
 		this.props.clickAction();
-		document.getElementById('mobileNav').setAttribute("style", "display: none");
+		document.getElementById('mobileNav')!.setAttribute("style", "display: none");
 		navMenuVisible = false;
 	}
 
