@@ -3,6 +3,7 @@
     "target": "ES2022",
     "jsx": "react",
     "module": "CommonJS",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "baseUrl": "src"
   },

@@ -7,13 +7,13 @@ export default class App extends React.Component {
 	render() {
 		return (
       <div>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="games" element={<Games/>}/>
-        <Route path="webdevelopment" element={<WebDevelopment/>}/>
-        <Route path="team" element={<Team/>}/>
-      </Routes>
-      <Footer />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="games" element={<Games/>}/>
+          <Route path="webdevelopment" element={<WebDevelopment/>}/>
+          <Route path="team" element={<Team/>}/>
+        </Routes>
+        <Footer />
       </div>
 		)
 	}
