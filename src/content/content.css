@@ -114,6 +114,108 @@
   margin: 10px 20px 10px 0px;
 }
 
+.games-page {
+  padding-top: 200px;
+  padding-bottom: 50px;
+  justify-content: center;
+  text-align: center;
+  margin: 0px auto;
+  color: #E6D4D4;
+}
+
+.gameLibrary {
+  width: 80%;
+  height: 18vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.gameInfo {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+.game {
+  position: absolute;
+  width: 80%;
+  display: flex;
+}
+
+.games-page h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Montserrat-Bold';
+  text-shadow: 4px 4px 4px  #181E26;
+}
+
+.games-page h2 {
+  font-size: 30px;
+}
+
+.games-page p {
+  font-size: 20px;
+}
+
+.gameInfo {
+  grid-row: 2;
+  grid-column: 1 / 4;
+  text-align: left;
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #181E26;
+  border-radius: 20px;
+}
+
+#gameInfo0, #gameInfo3 {
+  display: none;
+}
+
+.games-page .image:hover {
+  height: 13vw;
+}
+
+.games-page .imageUnfocus:hover {
+  height: 13vw;
+  filter: grayscale(0%) blur(0px);
+}
+
+.image {
+  height: 12vw;
+  transition: all 0.25s;
+  justify-self: center;
+  border-radius: 20px;
+  transition: all 0.5s;
+  margin: 20px;
+}
+
+.imageFocus {
+  height: 15vw;
+  justify-self: center;
+  transition: all 0.5s;
+  padding: 20px;
+  background-color: #181E26;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-radius: 40px;
+}
+
+.imageUnfocus {
+  height: 11vw;
+  opacity: 50;
+  justify-self: center;
+  border-radius: 20px;
+  transition: all 0.5s;
+  margin: 20px;
+  filter: grayscale(50%) blur(2px);
+}
+
+
 .underConstruction {
   text-align: center;
   margin: 0 auto;
