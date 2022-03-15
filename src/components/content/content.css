@@ -62,8 +62,6 @@
   grid-gap: 40px;
   text-align: left;
   padding: 20px;
-  /* border-top: groove 6px #E6D4D4; */
-  /* border-left: groove 6px #e6d4d49f; */
   border-radius: 20px;
   margin: 0 auto;
 }
@@ -75,8 +73,6 @@
   grid-gap: 40px;
   text-align: right;
   padding: 20px;
-  /* border-top: groove 6px #E6D4D4; */
-  /* border-right: groove 6px #e6d4d49f; */
   border-radius: 20px;
 }
 
@@ -91,22 +87,18 @@
   grid-area: pic;
   justify-self: center;
   box-shadow: 0px 0px 5px 5px #181E26;
-  /* border-top: groove 10px #181E26;;
-  border-left: groove 10px #181E26;; */
 }
 
 .team-page .teamEven .headshot:hover {
   box-shadow: -20px 0px 5px 5px #181E26;
   transition: all 0.25s;
   margin-left: 30px;
-  /* margin-top: 20px */
 }
 
 .team-page .teamOdd .headshot:hover {
   box-shadow: 20px 0px 5px 5px #181E26;
   transition: all 0.25s;
   margin-right: 30px;
-  /* margin-top: 20px */
 }
 
 #teamMemberInfo img {
@@ -187,7 +179,7 @@
 
 .image {
   height: 12vw;
-  transition: all 0.25s;
+  transition: all 0.125s;
   justify-self: center;
   border-radius: 20px;
   transition: all 0.5s;
