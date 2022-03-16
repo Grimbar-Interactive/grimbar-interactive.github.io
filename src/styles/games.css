@@ -5,6 +5,7 @@
   text-align: center;
   margin: 0px auto;
   color: #E6D4D4;
+  min-height: calc(100vh - 100px)
 }
 
 .gameLibrary {
