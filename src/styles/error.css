@@ -1,0 +1,8 @@
+.errorPage {
+    text-align: center;
+    margin: 0 auto;
+    color: #E6D4D4;
+    height: calc(100vh - 100px);
+    padding: 30vh 0;
+    font-size: 2em;
+}
