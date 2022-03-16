@@ -1,12 +1,10 @@
 import React from 'react';
-import { NavBar } from 'components';
 import 'styles/home.css';
 import 'styles/home-mobile.css';
 
 export function Home() {
 	return (
 		<div>
-			<NavBar/>
 			<div className="home-page" >
 				<div className="text-box">
 					<h1>A New Journey Begins...</h1>
