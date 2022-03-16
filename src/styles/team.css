@@ -1,0 +1,77 @@
+.team-page {
+  padding-top: 200px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  color: #E6D4D4;
+}
+
+.team-page h1 {
+  font-family: 'Montserrat-Bold';
+}
+
+.team-page p {
+  color: #969DA7;
+  font-size: 20px;
+}
+
+.teamEven .teamOdd {
+  width: 75%;
+  justify-content: center;
+  align-items: center;;
+}
+
+.teamEven {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-areas: 'pic info';
+  grid-gap: 40px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.teamOdd {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-areas: 'info pic';
+  grid-gap: 40px;
+  text-align: right;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#teamMemberInfo {
+  grid-area: info;
+  overflow-wrap: normal;
+}
+
+.team-page .headshot{
+  border-radius: 30px;
+  height: 450px;
+  grid-area: pic;
+  justify-self: center;
+  box-shadow: 0px 0px 5px 5px #181E26;
+}
+
+.team-page .teamEven .headshot:hover {
+  box-shadow: -20px 0px 5px 5px #181E26;
+  transition: all 0.25s;
+  margin-left: 30px;
+}
+
+.team-page .teamOdd .headshot:hover {
+  box-shadow: 20px 0px 5px 5px #181E26;
+  transition: all 0.25s;
+  margin-right: 30px;
+}
+
+#teamMemberInfo img {
+  height: 50px;
+  margin: 10px 20px 10px 0px;
+}
+

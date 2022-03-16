@@ -1,0 +1,81 @@
+@media only screen and (max-width: 1400px) {
+    .games-page {
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {  
+    .image {
+        margin: 5px;
+        height: 14vw;
+    }
+    
+    .imageFocus {
+        padding: 10px;
+        height: 17vw;
+    }
+
+    .imageUnfocus {
+        margin: 10px;
+        height: 13vw;
+    }
+
+    .games-page .image:hover {
+        height: 16vw;
+      }
+      
+    .games-page .imageUnfocus:hover {
+        height: 16vw;
+    }
+
+    .games-page h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    .mobileInfo {
+        display: none;
+    }
+
+    .image {
+        margin: 30px auto;
+        height: 30vw;
+        display: block;
+    }
+    
+    .imageFocus {
+        padding: 10px;
+        height: 35vw;
+    }
+
+    .imageUnfocus {
+        margin: 10px;
+        height: 32vw;
+    }
+
+    .games-page .image:hover {
+        height: 34vw;
+      }
+      
+    .games-page .imageUnfocus:hover {
+        height: 34vw;
+    }
+
+    .games-page h2 {
+        font-size: 20px;
+      }
+      
+      .games-page p {
+        font-size: 14px;
+      }
+
+}

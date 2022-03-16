@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Montserrat-ExtraLight';
-  src: url('../public/Montserrat-ExtraLight.ttf');
+  src: url('../../public/Montserrat-ExtraLight.ttf');
 }
 
 @font-face {
   font-family: 'Montserrat-Bold';
-  src: url('../public/MontserratBold-p781R.otf')
+  src: url('../../public/MontserratBold-p781R.otf')
 }
 
 html,
@@ -28,4 +28,16 @@ body,
   font-family: 'Montserrat-ExtraLight';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.underConstruction {
+  text-align: center;
+  margin: 0 auto;
+  color: #E6D4D4;
+  height: calc(100vh - 100px);
+  padding: 30vh 0;
+}
+
+.underConstruction img {
+  height: 200px;
 }

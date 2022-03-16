@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavBar } from 'components';
+import 'styles/games.css';
+import 'styles/games-mobile.css';
 
 type Game = {
     title: string,
@@ -98,6 +100,10 @@ class GamesSection extends React.Component <GamesSectionProps, GamesSectionState
 
     showInfo(x: number) {
         this.setState({index: x});
+
+        Array.from(document.getElementsByClassName('mobileInfo')).forEach(element => element.setAttribute('style', 'display: none'));
+        document.getElementById('info' + x).setAttribute('style', 'display:block');
+        
         if (x <= 2) {
             document.getElementById('gameInfo0').setAttribute('style', 'display: block');
             document.getElementById('gameInfo3').setAttribute('style', 'display: none');
@@ -146,24 +152,35 @@ class GamesSection extends React.Component <GamesSectionProps, GamesSectionState
 
 
     render() {
-        console.log("gameInfo" + this.state.first);
-
         return (
-            <div onClick={this.hideInfo}> 
-                <h1>{this.props.header}</h1>
-                <div className="gameLibrary">
-                    <GamePic i={this.state.first} eventHandler={this.showInfo}/>
-                    <GamePic i={this.state.second} eventHandler={this.showInfo}/>
-                    <GamePic i={this.state.third} eventHandler={this.showInfo}/>
+            <div>
+                <div onClick={this.hideInfo} id="desktop"> 
+                    <h1>{this.props.header}</h1>
+                    <div className="gameLibrary">
+                        <GamePic i={this.state.first} eventHandler={this.showInfo}/>
+                        <GamePic i={this.state.second} eventHandler={this.showInfo}/>
+                        <GamePic i={this.state.third} eventHandler={this.showInfo}/>
+                    </div> 
+                    <div id={"gameInfo" + this.state.first} className={'desktopInfo'}> 
+                        <GameInfo i={this.state.index}/>
+                    </div>         
                 </div>
-                <div id={"gameInfo" + this.state.first}> 
-                    <GameInfo i={this.state.index}/>
-                </div>         
+                <div onClick={this.hideInfo} id="mobile">
+                    <h1>{this.props.header}</h1>
+                    <GamePic i={this.state.first} eventHandler={this.showInfo}/>
+                    <div id={"info" + this.state.first} className={'mobileInfo'}>
+                        <GameInfo i={this.state.first} />
+                    </div>
+                    <GamePic i={this.state.second} eventHandler={this.showInfo}/>
+                    <div id={"info" + this.state.second} className={'mobileInfo'}>
+                        <GameInfo i={this.state.second} />
+                    </div>
+                    <GamePic i={this.state.third} eventHandler={this.showInfo}/>
+                    <div id={"info" + this.state.third} className={'mobileInfo'}>
+                        <GameInfo i={this.state.third} />
+                    </div>
+                </div>
             </div>
-            // <div className="underConstruction">
-            //     <img src="./images/Grimbar_Interactvive_Logo_Image_Only.png"  alt="logo" />
-            //     <h1>Under Construction...</h1>
-            // </div>
         )
     }
 }
@@ -173,8 +190,8 @@ export function Games() {
 			<div>
 				<NavBar/>
 				<div className="games-page">
-						<GamesSection rowStart={0} header='Client Work'/>
-						<GamesSection rowStart={3} header='Personal Projects'/>
+						<GamesSection rowStart={0} header='Client Projects'/>
+						<GamesSection rowStart={3} header='Our Projects'/>
 				</div>
 			</div>
 		)

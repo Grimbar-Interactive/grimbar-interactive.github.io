@@ -1,0 +1,31 @@
+.home-page {
+  background-image: url("../../public/images/Homepage-Cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Montserrat-Bold';
+  color:#E6D4D4;
+  text-align: center;
+  padding: calc(40px);
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.home-page .text-box {
+  padding: 20px;
+  width: 75%;
+  margin: 15vh auto;
+  text-shadow: 4px 4px 4px  #181E26;
+}
+
+.home-page h1 {
+  font-size: 80px;
+}
+
+.home-page p {
+  font-size: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+

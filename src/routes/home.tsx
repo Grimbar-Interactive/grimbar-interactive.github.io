@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavBar } from 'components';
+import 'styles/home.css';
+import 'styles/home-mobile.css';
 
 export function Home() {
 	return (

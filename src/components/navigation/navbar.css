@@ -9,7 +9,7 @@
     display: grid;
     row-gap: 0px;
     height: 175px;
-    transition: all 0.125s;
+    transition: all 0.125s;  
     z-index: 10;
 }
 
