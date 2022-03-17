@@ -1,7 +1,7 @@
 .businessCard {
 	color:#E6D4D4;
 	background-color: #181E26;
-	padding: calc(40px);
+	padding: calc(25px);
 	height: 100%;
 	width: 100%;
   margin: 0px;
@@ -14,6 +14,14 @@
 	font-family: 'Montserrat-Bold';
 }
 
+.businessCard h3 {
+	margin: 40px;
+}
+
+.businessCard #teamEmail {
+	margin: 20px 0px 30px;
+}
+
 a {
     text-decoration: none;
     color:#E6D4D4;
@@ -21,4 +29,15 @@ a {
 
 a:visited {
     color:#E6D4D4;
+}
+
+img {
+	height: 50px;
+	margin: 10px 10px 0px 10px;
+}
+
+.headshot {
+	height: 200px;
+	border-radius: 20px;
+	box-shadow: #000000 0px 5px 10px;
 }

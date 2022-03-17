@@ -10,6 +10,7 @@ export type TeamMemberType = {
   textClass: string,
   portfolio: string,
   email: string,
+  handle: string,
   linkedIn: string,
   twitter: string,
   github: string
