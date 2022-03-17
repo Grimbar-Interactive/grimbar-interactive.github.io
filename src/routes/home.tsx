@@ -1,4 +1,6 @@
 import React from 'react';
+import { Typewriter } from 'components';
+import { products } from 'config';
 import 'styles/home.css';
 import 'styles/home-mobile.css';
 
@@ -7,7 +9,8 @@ export function Home() {
 		<div>
 			<div className="home-page" >
 				<div className="text-box">
-					<h1 className="typewriter">We are...</h1>
+					<h1>We Create:</h1>
+					<Typewriter static={''} dynamic={products} />
 					<p>
 						Grimbar Interactive is a software development and consulting
 						company specializing in game and web development. Our goal

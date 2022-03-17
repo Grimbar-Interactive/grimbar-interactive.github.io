@@ -19,31 +19,62 @@
   text-shadow: 4px 4px 4px  #181E26;
 }
 
-.home-page h1 {
-  font-size: 80px;
-}
-
 .home-page p {
   font-size: 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+.typewriter-wrapper {
+  display: inline-flex;
+}
+
+.typewriter-wrapper .static-text {
+  font-size: 80px;
+
+}
+
+.typewriter-wrapper .dynamic-text {
+  font-size: 80px;
+  margin-left: 15px;
+}
+
+.dynamic-text li {
+  list-style: none;
+  font-size: 80px;
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 4px solid #E6D4D4;
+  animation: typing 1.5s steps(10) infinite;
+}
+
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  width: 0;
   border-right: .15em solid #E6D4D4; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(10, end),
+    typing 2s steps(20, end),
     blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 50% }
-  to { width: 100% }
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
 }
 
 /* The typewriter cursor effect */

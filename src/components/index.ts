@@ -3,3 +3,4 @@ export * from './navigation';
 export * from './team'; 
 export * from './games';
 export * from './business-card';
+export * from './typewriter';
