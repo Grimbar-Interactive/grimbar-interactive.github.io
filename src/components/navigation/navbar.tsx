@@ -3,24 +3,6 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import './navbar-mobile.css';
 
-window.addEventListener('scroll', event => {
-	if (window.pageYOffset > 50 && window.innerWidth < 1400) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 100");
-	} else if (window.pageYOffset > 50) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 100");
-		document.getElementById('grimbar-logo').setAttribute("style", "height: 75px");
-		document.getElementById('nav-bar').setAttribute("style", "height: 100px");
-		document.getElementById('grimbar-name').setAttribute("style", "height: 50px");
-	} else if (window.pageYOffset <= 50 && window.innerWidth < 1400) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 0");
-	} else if (window.pageYOffset <= 50) {
-		document.getElementById('return-up').setAttribute("style", "opacity: 0");
-		document.getElementById('grimbar-logo').setAttribute("style", "height: 150px");
-		document.getElementById('nav-bar').setAttribute("style", "height: 175px");
-		document.getElementById('grimbar-name').setAttribute("style", "height: 75px");
-	}
-});
-
 type NavBarState = {
 	menuVisible: boolean,
 }
@@ -32,6 +14,24 @@ export default class NavBar extends React.Component<{}, NavBarState> {
 		super(props)
 		this.returnUp = this.returnUp.bind(this);
 		this.burgerMenu = this.burgerMenu.bind(this);
+
+		window.addEventListener('scroll', event => {
+			if (window.pageYOffset > 50 && window.innerWidth < 1400) {
+				document.getElementById('return-up').setAttribute("style", "opacity: 100");
+			} else if (window.pageYOffset > 50) {
+				document.getElementById('return-up').setAttribute("style", "opacity: 100");
+				document.getElementById('grimbar-logo').setAttribute("style", "height: 75px");
+				document.getElementById('nav-bar').setAttribute("style", "height: 100px");
+				document.getElementById('grimbar-name').setAttribute("style", "height: 50px");
+			} else if (window.pageYOffset <= 50 && window.innerWidth < 1400) {
+				document.getElementById('return-up').setAttribute("style", "opacity: 0");
+			} else if (window.pageYOffset <= 50) {
+				document.getElementById('return-up').setAttribute("style", "opacity: 0");
+				document.getElementById('grimbar-logo').setAttribute("style", "height: 150px");
+				document.getElementById('nav-bar').setAttribute("style", "height: 175px");
+				document.getElementById('grimbar-name').setAttribute("style", "height: 75px");
+			}
+		});
 	}
 
 	returnUp() {
