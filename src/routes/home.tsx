@@ -7,7 +7,7 @@ export function Home() {
 		<div>
 			<div className="home-page" >
 				<div className="text-box">
-					<h1 className="typewriter">We are...</h1>
+					<h1>A New Journey Begins...</h1>
 					<p>
 						Grimbar Interactive is a software development and consulting
 						company specializing in game and web development. Our goal
