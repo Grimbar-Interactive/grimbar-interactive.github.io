@@ -56,9 +56,9 @@ export default class GamesSection extends React.Component <GamesSectionProps, Ga
         
         // Update image classes
         // Array.from(document.getElementsByClassName('imageUnfocus')).forEach(element => element.setAttribute('class', 'image'));
-        Array.from(document.getElementsByClassName('image')).forEach(element => element.setAttribute('class', 'imageUnfocus'));
-        Array.from(document.getElementsByClassName('imageFocus')).forEach(element => element.setAttribute('class', 'imageUnfocus'));
-        document.getElementById(sectionRow + 'pic' + x).setAttribute('class', `imageFocus`);
+        Array.from(document.getElementsByClassName(`${sectionRow}image`)).forEach(element => element.setAttribute('class', `${sectionRow}imageUnfocus`));
+        Array.from(document.getElementsByClassName(`${sectionRow}imageFocus`)).forEach(element => element.setAttribute('class', `${sectionRow}imageUnfocus`));
+        document.getElementById(sectionRow + 'image' + x).setAttribute('class', `${sectionRow}imageFocus`);
 
          
     }

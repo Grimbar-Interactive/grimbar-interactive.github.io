@@ -16,7 +16,7 @@ export default class GamePic extends React.Component <GamePicProps, {}> {
         console.log('sectionRow: ' + sectionRow);
         return (
             <div>
-                <img id={sectionRow + 'pic' + this.props.i} className={`image`} src={this.props.game.photoURL} alt={this.props.game.title} onClick={() => this.props.eventHandler(this.props.i, sectionRow)}/>
+                <img id={sectionRow + 'image' + this.props.i} className={`${sectionRow}image`} src={this.props.game.photoURL} alt={this.props.game.title} onClick={() => this.props.eventHandler(this.props.i, sectionRow)}/>
             </div>
             
         )

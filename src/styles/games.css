@@ -69,7 +69,7 @@
   filter: grayscale(0%) blur(0px);
 }
 
-.image {
+.games-page img {
   height: 12vw;
   transition: all 0.125s;
   justify-self: center;
@@ -78,7 +78,7 @@
   margin: 20px;
 }
 
-.imageFocus{
+img[class*='imageFocus']{
   height: 15vw;
   justify-self: center;
   transition: all 0.5s;
@@ -89,7 +89,7 @@
   border-radius: 40px;
 }
 
-.imageUnfocus{
+img[class*='imageUnfocus']{
   height: 11vw;
   opacity: 50;
   justify-self: center;
