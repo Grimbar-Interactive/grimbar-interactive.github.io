@@ -12,7 +12,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="" element={<Home />} />
           <Route path="games" element={<Games />} />
-          <Route path="webdevelopment" element={<WebDevelopment />} />
+          {/* <Route path="webdevelopment" element={<WebDevelopment />} /> */}
           <Route path="team" element={<Team />} />
           <Route path="*" element={<Error />} />
         </Route>

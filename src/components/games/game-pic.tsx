@@ -12,10 +12,11 @@ type GamePicProps = {
 
 export default class GamePic extends React.Component <GamePicProps, {}> {
     render() {
-        const sectionRow = (this.props.section + this.props.rowNum);
+        const sectionRow = (this.props.section + this.props.rowNum.toString());
+        console.log('sectionRow: ' + sectionRow);
         return (
-            <div className={sectionRow} onClick={() => this.props.eventHandler(this.props.i, sectionRow)}>
-                <img id={sectionRow + 'pic' + this.props.i} className="image" src={this.props.game.photoURL} alt={this.props.game.title} />
+            <div>
+                <img id={sectionRow + 'pic' + this.props.i} className={`image`} src={this.props.game.photoURL} alt={this.props.game.title} onClick={() => this.props.eventHandler(this.props.i, sectionRow)}/>
             </div>
             
         )

@@ -56,6 +56,10 @@
   display: none;
 }
 
+.mobileInfo {
+  display: none;
+}
+
 .games-page .image:hover {
   height: 13vw;
 }
@@ -74,7 +78,7 @@
   margin: 20px;
 }
 
-.imageFocus img{
+.imageFocus{
   height: 15vw;
   justify-self: center;
   transition: all 0.5s;
@@ -85,7 +89,7 @@
   border-radius: 40px;
 }
 
-.imageUnfocus img{
+.imageUnfocus{
   height: 11vw;
   opacity: 50;
   justify-self: center;

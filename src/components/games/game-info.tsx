@@ -9,9 +9,8 @@ type GameInfoProps = {
 
 export default class GameInfo extends React.Component <GameInfoProps, {}> {
     render() {
-        const sectionRow = (this.props.section + this.props.rowNum);
         return (
-            <div className='gameInfo' id={sectionRow + 'info'} >
+            <div className='gameInfo' >
                 <h2>{this.props.game.title}{this.props.game.client}</h2>
                 <p>{this.props.game.description}</p>
             </div>
