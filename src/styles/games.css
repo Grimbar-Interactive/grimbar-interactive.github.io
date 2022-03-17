@@ -78,7 +78,7 @@
   margin: 20px;
 }
 
-img[class*='imageFocus']{
+img[class*='Focus']{
   height: 15vw;
   justify-self: center;
   transition: all 0.5s;
@@ -89,7 +89,7 @@ img[class*='imageFocus']{
   border-radius: 40px;
 }
 
-img[class*='imageUnfocus']{
+img[class*='Unfocus']{
   height: 11vw;
   opacity: 50;
   justify-self: center;
