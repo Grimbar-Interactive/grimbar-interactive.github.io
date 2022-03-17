@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import 'styles/index.css';
 import { App, Home, Games, WebDevelopment, Team, Error } from 'routes';
+import { BusinessCard } from 'components';
+import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
+
+const businessCards = teamMembers.map(m => <Route key={m.name} path={`/business-card/${m.name.toLowerCase().replace(' ', '-')}`} element={<BusinessCard member={m} />} />);
 
 ReactDOM.render(
   <BrowserRouter>
@@ -17,9 +21,8 @@ ReactDOM.render(
           <Route path="*" element={<Error />} />
         </Route>
 
-        <Route path="/business-card/" element={<Home />}>
+        {businessCards}
 
-        </Route>
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,
