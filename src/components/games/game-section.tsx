@@ -29,11 +29,20 @@ export default class GamesSection extends React.Component <GamesSectionProps, Ga
         this.hideInfo = this.hideInfo.bind(this);
     }
 
-    showInfo(x: number) {
+    showInfo(x: number, sectionRow: string) {
         this.setState({index: x});
+        console.log('gameInfo check: ' + sectionRow + 'info');
 
-        Array.from(document.getElementsByClassName('mobileInfo')).forEach(element => element.setAttribute('style', 'display: none'));
-        document.getElementById('info' + x).setAttribute('style', 'display:block');
+        // Display correct project info
+        Array.from(document.getElementsByClassName('gameInfo')).forEach(element => element.setAttribute('style', 'display: none'));
+        document.getElementById(sectionRow + 'info').setAttribute('style', 'display: block');
+
+        // Update image classes
+        Array.from(document.getElementsByClassName('imageUnfocus')).forEach(element => element.setAttribute('class', 'image'));
+        Array.from(document.getElementsByClassName('imageFocus')).forEach(element => element.setAttribute('class', 'imageUnfocus'));
+        Array.from(document.getElementsByClassName(sectionRow)).forEach(element => element.setAttribute('class', 'imageUnfocus'));
+        document.getElementById(sectionRow + 'pic' + x).setAttribute('class', 'imageFocus');
+
          
     }
 
@@ -42,8 +51,8 @@ export default class GamesSection extends React.Component <GamesSectionProps, Ga
         if (!classArray.includes(e.target.className)) {
             Array.from(document.getElementsByClassName('imageFocus')).forEach(element => element.setAttribute('class', 'image'));
             Array.from(document.getElementsByClassName('imageUnfocus')).forEach(element => element.setAttribute('class', 'image'));
-            Array.from(document.getElementsByClassName('mobileInfo')).forEach(element => element.setAttribute('class', 'image'));
-            Array.from(document.getElementsByClassName('desktopInfo')).forEach(element => element.setAttribute('class', 'image'));
+            Array.from(document.getElementsByClassName('mobileInfo')).forEach(element => element.setAttribute('style', 'display: none'));
+            Array.from(document.getElementsByClassName('desktopInfo')).forEach(element => element.setAttribute('style', 'display: none'));
         } else {
             return;
         }      
@@ -60,15 +69,15 @@ export default class GamesSection extends React.Component <GamesSectionProps, Ga
     }
 
     renderRow(row: GameType[], rowNum: number) {
-        const pics = row.map((g, i) => <GamePic key={g.title} i={i + (3 * (rowNum))} eventHandler={this.showInfo} rowNum={rowNum} game={row[i]} />)
-        
+        const pics = row.map((g, i) => <GamePic key={g.title} i={i + (3 * (rowNum))} eventHandler={this.showInfo} rowNum={rowNum} game={row[i]} section={this.props.header}/>)
+
         return (
             <div>
                 <div className="gameLibrary">
                     {pics}
                 </div> 
                 <div id={this.props.header + rowNum} className={'desktopInfo'}> 
-                    <GameInfo game={this.props.gamesArray[this.state.index]}/>
+                    <GameInfo game={this.props.gamesArray[this.state.index]} section={this.props.header} rowNum={rowNum}/>
                 </div>
             </div>
         )
@@ -79,8 +88,8 @@ export default class GamesSection extends React.Component <GamesSectionProps, Ga
         for (let i = 0; i < this.props.gamesArray.length; i ++) {
             mobileArray.push (
                 <div>
-                    <GamePic i={i} eventHandler={this.showInfo} rowNum={i} game={this.props.gamesArray[i]}/>
-                    <GameInfo game={this.props.gamesArray[i]} />
+                    <GamePic key={this.props.gamesArray[i].title + "mobilePic"} i={i} eventHandler={this.showInfo} rowNum={i} game={this.props.gamesArray[i]} section={this.props.header}/>
+                    <GameInfo key={this.props.gamesArray[i].title + "mobileInfo"} game={this.props.gamesArray[i]} section={this.props.header} rowNum={i}/>
                 </div> 
             )
         }

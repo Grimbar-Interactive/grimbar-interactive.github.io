@@ -22,12 +22,7 @@
   width: 80%;
   margin: 0 auto;
   padding: 0 20px 20px 20px;
-}
-
-.game {
-  position: absolute;
-  width: 80%;
-  display: flex;
+  display: block;
 }
 
 .games-page h1 {
@@ -79,7 +74,7 @@
   margin: 20px;
 }
 
-.imageFocus {
+.imageFocus img{
   height: 15vw;
   justify-self: center;
   transition: all 0.5s;
@@ -90,13 +85,13 @@
   border-radius: 40px;
 }
 
-.imageUnfocus {
+.imageUnfocus img{
   height: 11vw;
   opacity: 50;
   justify-self: center;
   border-radius: 20px;
   transition: all 0.5s;
-  margin: 20px;
+  margin: 0px 20px;
   filter: grayscale(50%) blur(2px);
 }
 

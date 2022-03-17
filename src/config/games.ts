@@ -4,7 +4,7 @@ export const clientGames: GameType[] = [{
     title: 'Battle Bees',
     client: ' - Eastedge Studios',
     description: "A bee themed battle royal game. laskdfjal; lksdfjalskjd  asldkjfdslfkaj alkdsaflkdjs asdlkfj jfdksalkssdjf  aldskfjsldk.",
-    photoURL: './images/battle-bees.jpg'
+    photoURL: './images/battle-bees.jpg' 
 },{
     title: 'Electioneering',
     client: ' - ??',
