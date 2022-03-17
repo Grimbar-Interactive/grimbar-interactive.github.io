@@ -1,0 +1,24 @@
+.businessCard {
+	color:#E6D4D4;
+	background-color: #181E26;
+	padding: calc(40px);
+	height: 100%;
+	width: 100%;
+  margin: 0px;
+  font-family: 'Montserrat-ExtraLight';
+	text-align: center;
+}
+
+.businessCard h1 {
+	color:#E6D4D4;
+	font-family: 'Montserrat-Bold';
+}
+
+a {
+    text-decoration: none;
+    color:#E6D4D4;
+}
+
+a:visited {
+    color:#E6D4D4;
+}
