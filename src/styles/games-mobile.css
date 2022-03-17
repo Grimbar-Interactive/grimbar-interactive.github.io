@@ -18,6 +18,7 @@
     .imageUnfocus {
         margin: 10px;
         height: 13vw;
+        filter: grayscale(0%) blur(0px);
     }
 
     .games-page .image:hover {
@@ -42,9 +43,13 @@
         display: block;
     }
 
-    .gameInfo {
+    .mobileInfo {
         display: none;
-    }
+      }
+
+    /* .gameInfo {
+        display: none;
+    } */
 
     .image {
         margin: 30px auto;
@@ -59,7 +64,7 @@
 
     .imageUnfocus {
         margin: 10px;
-        height: 32vw;
+        height: 25vw;
     }
 
     .games-page .image:hover {
@@ -74,8 +79,8 @@
         font-size: 20px;
       }
       
-      .games-page p {
+    .games-page p {
         font-size: 14px;
-      }
+    }
 
 }
