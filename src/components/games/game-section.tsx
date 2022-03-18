@@ -1,136 +1,132 @@
 import React from "react";
-import { GamePic, GameInfo } from 'components'
+import { GamePic, GameInfo } from 'components';
+
+export const ROW_LENGTH = 3;
+
+enum Size {
+	Desktop = 'desktop',
+	Mobile = 'mobile'
+}
 
 export type GameType = {
-    title: string,
-    client: string,
-    description: string,
-    photoURL: string,
+	title: string,
+	client: string,
+	description: string,
+	photoURL: string,
 }
 
 type GamesSectionProps = {
-    gamesArray: GameType[],
-    header: string
+	gamesArray: GameType[],
+	header: string,
+	selectedSection: string | undefined,
+	selectedCallback: Function
 }
 
 type GamesSectionState = {
-    index: number,
-    screenSize: string,
+	selectedGameIndex: number | undefined,
+	screenSize: Size,
 }
 
-export default class GamesSection extends React.Component <GamesSectionProps, GamesSectionState> {
-    constructor (props) {
-        super(props);
-        this.state = {
-            index: 0,
-            screenSize: (window.innerWidth >= 786 ? 'desktop' : 'mobile'),
-        }
+export default class GamesSection extends React.Component<GamesSectionProps, GamesSectionState> {
+	constructor(props) {
+		super(props);
+		this.state = {
+			selectedGameIndex: undefined,
+			screenSize: (window.innerWidth >= 786 ? Size.Desktop : Size.Mobile),
+		}
 
-        this.onWindowResize = this.onWindowResize.bind(this);
-        this.showInfo = this.showInfo.bind(this);
-        this.hideInfo = this.hideInfo.bind(this);
+		this.onWindowResize = this.onWindowResize.bind(this);
+		this.showInfo = this.showInfo.bind(this);
+		this.hideInfo = this.hideInfo.bind(this);
 
-        // this.onWindowResize(window.innerWidth);
+		window.addEventListener('resize', event => {
+			this.onWindowResize(window.innerWidth);
+		})
+	}
 
-        window.addEventListener('resize', event => {
-            this.onWindowResize(window.innerWidth);
-        })
-    }
+	onWindowResize(width: number) {
+		this.setState({ screenSize: width >= 786 ? Size.Desktop : Size.Mobile });
+	}
 
-    onWindowResize(width: number) {
-        if (width >= 786) {
-            this.setState({screenSize: 'desktop'});
-        } else {
-            this.setState({screenSize: 'mobile'})
-        }
-    }
+	showInfo(x: number) {
+		this.setState({ selectedGameIndex: x });
+		this.props.selectedCallback(this.props.header);
+	}
 
-    showInfo(x: number, sectionRow: string) {
-        this.setState({index: x});
-        console.log(sectionRow + 'info');
+	hideInfo(e) {
+		// Only hide if we clicked on an element that IS NOT specified below.
+		const classArray = ['image', 'imageFocus', 'imageUnfocus', 'gameInfo'];
+		if (classArray.includes(e.target.className)) return;
+		this.setState({ selectedGameIndex: undefined });
+		this.props.selectedCallback(undefined);
+	}
 
-        // Display correct project info
-        Array.from(document.getElementsByClassName('desktopInfo')).forEach(element => element.setAttribute('style', 'display: none'));
-        Array.from(document.getElementsByClassName('mobileInfo')).forEach(element => element.setAttribute('style', 'display: none'));
-        document.getElementById(sectionRow + 'info').setAttribute('style', 'display: block');
-        
-        // Update image classes
-        // Array.from(document.getElementsByClassName('imageUnfocus')).forEach(element => element.setAttribute('class', 'image'));
-        Array.from(document.getElementsByClassName(`${sectionRow}image`)).forEach(element => element.setAttribute('class', `${sectionRow}imageUnfocus`));
-        Array.from(document.getElementsByClassName(`${sectionRow}imageFocus`)).forEach(element => element.setAttribute('class', `${sectionRow}imageUnfocus`));
-        document.getElementById(sectionRow + 'image' + x).setAttribute('class', `${sectionRow}imageFocus`);
+	renderRows() {
+		const desktopArray = [];
+		for (let i = 0; i < this.props.gamesArray.length; i += ROW_LENGTH) {
+			const row = this.props.gamesArray.slice(i, i + ROW_LENGTH);
+			const rowNum = Math.floor(i / ROW_LENGTH);
+			desktopArray.push(this.renderRow(row, rowNum));
+		}
+		return desktopArray;
+	}
 
-         
-    }
+	renderRow(row: GameType[], rowNum: number) {
+		const pics = row.map((g, i) => <GamePic key={g.title} i={ROW_LENGTH * rowNum + i} selected={this.props.selectedSection !== this.props.header ? undefined : this.state.selectedGameIndex} eventHandler={this.showInfo} game={row[i]} />)
 
-    hideInfo(e) {
-        const classArray = ['image', 'imageFocus', 'imageUnfocus', 'gameInfo']
-        if (!classArray.includes(e.target.className)) {
-            console.log('hideInfo test');
-            Array.from(document.getElementsByClassName('imageFocus')).forEach(element => element.setAttribute('class', 'image'));
-            Array.from(document.getElementsByClassName('imageUnfocus')).forEach(element => element.setAttribute('class', 'image'));
-            Array.from(document.getElementsByClassName('mobileInfo')).forEach(element => element.setAttribute('style', 'display: none'));
-            Array.from(document.getElementsByClassName('desktopInfo')).forEach(element => element.setAttribute('style', 'display: none'));
-        } else {
-            return;
-        }      
-    }
+		const selectedRow = Math.floor(this.state.selectedGameIndex / ROW_LENGTH);
 
-    renderRows() {
-        const desktopArray = [];
-        for (let i = 0; i < this.props.gamesArray.length; i += 3) {
-            const row = this.props.gamesArray.slice(i, i + 3);
-            const rowNum = (Math.round(i / 3));
-            desktopArray.push(this.renderRow(row, rowNum));
-        }
-        return desktopArray;
-    }
+		const info = this.props.selectedSection !== this.props.header || this.state.selectedGameIndex === undefined || selectedRow === undefined || selectedRow !== rowNum ? '' : (
+			<div className='desktopInfo'>
+					<GameInfo game={this.props.gamesArray[this.state.selectedGameIndex]} />
+			</div>
+		);
 
-    renderRow(row: GameType[], rowNum: number) {
-        const pics = row.map((g, i) => <GamePic key={g.title} i={i + (3 * (rowNum))} eventHandler={this.showInfo} rowNum={rowNum} game={row[i]} section={this.props.header} />)
+		return (
+			<div key={`${this.props.header}_${rowNum}`}>
+				<div className="gameLibrary">
+					{pics}
+				</div>
+				{info}
+			</div>
+		)
+	}
 
-        return (
-            <div>
-                <div className="gameLibrary">
-                    {pics}
-                </div> 
-                <div id={this.props.header + rowNum + 'info'} className={'desktopInfo'}> 
-                    <GameInfo game={this.props.gamesArray[this.state.index]} section={this.props.header} rowNum={rowNum}/>
-                </div>
-            </div>
-        )
-    }
+	renderGamesMobile() {
+		const mobileArray = [];
 
-    renderGamesMobile() {
-        const mobileArray = [];
-        for (let i = 0; i < this.props.gamesArray.length; i++) {
-            mobileArray.push (
-                <div>
-                    <GamePic key={this.props.gamesArray[i].title + "mobilePic"} i={i} eventHandler={this.showInfo} rowNum={i} game={this.props.gamesArray[i]} section={this.props.header}/>
-                    <div id={this.props.header + i + 'info'} className={'mobileInfo'}> 
-                        <GameInfo key={this.props.gamesArray[i].title + "mobileInfo"} game={this.props.gamesArray[i]} section={this.props.header} rowNum={i}/>
-                    </div>
-                </div> 
-            )
-        }
-        return mobileArray;
-    }
+		for (let i = 0; i < this.props.gamesArray.length; i++) {
+			const info = this.props.selectedSection !== this.props.header || this.state.selectedGameIndex === undefined || this.state.selectedGameIndex !== i ? '' : (
+				<div className='mobileInfo'>
+						<GameInfo game={this.props.gamesArray[i]} />
+				</div>
+			);
 
-    render() {
-        if (this.state.screenSize === 'desktop') {
-            return (
-                <div onClick={this.hideInfo} id="desktop"> 
-                    <h1>{this.props.header}</h1>
-                    {this.renderRows()}         
-                </div>
-            )
-        } else if (this.state.screenSize === 'mobile') {
-            return (
-                <div onClick={this.hideInfo} id="mobile">
-                    <h1>{this.props.header}</h1>
-                    {this.renderGamesMobile()}
-                </div>
-            )
-        }
-    }
+			mobileArray.push(
+				<div key={this.props.gamesArray[i].title}>
+					<GamePic i={i} selected={this.props.selectedSection !== this.props.header ? undefined : this.state.selectedGameIndex} eventHandler={this.showInfo} game={this.props.gamesArray[i]} />
+					{info}
+				</div>
+			)
+		}
+		return mobileArray;
+	}
+
+	render() {
+		if (this.state.screenSize === Size.Desktop) {
+			return (
+				<div onClick={this.hideInfo} id={Size.Desktop}>
+					<h1>{this.props.header}</h1>
+					{this.renderRows()}
+				</div>
+			)
+		} else if (this.state.screenSize === Size.Mobile) {
+			return (
+				<div onClick={this.hideInfo} id={Size.Mobile}>
+					<h1>{this.props.header}</h1>
+					{this.renderGamesMobile()}
+				</div>
+			)
+		}
+	}
 }

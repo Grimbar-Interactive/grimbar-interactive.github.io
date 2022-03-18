@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import 'styles/index.css';
-import { App, Home, Games, WebDevelopment, Team, Error } from 'routes';
-import { BusinessCard } from 'components';
+import { App, Home, WebDevelopment, Team, Error } from 'routes';
+import { Games, BusinessCard } from 'components';
 import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
 

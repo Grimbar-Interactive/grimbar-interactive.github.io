@@ -15,6 +15,21 @@ export const clientGames: GameType[] = [{
     client: ' - Eastedge Studios',
     description: 'A snake-like arcade game featuring Anoying Orange IP and his friends. lskdafj lskdjfsld lskdfj lskdfjsld lksdfjk lskdfjl lskdjf.',
     photoURL: './images/skewerz.jpg'
+},{
+    title: 'Skewerz',
+    client: ' - Eastedge Studios',
+    description: 'A snake-like arcade game featuring Anoying Orange IP and his friends. lskdafj lskdjfsld lskdfj lskdfjsld lksdfjk lskdfjl lskdjf.',
+    photoURL: './images/skewerz.jpg'
+},{
+    title: 'Battle Bees',
+    client: ' - Eastedge Studios',
+    description: "A bee themed battle royal game. laskdfjal; lksdfjalskjd  asldkjfdslfkaj alkdsaflkdjs asdlkfj jfdksalkssdjf  aldskfjsldk.",
+    photoURL: './images/battle-bees.jpg' 
+},{
+    title: 'Electioneering',
+    client: ' - ??',
+    description: 'A strategy game centering around election simulations. lksdjfsalkdj asldkflkj slkdfj aslkdfjslkdfj asldkjfl lsadkfjlsdk asdlkfj.',
+    photoURL: './images/electioneering.jpg'
 }]
 
 export const ourGames: GameType[] = [{

@@ -1,24 +1,21 @@
 import React from 'react';
-import { GameType } from 'components'
-
+import { GameType } from 'components';
 
 type GamePicProps = {
     i: number;
+    selected: number | undefined;
     eventHandler: Function;
-    rowNum: number;
     game: GameType;
-    section: string;
 }
 
 export default class GamePic extends React.Component <GamePicProps, {}> {
     render() {
-        const sectionRow = (this.props.section + this.props.rowNum.toString());
-        console.log('sectionRow: ' + sectionRow);
+        const imageClass = this.props.selected === undefined ? 'image' : this.props.i === this.props.selected ? 'imageFocus' : 'imageUnfocus';
+
         return (
-            <div>
-                <img id={sectionRow + 'image' + this.props.i} className={`${sectionRow}image`} src={this.props.game.photoURL} alt={this.props.game.title} onClick={() => this.props.eventHandler(this.props.i, sectionRow)}/>
+            <div key={this.props.i}>
+                <img className={imageClass} src={this.props.game.photoURL} alt={this.props.game.title} onClick={() => this.props.eventHandler(this.props.i)}/>
             </div>
-            
         )
     }
 }
