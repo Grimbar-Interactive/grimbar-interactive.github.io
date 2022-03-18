@@ -52,7 +52,7 @@ export const clientGames: GameType[] = [{
 export const ourGames: GameType[] = [{
     title: 'Trove Ball',
     client: '',
-    description: 'And endless runner game where you control the difficulty with the ability to purchase more ememies as you progres! lksdjfr lksd.',
+    description: 'And endless runner game where you control the difficulty with the ability to purchase more enemies as you progress. The more challenging the game, the higher you score!',
     mainURL: 'https://www.jacobfdunbar.com/troveball.html',
     photoURL: '/images/games/troveball.jpg',
     platforms: [
@@ -61,7 +61,7 @@ export const ourGames: GameType[] = [{
 }, {
     title: 'Mayor! Mayor!',
     client: '',
-    description: 'A dice rolling, city building, chace taking game.  lksdajf laskdjf lsdakjf lksdfj llkdj sadlkfj alskdfj lkjdsfj lkasdjfldk salkdfjd.',
+    description: 'Mayor! Mayor! is a city-builder, dice-rolling, idle-simulation game. If you like watching virtual cities earn virtual money then this is the game for you. Plan out cities around the globe to make money and keep people happy!',
     mainURL: 'https://www.jacobfdunbar.com/mayormayor.html',
     photoURL: '/images/games/mayormayor.jpg',
     platforms: [
@@ -71,7 +71,7 @@ export const ourGames: GameType[] = [{
 }, {
     title: 'ProcrastiTyper',
     client: '',
-    description: 'A typing game that will put you to the test.  You left your paper to the last minute, can you finish in time while staying on topic??',
+    description: 'A typing game that will put you to the test. You left your paper to the last minute, can you finish it in time while staying on topic?',
     mainURL: undefined,
     photoURL: '/images/games/procrastityper.jpg',
     platforms: [
@@ -87,6 +87,6 @@ type PlatformInfoMap = Map<Platform, PlatformInfo>;
 
 export const platformInfo: PlatformInfoMap = new Map();
 platformInfo.set(Platform.Android, { iconURL: '/images/platforms/google-play.svg' });
-platformInfo.set(Platform.iOS, { iconURL: '/images/app-store.svg' });
-platformInfo.set(Platform.Steam, { iconURL: '/images/steam.svg' });
-platformInfo.set(Platform.Itch, { iconURL: '/images/itch.svg' });
+platformInfo.set(Platform.iOS, { iconURL: '/images/platforms/app-store.svg' });
+platformInfo.set(Platform.Steam, { iconURL: '/images/platforms/steam.svg' });
+platformInfo.set(Platform.Itch, { iconURL: '/images/platforms/itch.svg' });

@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.games-page a {
+  text-decoration: underline;
+}
+
 .games-page h1 {
   font-size: 60px;
   text-align: center;
