@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
 import { App, Home, WebDevelopment, Team, Error } from 'routes';
 import { Games, BusinessCard } from 'components';
@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 const businessCards = teamMembers.map(m => <Route key={m.name} path={`/business-card/${m.name.toLowerCase().replace(' ', '-')}`} element={<BusinessCard member={m} />} />);
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <React.StrictMode>
       <Routes>
         <Route path="/" element={<App />}>
@@ -25,7 +25,7 @@ ReactDOM.render(
 
       </Routes>
     </React.StrictMode>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
 
