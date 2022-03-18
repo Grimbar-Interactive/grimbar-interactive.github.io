@@ -71,8 +71,8 @@ export default class NavBar extends React.Component<{}, NavBarState> {
 		return (
 			<div id="nav-bar">
 				<Link to="/" id="logo-container">
-					<img id="grimbar-logo" src="./images/Grimbar_Interactvive_Logo_Image_Only.png" alt="Grimbar Interactive Logo" />
-					<img id="grimbar-name" src="./images/Grimbar_Interactvive_Logo_Name_Only.png" alt="Grimbar Interactive Logo" />
+					<img id="grimbar-logo" src="./images/Grimbar_Interactive_Logo_Image_Only.png" alt="Grimbar Interactive Logo" />
+					<img id="grimbar-name" src="./images/Grimbar_Interactive_Logo_Name_Only.png" alt="Grimbar Interactive Logo" />
 				</Link>
 				<nav id="desktopNav">{buttons}</nav>
 				<nav id="mobileNav">{buttons}</nav>
