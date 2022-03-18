@@ -41,30 +41,36 @@
   text-align: left;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 15px;
   background-color: #181E26;
   border-radius: 20px;
 }
 
 .games-page .image:hover {
   height: 13vw;
+  width: 21.66vw;
 }
 
 .games-page .imageUnfocus:hover {
   height: 13vw;
+  width: 21.66vw;
   filter: grayscale(0%) blur(0px);
 }
 
 .image {
   height: 12vw;
+  width: 20vw;
   transition: all 0.125s;
   justify-self: center;
   border-radius: 20px;
   transition: all 0.5s;
   margin: 20px;
+  object-fit: cover;
 }
 
 .imageFocus {
   height: 15vw;
+  width: 25vw;
   justify-self: center;
   transition: all 0.5s;
   padding: 20px;
@@ -72,14 +78,17 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   border-radius: 40px;
+  object-fit: cover;
 }
 
 .imageUnfocus {
   height: 11vw;
+  width: 18.33vw;
   opacity: 50;
   justify-self: center;
   border-radius: 20px;
   transition: all 0.5s;
   margin: 0px 20px;
   filter: grayscale(50%) blur(2px);
+  object-fit: cover;
 }

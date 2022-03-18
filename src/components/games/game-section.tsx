@@ -1,18 +1,12 @@
 import React from "react";
 import { GamePic, GameInfo } from 'components';
+import { Platform } from "config";
 
 export const ROW_LENGTH = 3;
 
 enum Size {
 	Desktop = 'desktop',
 	Mobile = 'mobile'
-}
-
-export enum Platform {
-	Android,
-	iOS,
-	Steam,
-	Itch
 }
 
 export type GamePlatform = {
@@ -24,6 +18,7 @@ export type GameType = {
 	title: string,
 	client: string,
 	description: string,
+	mainURL: string | undefined,
 	photoURL: string,
 	platforms: GamePlatform[]
 }

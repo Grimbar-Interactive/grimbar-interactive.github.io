@@ -8,25 +8,30 @@
     .image {
         margin: 5px;
         height: 14vw;
+        width: 23.33vw;
     }
     
     .imageFocus {
         padding: 10px;
         height: 17vw;
+        width: 22.33vw;
     }
 
     .imageUnfocus {
         margin: 10px;
         height: 13vw;
+        width: 21.66vw;
         filter: grayscale(0%) blur(0px);
     }
 
     .games-page .image:hover {
         height: 16vw;
+        width: 26.66vw;
       }
       
     .games-page .imageUnfocus:hover {
         height: 16vw;
+        width: 26.66vw;
     }
 
     .games-page h1 {
@@ -38,24 +43,29 @@
     .image {
         margin: 30px auto;
         height: 30vw;
+        width: 50vw;
     }
     
     .imageFocus {
         padding: 10px;
         height: 35vw;
+        width: 58.33vw;
     }
 
     .imageUnfocus {
         margin: 10px;
         height: 25vw;
+        width: 41.66vw;
     }
 
     .games-page .image:hover {
         height: 34vw;
+        width: 56.66vw;
       }
       
     .games-page .imageUnfocus:hover {
         height: 34vw;
+        width: 56.66vw;
     }
 
     .games-page h2 {
