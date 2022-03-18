@@ -54,7 +54,7 @@
   filter: grayscale(0%) blur(0px);
 }
 
-.games-page img {
+.image {
   height: 12vw;
   transition: all 0.125s;
   justify-self: center;
@@ -63,7 +63,7 @@
   margin: 20px;
 }
 
-img[class*='imageFocus']{
+.imageFocus {
   height: 15vw;
   justify-self: center;
   transition: all 0.5s;
@@ -74,7 +74,7 @@ img[class*='imageFocus']{
   border-radius: 40px;
 }
 
-img[class*='imageUnfocus']{
+.imageUnfocus {
   height: 11vw;
   opacity: 50;
   justify-self: center;
@@ -83,15 +83,3 @@ img[class*='imageUnfocus']{
   margin: 0px 20px;
   filter: grayscale(50%) blur(2px);
 }
-
-#desktop {
-  display: block;
-}
-
-#mobile {
-  display: none;
-}
-
-
-
-

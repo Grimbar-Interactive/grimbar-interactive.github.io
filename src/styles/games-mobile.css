@@ -35,26 +35,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    #desktop {
-        display: none;
-    }
-
-    #mobile {
-        display: block;
-    }
-
-    .mobileInfo {
-        display: none;
-      }
-
-    /* .gameInfo {
-        display: none;
-    } */
-
     .image {
         margin: 30px auto;
         height: 30vw;
-        display: block;
     }
     
     .imageFocus {

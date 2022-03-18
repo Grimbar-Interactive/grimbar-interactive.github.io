@@ -8,11 +8,24 @@ enum Size {
 	Mobile = 'mobile'
 }
 
+export enum Platform {
+	Android,
+	iOS,
+	Steam,
+	Itch
+}
+
+export type GamePlatform = {
+	platform: Platform;
+	url: string
+}
+
 export type GameType = {
 	title: string,
 	client: string,
 	description: string,
 	photoURL: string,
+	platforms: GamePlatform[]
 }
 
 type GamesSectionProps = {
@@ -77,9 +90,7 @@ export default class GamesSection extends React.Component<GamesSectionProps, Gam
 		const selectedRow = Math.floor(this.state.selectedGameIndex / ROW_LENGTH);
 
 		const info = this.props.selectedSection !== this.props.header || this.state.selectedGameIndex === undefined || selectedRow === undefined || selectedRow !== rowNum ? '' : (
-			<div className='desktopInfo'>
-					<GameInfo game={this.props.gamesArray[this.state.selectedGameIndex]} />
-			</div>
+			<GameInfo game={this.props.gamesArray[this.state.selectedGameIndex]} />
 		);
 
 		return (
@@ -97,9 +108,7 @@ export default class GamesSection extends React.Component<GamesSectionProps, Gam
 
 		for (let i = 0; i < this.props.gamesArray.length; i++) {
 			const info = this.props.selectedSection !== this.props.header || this.state.selectedGameIndex === undefined || this.state.selectedGameIndex !== i ? '' : (
-				<div className='mobileInfo'>
-						<GameInfo game={this.props.gamesArray[i]} />
-				</div>
+				<GameInfo game={this.props.gamesArray[i]} />
 			);
 
 			mobileArray.push(
