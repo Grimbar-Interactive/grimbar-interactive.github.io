@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
-import { App, Home, WebDevelopment, Team, Error } from 'routes';
-import { Games, BusinessCard } from 'components';
+import { App, Home, Team, Error } from 'routes';
+import { Games, Websites, BusinessCard } from 'components';
 import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,7 +16,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="" element={<Home />} />
           <Route path="games" element={<Games />} />
-          {/* <Route path="webdevelopment" element={<WebDevelopment />} /> */}
+          <Route path="webdevelopment" element={<Websites />} />
           <Route path="team" element={<Team />} />
           <Route path="*" element={<Error />} />
         </Route>
