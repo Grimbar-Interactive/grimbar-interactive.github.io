@@ -1,4 +1,4 @@
-import { GameType } from 'components';
+import { GameItemType } from 'components';
 
 export const enum Platform {
 	Android,
@@ -7,7 +7,7 @@ export const enum Platform {
 	Itch
 }
 
-export const clientGames: GameType[] = [{
+export const clientGames: GameItemType[] = [{
     title: 'Battle Bees Royale',
     client: 'Eastedge Studios',
     description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
@@ -49,7 +49,7 @@ export const clientGames: GameType[] = [{
     ]
 }];
 
-export const ourGames: GameType[] = [{
+export const ourGames: GameItemType[] = [{
     title: 'Trove Ball',
     client: '',
     description: 'And endless runner game where you control the difficulty with the ability to purchase more enemies as you progress. The more challenging the game, the higher you score!',

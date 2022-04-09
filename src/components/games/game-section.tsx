@@ -14,17 +14,8 @@ export type GamePlatform = {
 	url: string
 }
 
-export type GameType = {
-	title: string,
-	client: string,
-	description: string,
-	mainURL: string | undefined,
-	photoURL: string,
-	platforms: GamePlatform[]
-}
-
 type GamesSectionProps = {
-	gamesArray: GameType[],
+	gamesArray: GameItemType[],
 	header: string,
 	selectedSection: string | undefined,
 	selectedCallback: Function
@@ -79,7 +70,7 @@ export default class GamesSection extends React.Component<GamesSectionProps, Gam
 		return desktopArray;
 	}
 
-	renderRow(row: GameType[], rowNum: number) {
+	renderRow(row: GameItemType[], rowNum: number) {
 		const pics = row.map((g, i) => <GamePic key={g.title} i={ROW_LENGTH * rowNum + i} selected={this.props.selectedSection !== this.props.header ? undefined : this.state.selectedGameIndex} eventHandler={this.showInfo} game={row[i]} />)
 
 		const selectedRow = Math.floor(this.state.selectedGameIndex / ROW_LENGTH);
