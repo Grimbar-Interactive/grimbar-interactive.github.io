@@ -1,0 +1,94 @@
+.questPage {
+    margin: 0 auto;
+    color: #E6D4D4;
+    padding: 20vh 0;
+}
+
+.questPage h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Montserrat-Bold';
+    text-shadow: 4px 4px 4px #181E26;
+  }
+
+.questPage h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat-Bold';
+    text-shadow: 4px 4px 4px #181E26;
+}
+
+.questPage h3 {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Montserrat-Bold';
+    text-shadow: 4px 4px 4px #181E26;
+}
+
+.questPage p {
+    font-size: 25px;
+    margin: 0 8vw;
+    text-align: center;
+}
+
+.questPage .questGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 50px 10vw;
+    align-items: center;
+    justify-items: center;
+}
+
+.questPage img {
+    width: 20vw;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 5px #181E26;
+}
+
+.questPage table, td, th {
+    border: 1px solid #E6D4D4;
+    border-collapse: collapse;
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+}
+
+.questPage caption {
+    padding: 30px 10px;
+    font-size: 20px;
+    font-family: 'Montserrat-Bold';
+}
+
+.questPage button {
+    margin: 30px auto;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat-Bold';
+    background-color: #181E26;
+    color: #E6D4D4;
+    display: block;
+    border-radius: 10px;
+    border: none;
+}
+
+.questPage .story {
+    grid-column: 1 / 3;
+    padding-top: 100px;
+}
+
+.questPage .story p {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.questPage .story .buttonContainer{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.questPage .story button {
+    display: inline-block;
+    margin: 20px;
+}
+
