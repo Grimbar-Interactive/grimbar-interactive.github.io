@@ -45,7 +45,7 @@ export default class NavBar extends React.Component<{}, NavBarState> {
 	}
 
 	burgerMenu() {
-		if (window.innerWidth <= 1000) {
+		if (window.innerWidth <= 1200) {
 			if (navMenuVisible === true) {
 				document.getElementById('mobileNav').setAttribute("style", "display: none");
 				navMenuVisible = false;
@@ -66,7 +66,7 @@ export default class NavBar extends React.Component<{}, NavBarState> {
 			this.renderButton('Games', '/games'),
 			this.renderButton('Web Development', '/webdevelopment'),
 			this.renderButton('Team', '/team'),
-			this.renderButton('CGF Quest 2022', '/quest'),
+			this.renderButton('CGF 2022', '/quest'),
 		];
 
 		return (
@@ -95,6 +95,11 @@ class NavButton extends React.Component<NavButtonProps> {
 	onButtonPressed() {
 		document.getElementById('mobileNav').setAttribute("style", "display: none");
 		navMenuVisible = false;
+		window.scroll({
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		});
 	}
 
 	render() {

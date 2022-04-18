@@ -2,7 +2,7 @@ import React from 'react';
 import { storyOptions } from 'config';
 
 type questStoryProps = {
-    stats: number[]
+    stats: {}
 }
 
 type questStoryState = {

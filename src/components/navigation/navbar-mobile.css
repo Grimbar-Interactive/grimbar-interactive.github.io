@@ -13,7 +13,7 @@
 
 }
 
-@media only screen and (max-width: 1000px) {   
+@media only screen and (max-width: 1200px) {   
     #nav-bar {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 400px;
@@ -43,6 +43,10 @@
     #mobileNav .navbutton {
         display: block;
         background-color: transparent;
+        width: max-content;
+        margin-right: 10px;
+        margin-left: auto;
+        padding-left: 10px;
     }
 
 }
