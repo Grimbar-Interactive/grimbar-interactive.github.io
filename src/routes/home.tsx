@@ -16,6 +16,9 @@ export class Home extends React.Component <{}, homeState> {
 			emailError: '',
 			submitted: localStorage.getItem('email') || '',
 		}
+
+		this.emailSubmit = this.emailSubmit.bind(this);
+		this.renderEmail = this.renderEmail.bind(this);
 	}
 
 	emailSubmit() {
@@ -28,7 +31,7 @@ export class Home extends React.Component <{}, homeState> {
             //THIS IS WHERE IT WILL POST 
         } else {
             this.setState({
-                emailError: ''
+                emailError: 'Please enter a valid email'
             })
         }
 

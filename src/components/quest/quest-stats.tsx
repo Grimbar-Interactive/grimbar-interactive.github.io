@@ -38,7 +38,7 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
             //THIS IS WHERE IT WILL POST 
         } else {
             this.setState({
-                emailError: ''
+                emailError: 'Please enter a valid email'
             })
         }
 
