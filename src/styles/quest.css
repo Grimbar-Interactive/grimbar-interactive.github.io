@@ -1,7 +1,8 @@
 .questPage {
-    margin: 0 auto;
+    margin: 0;
     color: #E6D4D4;
     padding: 20vh 0;
+    width: 100vw;
 }
 
 .questPage h1 {
@@ -9,6 +10,8 @@
     text-align: center;
     font-family: 'Montserrat-Bold';
     text-shadow: 4px 4px 4px #181E26;
+    margin: 40px 0;
+    width: 100%;
   }
 
 .questPage h2 {
@@ -47,7 +50,7 @@
 }
 
 .questPage table {
-    margin: 10px 50px;
+    margin: 10px auto;
 }
 
 .questPage table, td, th {
@@ -55,11 +58,11 @@
     border-collapse: collapse;
     width: max-content;
     height: max-content;
-    padding: 20px 5px;
+    padding: 20px 15px;
     text-align: center;
 }
 
-.questPage caption {
+.questPage .caption {
     padding: 30px 10px;
     font-size: 20px;
     font-family: 'Montserrat-Bold';
@@ -69,10 +72,28 @@
     font-size: 18px;
     background-color: #E6D4D4;
     color:#181E26;
-    margin: 30px auto;
-    display: block;
+    margin: 15px;
+    display: inline-block;
     border-radius: 10px;
     height: 30px;
+}
+
+.questPage label {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.questPage select {
+    background-color: #E6D4D4;
+    color:#181E26;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.questPage .inputContainer {
+    padding-top: 10px;
+    text-align: center;
 }
 
 
@@ -100,6 +121,7 @@
     font-size: 20px;
     text-align: center;
     margin: 30px auto;
+    width: 80%;
 }
 
 .questPage .story {

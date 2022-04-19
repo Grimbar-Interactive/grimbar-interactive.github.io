@@ -1,6 +1,7 @@
 import React from 'react';
 import { QuestStats, QuestStory } from 'components/quest';
 import 'styles/quest.css';
+import 'styles/quest-mobile.css';
 
 type questState = {
     stats: {},

@@ -9,14 +9,7 @@ type questStatsProp = {
 
 type questStatsState = {
     emailError: string,
-    emailThanks: string,
-    emailSubmitted: boolean,
-    statsSubmitted: boolean,
-    statsChange: {},
-    changeCount: number,
-    startingArray: any[],
-    newStats: {},
-    statError: string,
+    submitted: string,
 }
 
 
@@ -25,29 +18,13 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
         super(props);
         this.state = {
             emailError: '',
-            emailThanks: '',
-            emailSubmitted: false,
-            statsSubmitted: false,
-            statsChange: {
-                Strength: 0,
-                Dextarity: 0,
-                Constitution: 0,
-                Wisdom: 0,
-                Intellegence: 0,
-                Charisma: 0
-            },
-            changeCount: 0,
-            startingArray: [],
-            newStats: this.props.stats,
-            statError: '',
+            submitted: localStorage.getItem('email') || '',
         }
         this.emailSubmit = this.emailSubmit.bind(this);
-        this.modifyStat = this.modifyStat.bind(this);
         this.renderOptions = this.renderOptions.bind(this);
         this.renderStats = this.renderStats.bind(this);
-        this.statSubmit = this.statSubmit.bind(this);
 
-        Object.values(this.props.stats).forEach((x, i) => this.state.startingArray.push(<td key={i}>{x}</td>))
+
     }
 
 
@@ -56,116 +33,65 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
         if (validator.isEmail(email)) {
             this.setState({
                 emailError: '',
-                emailSubmitted: true,
-                emailThanks: 'Thank you for joining our email list!'
+                submitted: email,
             })
+            //THIS IS WHERE IT WILL POST 
         } else {
             this.setState({
-                emailError: 'Please enter a valid email'
+                emailError: ''
             })
         }
+
+        localStorage.setItem("email", email);
     }
 
-    modifyStat(statName: string, value: number) {
-        let newStats = this.props.stats;
-        let statsChange = this.state.statsChange;
-        let changeCount = this.state.changeCount;
-        if (statName in statsChange) {
-            statsChange[statName] += value;
-        } else {
-            statsChange[statName] = value;
-        }
-        
-        if (statsChange[statName] === 0) {
-            delete statsChange[statName];
-        }
 
-        changeCount ++;
-
-        newStats[statName] += value;
-
-        this.setState({
-            statsChange: statsChange,
-            changeCount: changeCount,
-            newStats: newStats,
-        })   
-    }
-
-    statSubmit() {
-        const sumChange = Object.values(this.state.statsChange).reduce((a: number, b: number) => a + b);
-        if (sumChange === 0 && this.state.changeCount >= 2) {
-            this.setState({statsSubmitted: true});
-        } else {
-            this.setState({statError: "You aren't done editing the stats yet! Make sure you have increased and decreased the stats evenly."})
-        }
-        
-        this.props.eventHandler(this.state.newStats);
-    } 
-
-    renderStats(newStats) {
+    renderStats() {
         let statsArray = [];
-        let changeArray = Object.values(this.state.statsChange);
-        let incDis: boolean = (changeArray.filter(x => x > 0).length > 1 || changeArray.includes(2) ? true : false);
-        let decDis: boolean = (changeArray.filter(x => x < 0).length > 1 || changeArray.includes(-2)? true : false);
-        if (this.state.emailSubmitted && !this.state.statsSubmitted) {
-            Object.keys(newStats).forEach((key) => statsArray.push(<td key={key}><button onClick={() => this.modifyStat(key, -1)} className="decStats" disabled={decDis}>-</button>{newStats[key]}<button onClick={() => this.modifyStat(key, 1)} className="incStats" disabled={incDis}>+</button></td>))
-        } else {
-            Object.keys(newStats).forEach((key) => statsArray.push(<td key={key}>{newStats[key]}</td>))
-        }
+        Object.keys(this.props.stats).forEach((key) => statsArray.push(<td key={key}>{this.props.stats[key]}</td>));
 
-        if (this.state.emailSubmitted && !this.state.statsSubmitted) {
-            return (
-                <tbody>
-                    <tr>
-                        <th>Original Values</th>
-                        {this.state.startingArray}
-                    </tr>
-                    <tr>
-                        <th>New Values</th>
-                        {statsArray}
-                    </tr>
-                </tbody>
-            )
-        } else {
-            return (
-                <tbody>
-                    <tr>
-                        <th>Value</th>
-                        {statsArray}
-                    </tr>
-                </tbody>
-                
-            )
-        }
-        
+        return (
+                <tr>
+                    <th>Value</th>
+                    {statsArray}
+                </tr>
+        )
     }
+        
+
 
 
     renderOptions() {
-        if (this.state.emailSubmitted === false) {
+        if (this.state.submitted === '') {
             return (
                 <div className='buttonContainer'>
-                    <input type="email" id="email" placeholder="Enter Your Email Here" size={40} required></input>
+                    <div className="inputContainer">
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" size={40} required></input>
+                    </div>
+                    <div className="inputContainer">
+                        <label htmlFor="stat">Choose one of Fred's stats to increase:</label>
+                        <select name="stat" id="stat">
+                            <option value="strength">Strength</option>
+                            <option value="dexterity">Dexterity</option>
+                            <option value="constitution">Constitution</option>
+                            <option value="wisdom">Wisdom</option>
+                            <option value="intelegence">Intelegence</option>
+                            <option value="charisma">Charisma</option>
+                        </select>
+                    </div>
                     <button type="submit" onClick={this.emailSubmit}>Join Our Email List</button>
                     <p className="error">{this.state.emailError}</p>
                 </div>
             )
-        } else if (this.state.emailSubmitted === true && this.state.statsSubmitted === false){
-            return (
-                <div>
-                    <p id="emailThanks">Thank you for joining our email list! You can now use the buttons above to realocate two of Freds points. Once you are done, please hit the submit button below.</p>
-                    <button type="submit" onClick={() => this.statSubmit()} className="submitStat">Submit Your Stat Adjustments</button>
-                    <p className="error">{this.state.statError}</p>
-                </div>
-                
-            )
         } else {
             return (
                 <div>
-                    <p id="emailThanks">Great Job! Now make sure to vote every hour on Fred's next move.</p>
+                    <p id="emailThanks">Thank you for joining our email list and helping Fred out! Make sure you vote below and come back every hour to help Fred with his next choice!</p>
                 </div>
+                
             )
-        }
+        } 
     }
   
 
@@ -173,9 +99,9 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
 
         return (
             <div>
+                <h2 className='caption'>These are Fred's stats, they will help determine the results his quest.  Join our email list below adjust these values and help ensure Fred's success!</h2>
                 <table>
-                    <caption>These are Fred's stats, they will help determine the results his quest.  Join our email list below adjust these values and help ensure Fred's success!</caption>
-                    <thead>
+                    <tbody>
                         <tr>
                             <th>Stat</th>
                             <td>Strength</td>
@@ -185,8 +111,8 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
                             <td>Intelegence</td>
                             <td>Charisma</td>
                         </tr>
-                    </thead>
-                    {this.renderStats(this.state.newStats)}
+                    {this.renderStats()}
+                    </tbody>
                 </table>
                 {this.renderOptions()}
             </div>

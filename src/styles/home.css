@@ -6,7 +6,7 @@
   font-family: 'Montserrat-Bold';
   color:#E6D4D4;
   text-align: center;
-  padding: calc(40px);
+  padding: 40px;
   margin: 0;
   width: 100%;
   height: calc(100vh - 100px);
@@ -14,17 +14,77 @@
 
 .home-page .text-box {
   padding: 20px;
-  width: 75%;
-  margin: 15vh auto;
-  text-shadow: 4px 4px 4px  #181E26;
+  width: 85%;
+  margin: 10vh auto;
+  margin-bottom: 0;
+  text-shadow: 6px 6px 4px  #181E26;
 }
 
 .home-page h1 {
   font-size: 80px;
+  margin-bottom: 30px;
 }
 
-.home-page p {
-  font-size: 30px;
+.home-page .text-box p {
+  font-size: 25px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.home-page .infoContainter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.home-page h2 {
+  font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.home-page .infoContainter p {
+  font-size: 20px;
+  font-family: 'Montserrat-ExtraLight';
+}
+
+.home-page .bold {
+  font-family: 'Montserrat-Bold';
+}
+
+.home-page button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Montserrat-Bold';
+  background-color: #E6D4D4;
+  color: #181E26;
+  border-radius: 10px;
+  border: none;
+  margin: 20px;
+}
+
+.home-page .infoContainter > div {
+  width: 90%;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #181e26c2;
+  border: 2px solid #E6D4D4;
+  border-radius: 10px;
+}
+
+.home-page .error {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  color: red;
+}
+
+.home-page input[type=email] {
+  font-size: 18px;
+  background-color: #E6D4D4;
+  color:#181E26;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  height: 30px;
 }

@@ -10,13 +10,36 @@
 }
 
 @media only screen and (max-width: 1200px) {
+
     .home-page .text-box {
-        margin: 15vh auto;
+        margin: 5vh auto;
+        margin-bottom: 0;
         width: 100%;
     }
 
     .home-page p {
         font-size: 25px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .home-page {
+        height: max-content;
+    }
+
+    .home-page .infoContainer {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .home-page #cgf {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .home-page #emailForm {
+        grid-column: 1 / 3;
+        grid-row: 2;
     }
     
 }

@@ -25,6 +25,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
     determineVote(winnerNum) {
         let storyStep = storyOptions[this.state.story.length];
         let trait = storyStep['trait' + winnerNum];
+        console.log(trait);
         let storyResult = '';
         let pointResult = 0;
         if (this.props.stats[trait] >= 10) {

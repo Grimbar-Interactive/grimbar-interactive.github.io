@@ -1,0 +1,101 @@
+@media screen and (max-width: 1300px) {
+    .questPage {
+        padding: 10vh 0;
+    }
+
+    .questPage .questGrid {
+        margin: 50px 10vw;
+    }
+
+    .questPage table, td, th {
+        padding: 20px 5px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .questPage .questGrid {
+        grid-template-columns: none;
+    }
+
+    .questPage .story {
+        grid-column: 1;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .questPage h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .questPage h2 {
+        font-size: 20px;
+    }
+
+    .questPage h3 {
+        font-size: 16px;
+    }
+
+    .questPage p {
+        font-size: 16px;
+    }
+
+    .questPage caption {
+        font-size: 16px;
+    }
+
+    .questPage table {
+        font-size: 14px;
+    }
+
+    .questPage button {
+        font-size: 16px;
+    }
+
+    .questPage #emailThanks {
+        font-size: 16px;
+    }
+
+    .questPage .questGrid {
+        margin: 50px 20px;
+    }
+
+    .questPage img {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .questPage table {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .questPage table {
+        font-size: 16px;
+    }
+
+    .questPage table tbody {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .questPage table tr {
+        display: flex;
+        flex-direction: column;
+        width: 125px;
+    }
+
+    .questPage table th {
+        width: 100%;
+    }
+
+    .questPage table td {
+        width: 100%;
+    }
+}
+
