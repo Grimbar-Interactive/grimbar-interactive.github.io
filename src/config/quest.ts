@@ -30,7 +30,7 @@ export const storyOptions: storyOptionsType[] = [{
     pass2: 'As Fred continues along his journey, he comes across some bandits.  He attempts to fight his way past bandits and suceeds!  With the bandits defeated, Fred continues on his way.',
     fail2: 'As Fred continues along his journey, he comes across some bandits.  He attempts to fight his way past the bandits and fails miserably...  After being beaten by the bandits, Fred stumbles on, ego and body bruised.',
     trait1: 'Charisma',
-    trait2: 'Strngth',
+    trait2: 'Strength',
     points: 10,
     buttonText1: 'Negotiate with the bandits (Charisma)',
     buttonText2: 'Fight the bandits (Strength)'

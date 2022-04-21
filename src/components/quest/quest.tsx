@@ -1,30 +1,53 @@
 import React from 'react';
 import { QuestStats, QuestStory } from 'components/quest';
+import { serverURL } from 'config';
 import 'styles/quest.css';
 import 'styles/quest-mobile.css';
 
 type questState = {
     stats: {},
+    currentStep: string
 }
+
+
 
 export default class Quest extends React.Component <{}, questState> {
     constructor(props) {
         super(props);
         this.state = {
             stats: {
-                Strength: 10,
-                Dextarity: 10,
-                Constitution: 10,
-                Wisdom: 10,
-                Intellegence: 10,
-                Charisma: 10,
-            }
+                Strength: 0,
+                Dextarity: 0,
+                Constitution: 0,
+                Wisdom: 0,
+                Intelligence: 0,
+                Charisma: 0,
+            },
+            currentStep: ''
         }
-        this.setStats = this.setStats.bind(this);
+
+        this.updateStats = this.updateStats.bind(this);
     }
 
-    setStats(newStats: {}) {
-        this.setState({stats: newStats})
+    componentDidMount() {
+        this.updateStats();
+
+        fetch(`${serverURL}step`)
+        .then(response => response.json())
+        .then(data => {
+            this.setState({currentStep: data.StepID})
+            console.log('Current Step:' + data.StepID);
+        })
+
+    }
+
+    updateStats() {
+        fetch(`${serverURL}stats`)
+        .then(response => response.json())
+        .then(data => {
+            const statsObject = data;
+            this.setState({stats: statsObject})
+        })
     }
 
     render() {    
@@ -39,8 +62,8 @@ export default class Quest extends React.Component <{}, questState> {
                     </p>
                     <div className='questGrid'>
                         <img src='./images/quest/fred.jpg' alt='Fred - The Indecisive Adventurer'/>
-                        <QuestStats stats={this.state.stats} eventHandler={this.setStats}/>
-                        <QuestStory stats={this.state.stats}/>
+                        <QuestStats stats={this.state.stats} eventHandeler={this.updateStats}/>
+                        <QuestStory stats={this.state.stats} currentStep={this.state.currentStep}/>
                     </div>
                 </div>
             </div>

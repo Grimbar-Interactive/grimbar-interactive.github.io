@@ -1,10 +1,11 @@
 import React from 'react';
 import validator from 'validator';
+import { serverURL } from 'config';
 
 
 type questStatsProp = {
     stats: {},
-    eventHandler: Function,
+    eventHandeler: Function,
 }
 
 type questStatsState = {
@@ -30,12 +31,36 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
 
     emailSubmit() {
         var email = (document.getElementById('email') as HTMLInputElement).value;
+        var stat = (document.getElementById('stat') as HTMLInputElement).value;
+        var body: {} = {
+            email: email,
+            statToIncrease: stat,
+        }
         if (validator.isEmail(email)) {
             this.setState({
                 emailError: '',
                 submitted: email,
             })
             //THIS IS WHERE IT WILL POST 
+            fetch(`${serverURL}stats/increase`, {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            }).then(response => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response;
+            }).then(response => {
+                this.props.eventHandeler();
+            }).catch(error => {
+                console.error(error);
+            });
+            console.log(body);
+
         } else {
             this.setState({
                 emailError: 'Please enter a valid email'
@@ -62,7 +87,7 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
 
 
     renderOptions() {
-        if (this.state.submitted === '') {
+        // if (this.state.submitted === '') {
             return (
                 <div className='buttonContainer'>
                     <div className="inputContainer">
@@ -72,26 +97,26 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
                     <div className="inputContainer">
                         <label htmlFor="stat">Choose one of Fred's stats to increase:</label>
                         <select name="stat" id="stat">
-                            <option value="strength">Strength</option>
-                            <option value="dexterity">Dexterity</option>
-                            <option value="constitution">Constitution</option>
-                            <option value="wisdom">Wisdom</option>
-                            <option value="intelegence">Intelegence</option>
-                            <option value="charisma">Charisma</option>
+                            <option value="Strength">Strength</option>
+                            <option value="Dexterity">Dexterity</option>
+                            <option value="Constitution">Constitution</option>
+                            <option value="Wisdom">Wisdom</option>
+                            <option value="Intelligence">Intelligence</option>
+                            <option value="Charisma">Charisma</option>
                         </select>
                     </div>
                     <button type="submit" onClick={this.emailSubmit}>Join Our Email List</button>
                     <p className="error">{this.state.emailError}</p>
                 </div>
             )
-        } else {
-            return (
-                <div>
-                    <p id="emailThanks">Thank you for joining our email list and helping Fred out! Make sure you vote below and come back every hour to help Fred with his next choice!</p>
-                </div>
+        // } else {
+        //     return (
+        //         <div>
+        //             <p id="emailThanks">Thank you for joining our email list and helping Fred out! Make sure you vote below and come back every hour to help Fred with his next choice!</p>
+        //         </div>
                 
-            )
-        } 
+        //     )
+        // } 
     }
   
 

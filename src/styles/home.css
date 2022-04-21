@@ -9,7 +9,8 @@
   padding: 40px;
   margin: 0;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: max-content;
+  min-height: calc(100vh - 100px);
 }
 
 .home-page .text-box {
