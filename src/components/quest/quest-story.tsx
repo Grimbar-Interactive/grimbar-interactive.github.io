@@ -1,6 +1,5 @@
 import React from 'react';
-import { storyOptions, serverURL } from 'config';
-
+import { serverURL } from 'config';
 
 type questStoryProps = {
     stats: {}
@@ -11,7 +10,12 @@ type questStoryState = {
     story: string[],
     score: number,
     lastStepVoted: string,
-    currentStep: string,
+    currentStep: {
+        stepID: number,
+        prompt: string,
+        buttonText0: string,
+        buttonText1: string,
+    },
     voteCount: {}
 }
 
@@ -22,7 +26,12 @@ export default class QuestStory extends React.Component <questStoryProps, questS
             story: [],
             score: 0,
             lastStepVoted: localStorage.getItem('last step voted') || '',
-            currentStep: this.props.currentStep,
+            currentStep: {
+                stepID: 0,
+                prompt: '',
+                buttonText0: '',
+                buttonText1: '',
+            },
             voteCount: {
                 "0": 0,
                 "1": 0,
@@ -31,14 +40,14 @@ export default class QuestStory extends React.Component <questStoryProps, questS
 
         this.updateVoteCount = this.updateVoteCount.bind(this);
         this.castVote = this.castVote.bind(this);
-        this.determineWinner = this.determineWinner.bind(this);
-        this.appendStory = this.appendStory.bind(this);
+        this.retrieveStory = this.retrieveStory.bind(this);
         this.writeStory = this.writeStory.bind(this);
         this.renderOptions = this.renderOptions.bind(this);
     }
 
     componentDidMount() {
         this.updateVoteCount();
+        this.retrieveStory();
     }
 
     updateVoteCount() {
@@ -46,8 +55,23 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         .then(response => response.json())
         .then(data => {
             this.setState({voteCount: data});
-            console.log('Vote Count:' + JSON.stringify(data));
         })
+    }
+
+    retrieveStory() {
+        fetch(`${serverURL}story`)
+        .then(response => response.json())
+        .then(data => {
+            this.setState({story: data});
+            console.log('Current Story Array: ' + data);
+        }) 
+
+        fetch(`${serverURL}story/step`)
+        .then(response => response.json())
+        .then(data => {
+            this.setState({currentStep: data});
+            console.log('Current Step Object: ' + data)
+        }) 
     }
 
     castVote(choice: number) {
@@ -67,8 +91,8 @@ export default class QuestStory extends React.Component <questStoryProps, questS
             }
             return response;
         }).then(response => {
-            this.setState({lastStepVoted: this.state.currentStep});
-            localStorage.setItem('last step voted', this.state.currentStep);
+            this.setState({lastStepVoted: this.props.currentStep});
+            localStorage.setItem('last step voted', this.props.currentStep);
         }).then(response => {
             this.updateVoteCount();
         }).catch(error => {
@@ -78,28 +102,28 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         
     }
 
-    determineWinner(winnerNum) {
-        let storyStep = storyOptions[this.state.story.length];
-        let trait = storyStep['trait' + winnerNum];
-        console.log(trait);
-        let storyResult = '';
-        let pointResult = 0;
-        if (this.props.stats[trait] >= 10) {
-            storyResult = storyStep['pass' + winnerNum];
-            pointResult = storyStep.points;
-        } else {
-            storyResult = storyStep['fail' + winnerNum];
-            pointResult = -storyStep.points;
-        }   
-        this.appendStory(storyResult);
-        this.setState({score: this.state.score + pointResult})
-    }
+    // determineWinner(winnerNum) {
+    //     let storyStep = storyOptions[this.state.story.length];
+    //     let trait = storyStep['trait' + winnerNum];
+    //     console.log(trait);
+    //     let storyResult = '';
+    //     let pointResult = 0;
+    //     if (this.props.stats[trait] >= 10) {
+    //         storyResult = storyStep['pass' + winnerNum];
+    //         pointResult = storyStep.points;
+    //     } else {
+    //         storyResult = storyStep['fail' + winnerNum];
+    //         pointResult = -storyStep.points;
+    //     }   
+    //     this.appendStory(storyResult);
+    //     this.setState({score: this.state.score + pointResult})
+    // }
 
-    appendStory(addition: string) {
-        let currentStory: string[] = this.state.story;
-        currentStory.push(addition);
-        this.setState({ story: currentStory })
-    }
+    // appendStory(addition: string) {
+    //     let currentStory: string[] = this.state.story;
+    //     currentStory.push(addition);
+    //     this.setState({ story: currentStory })
+    // }
 
     writeStory() {
         let storyArray = [];
@@ -112,7 +136,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         const voteCount0: number = voteCount["0"];
         const voteCount1: number = voteCount["1"];
         const totalVote:number = voteCount0 + voteCount1;
-        if (this.state.lastStepVoted === this.state.currentStep) {
+        if (Number(this.state.lastStepVoted) === this.state.currentStep.stepID) {
             return (
                 <div>
                     <h3>Thanks for voting this hour! Check back next hour to find out what happens!</h3>
@@ -124,8 +148,8 @@ export default class QuestStory extends React.Component <questStoryProps, questS
                         </thead>
                         <tbody>
                             <tr>
-                                <th>{storyOptions[Number(this.state.currentStep)].buttonText1}</th>
-                                <th>{storyOptions[Number(this.state.currentStep)].buttonText2}</th>
+                                <th>{this.state.currentStep.buttonText0}</th>
+                                <th>{this.state.currentStep.buttonText1}</th>
                             </tr>
                             <tr>
                                 <td>{Math.round(voteCount0 / totalVote * 100)}%</td>
@@ -136,13 +160,12 @@ export default class QuestStory extends React.Component <questStoryProps, questS
                 </div>
                 
             )
-        } else 
-        if (this.state.story.length < storyOptions.length) {
+        } else if (this.state.currentStep.buttonText0 !== '') {
             return (
                 <div className="buttonContainer">
-                    <h3>{storyOptions[this.state.story.length].prompt}</h3>
-                    <button onClick={() => this.castVote(0)}>{storyOptions[this.state.story.length].buttonText1}</button>
-                    <button onClick={() => this.castVote(1)}>{storyOptions[this.state.story.length].buttonText2}</button>
+                    <h3>{this.state.currentStep.prompt}</h3>
+                    <button onClick={() => this.castVote(0)}>{this.state.currentStep.buttonText0}</button>
+                    <button onClick={() => this.castVote(1)}>{this.state.currentStep.buttonText1}</button>
                 </div>
             )
         } else {
