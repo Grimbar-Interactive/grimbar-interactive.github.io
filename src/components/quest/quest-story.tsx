@@ -70,7 +70,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         .then(response => response.json())
         .then(data => {
             this.setState({currentStep: data});
-            console.log('Current Step Object: ' + data)
+            console.log('Current Step Object: ' + JSON.stringify(data))
         }) 
     }
 
