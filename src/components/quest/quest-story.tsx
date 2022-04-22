@@ -16,7 +16,7 @@ type questStoryState = {
         buttonText0: string,
         buttonText1: string,
     },
-    voteCount: {}
+    voteCount: {},
 }
 
 export default class QuestStory extends React.Component <questStoryProps, questStoryState> {
@@ -43,12 +43,29 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         this.retrieveStory = this.retrieveStory.bind(this);
         this.writeStory = this.writeStory.bind(this);
         this.renderOptions = this.renderOptions.bind(this);
+        // this.refreshTick = this.refreshTick.bind(this);
+        this.setState = this.setState.bind(this);
+
+        console.log('Last Step Voted: ' + this.state.lastStepVoted);
+        
     }
 
     componentDidMount() {
         this.updateVoteCount();
         this.retrieveStory();
+
+        // setInterval(this.refreshTick, 10000);
     }
+
+    // componentDidUpdate() {
+    //     // this.updateVoteCount();
+    //     this.retrieveStory();
+    // }
+
+    // refreshTick = () => {
+    //     this.setState({ time: Date.now() });
+    //     console.log('refresh tick sent')
+    //   }
 
     updateVoteCount() {
         fetch(`${serverURL}votes`)
@@ -63,14 +80,14 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         .then(response => response.json())
         .then(data => {
             this.setState({story: data});
-            console.log('Current Story Array: ' + data);
+            console.log('Current Story Array: ' + JSON.stringify(data));
         }) 
 
         fetch(`${serverURL}story/step`)
         .then(response => response.json())
         .then(data => {
             this.setState({currentStep: data});
-            console.log('Current Step Object: ' + data)
+            console.log('Current Step Object: ' + JSON.stringify(data))
         }) 
     }
 
@@ -93,6 +110,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
         }).then(response => {
             this.setState({lastStepVoted: this.props.currentStep});
             localStorage.setItem('last step voted', this.props.currentStep);
+            console.log('Last Step Voted Update: ' + this.state.lastStepVoted);
         }).then(response => {
             this.updateVoteCount();
         }).catch(error => {
@@ -101,29 +119,6 @@ export default class QuestStory extends React.Component <questStoryProps, questS
 
         
     }
-
-    // determineWinner(winnerNum) {
-    //     let storyStep = storyOptions[this.state.story.length];
-    //     let trait = storyStep['trait' + winnerNum];
-    //     console.log(trait);
-    //     let storyResult = '';
-    //     let pointResult = 0;
-    //     if (this.props.stats[trait] >= 10) {
-    //         storyResult = storyStep['pass' + winnerNum];
-    //         pointResult = storyStep.points;
-    //     } else {
-    //         storyResult = storyStep['fail' + winnerNum];
-    //         pointResult = -storyStep.points;
-    //     }   
-    //     this.appendStory(storyResult);
-    //     this.setState({score: this.state.score + pointResult})
-    // }
-
-    // appendStory(addition: string) {
-    //     let currentStory: string[] = this.state.story;
-    //     currentStory.push(addition);
-    //     this.setState({ story: currentStory })
-    // }
 
     writeStory() {
         let storyArray = [];
@@ -179,7 +174,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
                 <h2>{this.state.story.length > 0 ? 'Here is our story so far...' : ''}</h2>
                 {this.writeStory()}
                 {this.renderOptions()}
-                <h2>Total Points: {this.state.score}</h2>
+                {/* <h2>Total Points: {this.state.score}</h2> */}
             </div>
         );
     }

@@ -6,7 +6,7 @@ import 'styles/quest-mobile.css';
 
 type questState = {
     stats: {},
-    currentStep: string
+    currentStep: string,
 }
 
 
@@ -23,22 +23,25 @@ export default class Quest extends React.Component <{}, questState> {
                 Intelligence: 0,
                 Charisma: 0,
             },
-            currentStep: ''
+            currentStep: '',
+            
         }
-
-        this.updateStats = this.updateStats.bind(this);
     }
 
     componentDidMount() {
+
+        this.checkStep();
         this.updateStats();
 
+    }
+
+    checkStep() {
         fetch(`${serverURL}step`)
         .then(response => response.json())
         .then(data => {
             this.setState({currentStep: data.StepID})
             console.log('Current Step:' + data.StepID);
-        })
-
+        });
     }
 
     updateStats() {

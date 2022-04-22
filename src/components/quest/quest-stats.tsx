@@ -87,7 +87,7 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
 
 
     renderOptions() {
-        // if (this.state.submitted === '') {
+        if (this.state.submitted === '') {
             return (
                 <div className='buttonContainer'>
                     <div className="inputContainer">
@@ -109,14 +109,14 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
                     <p className="error">{this.state.emailError}</p>
                 </div>
             )
-        // } else {
-        //     return (
-        //         <div>
-        //             <p id="emailThanks">Thank you for joining our email list and helping Fred out! Make sure you vote below and come back every hour to help Fred with his next choice!</p>
-        //         </div>
+        } else {
+            return (
+                <div>
+                    <p id="emailThanks">Thank you for joining our email list and helping Fred out! Make sure you vote below and come back every hour to help Fred with his next choice!</p>
+                </div>
                 
-        //     )
-        // } 
+            )
+        } 
     }
   
 
