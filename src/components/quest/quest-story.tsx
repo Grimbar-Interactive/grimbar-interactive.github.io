@@ -17,6 +17,7 @@ type questStoryState = {
         buttonText1: string,
     },
     voteCount: {},
+    tickTime: number
 }
 
 export default class QuestStory extends React.Component <questStoryProps, questStoryState> {
@@ -35,16 +36,16 @@ export default class QuestStory extends React.Component <questStoryProps, questS
             voteCount: {
                 "0": 0,
                 "1": 0,
-            }
+            },
+            tickTime: 0
         };
 
+        this.checkTime = this.checkTime.bind(this);
         this.updateVoteCount = this.updateVoteCount.bind(this);
         this.castVote = this.castVote.bind(this);
         this.retrieveStory = this.retrieveStory.bind(this);
         this.writeStory = this.writeStory.bind(this);
         this.renderOptions = this.renderOptions.bind(this);
-        // this.refreshTick = this.refreshTick.bind(this);
-        this.setState = this.setState.bind(this);
 
         console.log('Last Step Voted: ' + this.state.lastStepVoted);
         
@@ -53,19 +54,26 @@ export default class QuestStory extends React.Component <questStoryProps, questS
     componentDidMount() {
         this.updateVoteCount();
         this.retrieveStory();
+        this.retrieveTime();
 
-        // setInterval(this.refreshTick, 10000);
+        setInterval(this.checkTime, 10000);
     }
 
-    // componentDidUpdate() {
-    //     // this.updateVoteCount();
-    //     this.retrieveStory();
-    // }
+    checkTime() {
+        if (Date.now() >= this.state.tickTime) {
+            this.retrieveStory();
+            this.retrieveTime();
+        } 
+    }
 
-    // refreshTick = () => {
-    //     this.setState({ time: Date.now() });
-    //     console.log('refresh tick sent')
-    //   }
+    retrieveTime() {
+        fetch(`${serverURL}time`)
+        .then(response => response.json())
+        .then(data => {
+            this.setState({tickTime: data});
+        })
+    }
+
 
     updateVoteCount() {
         fetch(`${serverURL}votes`)
@@ -108,8 +116,8 @@ export default class QuestStory extends React.Component <questStoryProps, questS
             }
             return response;
         }).then(response => {
-            this.setState({lastStepVoted: this.props.currentStep});
-            localStorage.setItem('last step voted', this.props.currentStep);
+            this.setState({lastStepVoted: this.state.currentStep.stepID.toString()});
+            localStorage.setItem('last step voted', this.state.currentStep.stepID.toString());
             console.log('Last Step Voted Update: ' + this.state.lastStepVoted);
         }).then(response => {
             this.updateVoteCount();

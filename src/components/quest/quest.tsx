@@ -26,6 +26,9 @@ export default class Quest extends React.Component <{}, questState> {
             currentStep: '',
             
         }
+
+        this.checkStep = this.checkStep.bind(this);
+        this.updateStats = this.updateStats.bind(this);
     }
 
     componentDidMount() {

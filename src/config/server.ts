@@ -1,1 +1,1 @@
-export const serverURL: string = "http://localhost:3030/";
+export const serverURL: string = "https://grimbar-quest-server.herokuapp.com/";
