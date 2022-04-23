@@ -75,27 +75,31 @@
 
 @media screen and (max-width: 500px) {
 
-    .questPage table {
+    .questPage table.currentStats  {
         font-size: 16px;
     }
 
-    .questPage table tbody {
+    .questPage table.currentStats tbody {
         display: flex;
         flex-direction: row;
     }
 
-    .questPage table tr {
+    .questPage table.currentStats tr {
         display: flex;
         flex-direction: column;
         width: 125px;
     }
 
-    .questPage table th {
+    .questPage table.currentStats th {
         width: 100%;
     }
 
-    .questPage table td {
+    .questPage table.currentStats td{
         width: 100%;
+    }
+
+    .questPage table.currentStandings td th{
+        padding: 20px;
     }
 }
 

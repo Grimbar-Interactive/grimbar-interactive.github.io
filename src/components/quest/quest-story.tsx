@@ -62,6 +62,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
     checkTime() {
         if (Date.now() >= this.state.tickTime) {
             this.retrieveStory();
+            this.updateVoteCount();
             this.retrieveTime();
         } 
     }
@@ -143,7 +144,7 @@ export default class QuestStory extends React.Component <questStoryProps, questS
             return (
                 <div>
                     <h3>Thanks for voting this hour! Check back next hour to find out what happens!</h3>
-                    <table>
+                    <table className="currentStandings">
                         <thead>
                             <tr>
                                 <th colSpan={2}>Current Vote Standings</th>

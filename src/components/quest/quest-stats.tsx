@@ -125,7 +125,7 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
         return (
             <div>
                 <h2 className='caption'>These are Fred's stats, they will help determine the results his quest.  Join our email list below adjust these values and help ensure Fred's success!</h2>
-                <table>
+                <table className='currentStats'>
                     <tbody>
                         <tr>
                             <th>Stat</th>

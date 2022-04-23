@@ -173,3 +173,14 @@
     margin: 30px auto;
 }
 
+.questPage table.currentStandings {
+    max-width: 600px;
+    min-width: 200px;
+    width: 90%;
+}
+
+.questPage table.currentStandings thead {
+    font-family: 'Montserrat-Bold';
+    font-size: 20px;
+}
+
