@@ -3,6 +3,7 @@ import validator from 'validator';
 import 'styles/home.css';
 import 'styles/home-mobile.css';
 import { Link } from 'react-router-dom';
+import { serverURL } from 'config';
 
 type homeState = {
 	emailError: string,
@@ -23,12 +24,31 @@ export class Home extends React.Component <{}, homeState> {
 
 	emailSubmit() {
 		var email = (document.getElementById('email') as HTMLInputElement).value;
+        var body: {} = {
+            email: email,
+            statToIncrease: '',
+		}
         if (validator.isEmail(email)) {
             this.setState({
                 emailError: '',
                 submitted: email,
             })
             //THIS IS WHERE IT WILL POST 
+			fetch(`${serverURL}stats/increase`, {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            }).then(response => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response;
+            }).catch(error => {
+                console.error(error);
+            });
         } else {
             this.setState({
                 emailError: 'Please enter a valid email'

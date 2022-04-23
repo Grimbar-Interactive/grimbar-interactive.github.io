@@ -60,9 +60,9 @@ export default class QuestStory extends React.Component <questStoryProps, questS
     }
 
     checkTime() {
+        this.updateVoteCount();
         if (Date.now() >= this.state.tickTime) {
             this.retrieveStory();
-            this.updateVoteCount();
             this.retrieveTime();
         } 
     }

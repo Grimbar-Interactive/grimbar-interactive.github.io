@@ -92,7 +92,7 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
                 <div className='buttonContainer'>
                     <div className="inputContainer">
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" size={40} required></input>
+                        <input type="email" id="email" required></input>
                     </div>
                     <div className="inputContainer">
                         <label htmlFor="stat">Choose one of Fred's stats to increase:</label>
@@ -133,7 +133,7 @@ export default class QuestStats extends React.Component <questStatsProp, questSt
                             <td>Dexterity</td>
                             <td>Constitution</td>
                             <td>Wisdom</td>
-                            <td>Intelegence</td>
+                            <td>Intelligence</td>
                             <td>Charisma</td>
                         </tr>
                     {this.renderStats()}
