@@ -23,10 +23,12 @@ export class Home extends React.Component <{}, homeState> {
 	}
 
 	emailSubmit() {
+		const statsArray = ['Strength', 'Dexterity', 'Constitution', 'Wisdom', 'Intelligence', 'Charisma'];
+		const index = Math.floor(Math.random() * 6);
 		var email = (document.getElementById('email') as HTMLInputElement).value;
         var body: {} = {
             email: email,
-            statToIncrease: '',
+            statToIncrease: statsArray[index],
 		}
         if (validator.isEmail(email)) {
             this.setState({
