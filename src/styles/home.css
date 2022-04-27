@@ -16,7 +16,7 @@
 .home-page .text-box {
   padding: 20px;
   width: 85%;
-  margin: 10vh auto;
+  margin: 25vh auto;
   margin-bottom: 0;
   text-shadow: 6px 6px 4px  #181E26;
 }
@@ -34,8 +34,10 @@
 
 .home-page .infoContainter {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
+  width: 600px;
+  margin: 0px auto;
 }
 
 .home-page h2 {
