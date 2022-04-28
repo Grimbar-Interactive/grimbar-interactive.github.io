@@ -44,8 +44,7 @@ export const clientGames: GameType[] = [{
     mainURL: undefined,
     photoURL: '/images/games/idioma.png',
     platforms: [
-        { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.eastedgestudios.skewerz' },
-        { platform: Platform.iOS, url: 'https://apps.apple.com/us/app/skewerz/id1448406135' }
+        { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.intensiveservices.idioma' }
     ]
 }];
 
