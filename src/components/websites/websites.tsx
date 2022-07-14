@@ -29,7 +29,7 @@ export default class Games extends React.Component<{}, GamesState> {
 		return (
 			<div>
 				<div className="games-page">
-					<WebsitesSection websitesArray={clientWebsites} header='Client Projects' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
+					<WebsitesSection websitesArray={clientWebsites} header='Website Projects' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
 				</div>
 			</div>
 		)
