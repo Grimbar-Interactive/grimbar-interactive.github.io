@@ -6,28 +6,31 @@
   font-family: 'Montserrat-Bold';
   color:#E6D4D4;
   text-align: center;
-  padding: 40px;
+  padding: 200px 40px 40px 40px;
   margin: 0;
   width: 100%;
-  height: max-content;
+  height: calc(100vh - 100px);
   min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .home-page .text-box {
   padding: 20px;
   width: 85%;
-  margin: 25vh auto;
-  margin-bottom: 0;
   text-shadow: 6px 6px 4px  #181E26;
 }
 
 .home-page h1 {
-  font-size: 80px;
+  font-size: 7vh;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 
 .home-page .text-box p {
-  font-size: 25px;
+  font-size: 3vh;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -37,18 +40,21 @@
   grid-template-columns: 1fr;
   justify-items: center;
   width: 600px;
-  margin: 0px auto;
+  margin: auto auto;
 }
 
 .home-page h2 {
-  font-size: 40px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin: 10px;
+  padding: 0;
 }
 
 .home-page .infoContainter p {
   font-size: 20px;
   font-family: 'Montserrat-ExtraLight';
+  padding: 0;
+  margin: 10px;
+  flex-grow: 1;
 }
 
 .home-page .bold {
@@ -63,16 +69,22 @@
   color: #181E26;
   border-radius: 10px;
   border: none;
-  margin: 20px;
+  margin: 10px auto;
+  padding: 0;
+  width: 50%;
+  height: 50px;
 }
 
 .home-page .infoContainter > div {
   width: 90%;
-  margin: 30px auto;
-  padding: 10px;
+  margin: 20px 0px;
+  padding: 0;
   background-color: #181e26c2;
   border: 2px solid #E6D4D4;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .home-page .error {
@@ -91,5 +103,7 @@
   display: inline-block;
   border-radius: 10px;
   height: 30px;
-  width: 100px;
+  width: 80%;
+  padding: 0;
+  margin: 10px;
 }
