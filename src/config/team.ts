@@ -16,7 +16,7 @@ export const teamMembers: TeamMemberType[] = [{
   github: 'https://github.com/jacobfdunbar'
 }, {
   name: 'Amanda Dunbar',
-  position: 'Full-Stack Engineer & Consultant',
+  position: 'UI Designer & Developer',
   info1: 'Amanda graduated from Purdue University with a B.S.E in Multidisciplinary Engineering and a B.A. in Theatre Design and Production, and has always thrived at the intersection between the technical and creative aspects of her work.',
   info2: 'After a few years in the themed entertainment industry as a Technical Designer and Engineer, Amanda is excited to join the world of software development as a full-stack engineer.',
   photoURL: '/images/team/Amanda_Headshot.jpg',
