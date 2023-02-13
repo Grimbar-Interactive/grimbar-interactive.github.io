@@ -64,10 +64,10 @@
 .image {
   height: 12vw;
   width: 20vw;
-  transition: all 0.125s;
+  transition: all 0.1s;
   justify-self: center;
   border-radius: 20px;
-  transition: all 0.5s;
+  transition: all 0.2s;
   margin: 20px;
   object-fit: cover;
 }
@@ -76,7 +76,7 @@
   height: 15vw;
   width: 25vw;
   justify-self: center;
-  transition: all 0.5s;
+  transition: all 0.2s;
   padding: 20px;
   background-color: #181E26;
   border-top-left-radius: 40px;
@@ -91,7 +91,7 @@
   opacity: 50;
   justify-self: center;
   border-radius: 20px;
-  transition: all 0.5s;
+  transition: all 0.2s;
   margin: 0px 20px;
   filter: grayscale(50%) blur(2px);
   object-fit: cover;

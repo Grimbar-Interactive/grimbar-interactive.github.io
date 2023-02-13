@@ -100,17 +100,17 @@ export class Home extends React.Component <{}, homeState> {
 						our diverse set of tools and experience to bring our clients' visions to life!
 					</p>
 				</div>
-				<div className="infoContainter">
-					{/* <div id="cgf">
+				{/* <div className="infoContainter">
+					<div id="cgf">
 						<h2>Welcome to CGF 2022!</h2>
 						<p>
 							We invite you to join us on a "create your own adventure" today, we are calling it <span className='bold'>Grimbar Quest</span>.
 							Click the link below or visit our booth to learn more about it!
 						</p>
 						<Link to="/quest"><button>Grimbar Quest</button></Link>
-					</div> */}
+					</div>
 					{this.renderEmail()}
-				</div>
+				</div> */}
 			</div>
 		);
 	}

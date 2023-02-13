@@ -2,9 +2,9 @@ import type { TeamMemberType } from 'components';
 
 export const teamMembers: TeamMemberType[] = [{
   name: 'Jacob Dunbar',
-  position: 'Unity Engineer & Consultant',
-  info1: ('After graduating with a Bachelor\'s degree in Computer Science from Purdue University, Jacob immediately launched into a freelance career as a software engineer.'),
-  info2: ('Jacob specializes in Unity and full-stack web development and has leveraged these skills to create custom multi-platform experiences spanning a wide variety of projects and clients.'),
+  position: 'Unity & Software Engineer',
+  info1: ('Jacob specializes in Unity and full-stack web development and has leveraged these skills to create custom multi-platform experiences spanning a wide variety of projects and clients.'),
+  info2: ('He has a strong knack for creating wonderful and intuitive experiences for users and greatly enjoys a new challenge!'),
   photoURL: '/images/team/Jacob_Headshot.jpg',
   photoClass: 'photo0',
   textClass: 'text0',
@@ -29,11 +29,11 @@ export const teamMembers: TeamMemberType[] = [{
   twitter: '',
   github: 'https://github.com/amandagrimm95'
 }, {
-  name: 'Luna',
-  position: 'Head of Office Morale',
-  info1: 'Luna joined the team in 2018 and takes her role of maintaining office morale very seriously!',
-  info2: 'From keeping a close eye on our monitors to make sure all of our work is up to par, to helping out with typing every once in a while, she is never too far from the action!',
-  photoURL: '/images/team/Luna_Headshot.jpg',
+  name: 'Luna & Aurora',
+  position: 'Coheads of Office Morale',
+  info1: 'Luna and Rory take their role of maintaining office morale very seriously!',
+  info2: 'From keeping a close eye on our monitors, making sure all of our work is up to par, and helping out with typing every once in a while, they never too far from the action!',
+  photoURL: '/images/team/Luna_Rory.jpg',
   photoClass: 'photo2',
   textClass: 'text2',
   portfolio: '',

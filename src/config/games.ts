@@ -19,15 +19,6 @@ export const clientGames: GameType[] = [{
         { platform: Platform.Steam, url: 'https://store.steampowered.com/app/1792000/Battle_Bees_Royale/' }
     ]
 }, {
-    title: 'Electioneering',
-    client: 'Cosmo\'s Tuxedo',
-    description: 'Electioneering puts the 2020 election in the hands of the player, allowing them to hack information, sway voters, and interact with special agents in this turn-based, data-driven strategy game. For this project we built nearly all of the UI implementation and agent interactions, including a full dialogue system with a custom Unity editor tool.',
-    mainURL: 'https://electioneering-game.com/',
-    photoURL: '/images/games/electioneering.jpg',
-    platforms: [
-        { platform: Platform.Steam, url: 'https://store.steampowered.com/app/1377280/Electioneering/' }
-    ]
-}, {
     title: 'Skewerz',
     client: 'Eastedge Studios',
     description: 'A Snake-like arcade game featuring the Annoying Orange IP. Developed using Unity, this project features 60 levels including six intense boss fights. We helped develop the game\'s core gameplay as well as the PlayFab store/inventory integration and UI implementation.',
@@ -38,13 +29,21 @@ export const clientGames: GameType[] = [{
         { platform: Platform.iOS, url: 'https://apps.apple.com/us/app/skewerz/id1448406135' }
     ]
 }, {
+    title: 'Electioneering',
+    client: 'Cosmo\'s Tuxedo',
+    description: 'Electioneering puts the 2020 election in the hands of the player, allowing them to hack information, sway voters, and interact with special agents in this turn-based, data-driven strategy game. For this project we built nearly all of the UI implementation and agent interactions, including a full dialogue system with a custom Unity editor tool.',
+    mainURL: 'https://electioneering-game.com/',
+    photoURL: '/images/games/electioneering.jpg',
+    platforms: [
+        { platform: Platform.Steam, url: 'https://store.steampowered.com/app/1377280/Electioneering/' }
+    ]
+}, {
     title: 'Idioma',
     client: 'Intensive Services',
     description: 'Idioma is a fun word puzzle game all about finding and learning idioms. This project involved the development of the mobile game client and an custom admin website for generating and automatically updating game content.',
     mainURL: undefined,
     photoURL: '/images/games/idioma.png',
     platforms: [
-        { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.intensiveservices.idioma' }
     ]
 }];
 
