@@ -9,7 +9,7 @@
     display: grid;
     row-gap: 0px;
     height: 175px;
-    transition: all 0.125s;  
+    transition: all 0.25s;  
     z-index: 10;
 }
 
@@ -24,13 +24,13 @@
 #grimbar-logo {
     height: 150px;
     margin: 10px;
-    transition: all 0.125s;
+    transition: all 0.25s;
 }
 
 #grimbar-name {
     height: 75px;
     opacity: 100;
-    transition: slide-in 0.125s;
+    transition: all 0.25s;
 }
 
 #icons {
