@@ -5,3 +5,4 @@ export * from './games';
 export * from './websites';
 export * from './business-card';
 export * from './quest';
+export { default as PrivacyPolicy } from './privacy-policy';

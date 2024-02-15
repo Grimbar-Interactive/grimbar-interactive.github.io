@@ -4,7 +4,7 @@ import validator from 'validator';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
 import { App, Home, Team, Error } from 'routes';
-import { Games, Websites, BusinessCard } from 'components';
+import { Games, Websites, BusinessCard, PrivacyPolicy } from 'components';
 import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
 
@@ -23,6 +23,8 @@ ReactDOM.render(
           <Route path="*" element={<Error />} />
         </Route>
 
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        
         {businessCards}
 
       </Routes>
