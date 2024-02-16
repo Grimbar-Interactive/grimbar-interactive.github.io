@@ -4,7 +4,7 @@ import validator from 'validator';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
 import { App, Home, Team, Error } from 'routes';
-import { Games, Websites, BusinessCard, PrivacyPolicy } from 'components';
+import { Games, Websites, BusinessCard, GDCCalendarTool, GDCCTPrivacyPolicy } from 'components';
 import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
 
@@ -23,8 +23,12 @@ ReactDOM.render(
           <Route path="*" element={<Error />} />
         </Route>
 
-        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        
+        <Route path="gdc-calendar-tool/">
+          <Route path="" element={<GDCCalendarTool />} />
+          <Route path="privacy-policy" element={<GDCCTPrivacyPolicy />} />
+          <Route path="*" element={<GDCCalendarTool />} />
+        </Route>
+
         {businessCards}
 
       </Routes>

@@ -1,0 +1,29 @@
+#gdc-calendar-tool {
+  background-image: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-page .text-box p {
+  font-size: 24px;
+}
+
+.home-page a {
+  color:cadetblue;
+}
+
+.home-page a:hover {
+  text-decoration: underline;
+}
+
+#privacy {
+  background-color: white;
+  padding: 64px;
+}
+
+#privacy a {
+  color:blue;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import 'styles/privacypolicy.css';
+import 'styles/gdc-calendar-tool.css';
 
-export default class PrivacyPolicy extends React.Component<{}, {}> {
+export default class GDCCTPrivacyPolicy extends React.Component<{}, {}> {
 	render() {
 		return (
 			<div id='privacy'>
@@ -13,8 +13,7 @@ export default class PrivacyPolicy extends React.Component<{}, {}> {
         </p>
         <p>
           We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and
-          use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the
-          <a href="https://www.termsfeed.com/blog/sample-privacy-policy-template/" target="_blank">Privacy Policy Template</a>.
+          use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/blog/sample-privacy-policy-template/" target="_blank">Privacy Policy Template</a>.
         </p>
         <h1>Interpretation and Definitions</h1>
         <h2>Interpretation</h2>
@@ -85,18 +84,23 @@ export default class PrivacyPolicy extends React.Component<{}, {}> {
           used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
         <ul>
           <li>Google Data</li>
+          <li>Google Calendar Data</li>
         </ul>
-        <h3>Google Data</h3>
+        <h3>Google Data/Calendar Data</h3>
         <p>Your Google user data may be collected temporarily in order to facilitate Google API calls. No Google user data is
           stored by Jacob Dunbar or Grimbar Interactive, LLC. Some Google user data may be stored on the end user's local
           device for the purposes of saving Chrome extension options using the Chrome storage API.
         </p>
+        <h3>Limited Use Policy</h3>
+        <p>
+          GDC Calendar Tool's use and transfer to any other app of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, 
+          including the Limited Use requirements.
+          </p>
         <h3>Usage Data</h3>
         <p>Usage Data is collected automatically when using the Service.</p><p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type,
         browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those
         pages, unique device identifiers and other diagnostic data.</p><p>When You access the Service by or through a mobile device, We may collect certain information automatically,
-          including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of
-          Your
+          including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of your
           mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers
           and other diagnostic data.</p><p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service
             by or through a mobile device.</p><h2>Use of Your Personal Data</h2><p>The Company may use Personal Data for the following purposes:</p><ul>
@@ -104,64 +108,21 @@ export default class PrivacyPolicy extends React.Component<{}, {}> {
             <p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
           </li>
           <li>
-            <p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal
-              Data
-              You provide can give You access to different functionalities of the Service that are available to You as a
-              registered user.</p>
-          </li>
-          <li>
             <p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the
-              purchase
-              contract for the products, items or services You have purchased or of any other contract with Us through the
+              purchase contract for the products, items or services You have purchased or of any other contract with Us through the
               Service.</p>
-          </li>
-          <li>
-            <p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of
-              electronic communication, such as a mobile application's push notifications regarding updates or informative
-              communications related to the functionalities, products or contracted services, including the security
-              updates,
-              when necessary or reasonable for their implementation.</p>
-          </li>
-          <li>
-            <p><strong>To provide You</strong> with news, special offers and general information about other goods, services
-              and
-              events which we offer that are similar to those that you have already purchased or enquired about unless You
-              have
-              opted not to receive such information.</p>
           </li>
           <li>
             <p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
           </li>
           <li>
-            <p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger,
-              divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our
-              assets,
-              whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal
-              Data
-              held by Us about our Service users is among the assets transferred.</p>
-          </li>
-          <li>
             <p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis,
               identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and
-              improve
-              our Service, products, services, marketing and your experience.</p>
+              improve our Service, products, services, marketing and your experience.</p>
           </li>
         </ul><p>We may share Your personal information in the following situations:</p><ul>
           <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to
-            monitor
-            and analyze the use of our Service, to contact You.</li>
-          <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with,
-            or
-            during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our
-            business to another company.</li>
-          <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will
-            require
-            those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries,
-            joint venture partners or other companies that We control or that are under common control with Us.</li>
-          <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You
-            certain products, services or promotions.</li>
-          <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas
-            with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+            monitor and analyze the use of our Service, to contact You.</li>
           <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your
             consent.</li>
         </ul><h2>Retention of Your Personal Data</h2><p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy
