@@ -14,6 +14,13 @@ export default class GDCCalendarTool extends React.Component<{}, {}> {
       <div className="home-page" id="gdc-calendar-tool">
         <div className="text-box">
           <h1>GDC Calendar Tool</h1>
+          <a href="https://chromewebstore.google.com/detail/gdc-calendar-tool/pcegnhfgcahkoihgmecbplanamokaede">
+          <div className="circle">
+            <img src="/images/gdc-calendar-tool-icon.png" alt="GDC Calendar Tool Icon"/>
+          </div>
+          </a>
+          <br/>
+          <br/>
           <p>
             The GDC Calendar Tool is a simple Chrome-based extension that allows users to quickly add events from the <a href="https://schedule.gdconf.com/"> GDC Conference Schedule website</a> to their personal Google calendars.
           </p>

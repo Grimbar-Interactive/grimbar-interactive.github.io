@@ -19,6 +19,23 @@
   text-decoration: underline;
 }
 
+.circle {
+  height: 160px;
+  width: 160px;
+  border-radius: 15%;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  margin: 0px;
+  height: 128px;
+  width: 128px;
+}
+
 #privacy {
   background-color: white;
   padding: 64px;
