@@ -8,7 +8,7 @@
     grid-template-areas: "logos navbar return";
     display: grid;
     row-gap: 0px;
-    height: 175px;
+    height: 125px;
     transition: all 0.25s;  
     z-index: 10;
 }
@@ -22,13 +22,13 @@
 }
 
 #grimbar-logo {
-    height: 150px;
+    height: 100px;
     margin: 10px;
     transition: all 0.25s;
 }
 
 #grimbar-name {
-    height: 75px;
+    height: 50px;
     opacity: 100;
     transition: all 0.25s;
 }

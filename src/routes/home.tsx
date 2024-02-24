@@ -94,11 +94,12 @@ export class Home extends React.Component <{}, homeState> {
 			<div className="home-page" >
 				<div className="text-box">
 					<h1>A New Journey Begins...</h1>
-					<p>
+					<h2>Site under construction.  Check back soon to see our new and improved website!</h2>
+					{/* <h2>
 						Grimbar Interactive is a software development and consulting
 						studio specializing in game and web development. We utilize 
 						our diverse set of tools and experience to bring our clients' visions to life!
-					</p>
+					</h2> */}
 				</div>
 				{/* <div className="infoContainter">
 					<div id="cgf">
