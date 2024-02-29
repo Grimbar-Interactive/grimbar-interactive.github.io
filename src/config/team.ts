@@ -3,7 +3,7 @@ import type { TeamMemberType } from 'components';
 export const teamMembers: TeamMemberType[] = [{
   name: 'Jacob Dunbar',
   position: 'Unity & Software Engineer',
-  info1: ('Jacob specializes in Unity and full-stack web development and has leveraged these skills to create custom multi-platform experiences spanning a wide variety of projects and clients.'),
+  info1: ('Jacob specializes in Unity and full-stack web/app development and has leveraged these skills to create custom multi-platform experiences spanning a wide variety of projects and clients.'),
   info2: ('He has a strong knack for creating wonderful and intuitive experiences for users and greatly enjoys a new challenge!'),
   photoURL: '/images/team/Jacob_Headshot.jpg',
   photoClass: 'photo0',
@@ -16,16 +16,16 @@ export const teamMembers: TeamMemberType[] = [{
   github: 'https://github.com/jacobfdunbar'
 }, {
   name: 'Amanda Dunbar',
-  position: 'UI Designer & Developer',
+  position: 'UI/UX Designer & Developer',
   info1: 'Amanda graduated from Purdue University with a B.S.E in Multidisciplinary Engineering and a B.A. in Theatre Design and Production, and has always thrived at the intersection between the technical and creative aspects of her work.',
-  info2: 'After a few years in the themed entertainment industry as a Technical Designer and Engineer, Amanda is excited to join the world of software development as a full-stack engineer.',
+  info2: 'After a few years in the themed entertainment industry as a Technical Designer and Engineer, Amanda is excited to join the world of software development as a UI/UX Designer and Developer.',
   photoURL: '/images/team/Amanda_Headshot.jpg',
   photoClass: 'photo1',
   textClass: 'text1',
-  portfolio: 'amandagrimm.com',
+  portfolio: 'amandadunbar.dev',
   email: 'amanda@grimbar.dev',
   handle: '',
-  linkedIn: 'https://www.linkedin.com/in/amanda-grimm-69228680/',
+  linkedIn: 'https://www.linkedin.com/in/amanda-dunbar-69228680/',
   twitter: '',
   github: 'https://github.com/amandagrimm95'
 }, {

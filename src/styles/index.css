@@ -8,12 +8,22 @@
   src: url('../../public/MontserratBold-p781R.otf')
 }
 
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../../public/Montserrat-Light.ttf')
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../../public/Montserrat-Regular.ttf')
+}
+
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
-  background-color: #272e38;
+  background-color: #272e38; 
 }
 
 /* include border and padding in element width and height */
@@ -24,20 +34,66 @@ body,
 #root {
   height: 100vh;
   width: 100vw;
-
   font-family: 'Montserrat-ExtraLight';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.underConstruction {
-  text-align: center;
-  margin: 0 auto;
-  color: #E6D4D4;
-  height: calc(100vh - 100px);
-  padding: 30vh 0;
+body {
+  overflow-x: hidden;
 }
 
-.underConstruction img {
-  height: 200px;
+/* Typical Font Styling */
+h1 {
+  font-size: 7rem;
+  margin: 0;
 }
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.bold {
+  font-family: 'Montserrat-Bold';
+}
+
+.error {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  margin: 2px;
+  color: red;
+}
+
+.button {
+  background-color: transparent;
+  border: 3px solid #272e38;
+  margin: 20px;
+  padding: 15px;
+  width: max-content;
+  border-radius: 25px;
+  display: inline;
+  font-family: 'Montserrat-Bold';
+  color: #272e38;
+  font-size: 1.25rem;
+}
+
+.light .button {
+  border: 3px solid #E6D4D4;
+  color: #E6D4D4;
+}
+

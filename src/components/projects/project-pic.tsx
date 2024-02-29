@@ -1,20 +1,20 @@
 import React from 'react';
-import { GameType } from 'components';
+import { ProjectType } from 'components';
 
-type GamePicProps = {
+type ProjectPicProps = {
     i: number;
     selected: number | undefined;
     eventHandler: Function;
-    game: GameType;
+    project: ProjectType;
 }
 
-export default class GamePic extends React.Component <GamePicProps, {}> {
+export default class ProjectPic extends React.Component <ProjectPicProps, {}> {
     render() {
         const imageClass = this.props.selected === undefined ? 'image' : this.props.i === this.props.selected ? 'imageFocus' : 'imageUnfocus';
 
         return (
             <div key={this.props.i}>
-                <img className={imageClass} src={this.props.game.photoURL} alt={this.props.game.title} onClick={() => this.props.eventHandler(this.props.i)}/>
+                <img className={imageClass} src={this.props.project.photoURL} alt={this.props.project.title} onClick={() => this.props.eventHandler(this.props.i)}/>
             </div>
         )
     }

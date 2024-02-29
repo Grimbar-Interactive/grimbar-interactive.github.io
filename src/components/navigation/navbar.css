@@ -2,15 +2,19 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: #181E26;
+    /* background-color: #181E26; */
     position: fixed;
     grid-template-columns: 2fr 5fr 75px;
     grid-template-areas: "logos navbar return";
     display: grid;
     row-gap: 0px;
-    height: 125px;
+    height: 100px;
     transition: all 0.25s;  
     z-index: 10;
+}
+
+.nav-bar-translucent-background {
+    background-color: rgba(24, 30, 38, 0.50) !important;
 }
 
 #logo-container {
@@ -22,13 +26,13 @@
 }
 
 #grimbar-logo {
-    height: 100px;
+    height: 75px;
     margin: 10px;
     transition: all 0.25s;
 }
 
 #grimbar-name {
-    height: 50px;
+    height: 35px;
     opacity: 100;
     transition: all 0.25s;
 }
@@ -49,6 +53,10 @@
     position: fixed;
     bottom: 0px;
     right: 0px
+}
+
+.return-up-visible {
+    opacity: 100 !important;
 }
 
 nav {

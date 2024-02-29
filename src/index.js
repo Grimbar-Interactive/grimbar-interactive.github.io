@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import validator from 'validator';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
-import { App, Home, Team, Error } from 'routes';
-import { Games, Websites, BusinessCard, GDCCalendarTool, GDCCTPrivacyPolicy } from 'components';
+import { App, Home, About, Error, Projects } from 'routes';
+import { BusinessCard, GDCCalendarTool, GDCCTPrivacyPolicy, } from 'components';
 import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,9 +16,9 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="" element={<Home />} />
-          <Route path="games" element={<Games />} />
-          <Route path="webdevelopment" element={<Websites />} />
-          <Route path="team" element={<Team />} />
+          <Route path="services" element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="about" element={<About />} />
           {/* <Route path="quest" element={<Quest />} /> */}
           <Route path="*" element={<Error />} />
         </Route>

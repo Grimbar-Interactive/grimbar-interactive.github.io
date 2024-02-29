@@ -1,4 +1,4 @@
-import { GameType } from 'components';
+import { ProjectType } from 'components';
 
 export const enum Platform {
 	Android,
@@ -7,12 +7,33 @@ export const enum Platform {
 	Itch
 }
 
-export const clientGames: GameType[] = [{
+export const games: ProjectType[] = [{
+    title: 'Grumpy Goats',
+    client: 'Rebel Games',
+    description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
+    mainURL: 'https://grumpygoats.com/',
+    photoURL: '/images/games/grumpyGoats.png',
+    platforms: [
+        { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.VergeGames.GrumpyGoats' },
+        { platform: Platform.iOS, url: 'https://apps.apple.com/us/app/grumpy-goats/id1589498167' },
+    ]
+},{
     title: 'Battle Bees Royale',
     client: 'Eastedge Studios',
     description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
-    mainURL: 'https://www.battlebees.com/',
+    mainURL: 'https://grumpygoats.com/',
     photoURL: '/images/games/battle-bees.jpg',
+    platforms: [
+        { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.eastedgestudios.ehbeeroyale' },
+        { platform: Platform.iOS, url: 'https://apps.apple.com/us/app/battle-bees-royale/id1455237724' },
+        { platform: Platform.Steam, url: 'https://store.steampowered.com/app/1792000/Battle_Bees_Royale/' }
+    ]
+},{
+    title: 'Samurai Legends',
+    client: 'Samurai Legends Team',
+    description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
+    mainURL: 'https://www.battlebees.com/',
+    photoURL: '/images/games/samuraiLegends.png',
     platforms: [
         { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.eastedgestudios.ehbeeroyale' },
         { platform: Platform.iOS, url: 'https://apps.apple.com/us/app/battle-bees-royale/id1455237724' },
@@ -45,9 +66,7 @@ export const clientGames: GameType[] = [{
     photoURL: '/images/games/idioma.png',
     platforms: [
     ]
-}];
-
-export const ourGames: GameType[] = [{
+},{
     title: 'Trove Ball',
     client: '',
     description: 'And endless runner game where you control the difficulty with the ability to purchase more enemies as you progress. The more challenging the game, the higher you score!',

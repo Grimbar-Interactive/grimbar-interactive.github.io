@@ -31,8 +31,8 @@ export default class TeamMember extends React.Component<TeamMemberProps, {}> {
     return (
       <div className={this.props.evenOdd}>
         <div id='teamMemberInfo'>
-          <h1>{member.name}</h1>
-          <h2>{member.position}</h2>
+          <h2>{member.name}</h2>
+          <h3>{member.position}</h3>
           <p>{member.info1}</p>
           <p>{member.info2}</p>
           <p id="teamEmail">{member.email}</p>
