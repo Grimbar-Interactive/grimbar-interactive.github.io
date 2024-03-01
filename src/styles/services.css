@@ -1,0 +1,106 @@
+.services-page {
+    background: linear-gradient(180deg, #181E26 0%, #41546C 100%);
+    background-attachment: fixed;
+}
+
+.services-page .feature-banner {
+    text-align: right;
+}
+
+.services-page .card {
+    background-color: #181E26;
+    color: #E6D4D4;
+    padding: 20px;
+    margin-bottom: 50px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 5px #181E26;
+}
+
+.services-page .card h4 {
+    margin: 0;
+}
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    margin: 100px auto 100px auto;
+    align-items: center;
+    color: #E6D4D4;
+}
+
+form {
+    margin: 0 auto 0 -10px;
+    width: max-content;
+
+}
+
+input {
+    font-size: 1.5rem;
+    margin: 10px;
+    height: 2rem;
+    padding: 0 10px;
+    width: 500px;
+    background-color: #181E26;
+    color: #E6D4D4;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px #181e267d;
+    font-family: 'Montserrat-Regular';
+}
+
+textarea {
+    font-size: 1.5rem;
+    margin: 10px;
+    width: 500px;
+    background-color: #181E26;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px #181e267d;
+    padding: 10px;
+    font-family: 'Montserrat-Regular';
+    color: #E6D4D4;
+}
+
+.contactContainer .button {
+    margin: 15px auto;
+}
+
+.contactContainer img {
+    width: 40vw;
+    height: 50vh;
+    object-fit: contain;
+}
+
+.reviews { 
+    background-color: #E6D4D4;
+    color:#181E26;
+    text-align: center;
+    padding: 50px;
+}
+
+.reviewGallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1800px;
+    margin: 25px auto;
+    max-width: fit-content;
+}
+
+.reviewCard {
+    background-color: white;
+    box-shadow: 0 0 20px 5px #181E26;
+    width: 350px;
+    margin: 50px;
+    padding: 15px;
+}
+
+.reviewCard img {
+    height: 100px;
+    width: 100px;
+}

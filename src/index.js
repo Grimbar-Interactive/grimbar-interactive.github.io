@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import validator from 'validator';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
-import { App, Home, About, Error, Projects } from 'routes';
+import { App, Home, About, Error, Projects, Services } from 'routes';
 import { BusinessCard, GDCCalendarTool, GDCCTPrivacyPolicy, } from 'components';
 import { teamMembers } from 'config';
 import reportWebVitals from './reportWebVitals';
@@ -16,7 +16,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="" element={<Home />} />
-          <Route path="services" element={<Home />} />
+          <Route path="services" element={<Services />} />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
           {/* <Route path="quest" element={<Quest />} /> */}

@@ -1,34 +1,66 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'styles/home.css';
 import 'styles/home-mobile.css';
 
 
-const changingTitles = ['GAME', 'GAME', 'GAME', 'GAME', 'GAME', 'GAME', 'GAM', 'GA', 'G', '', 'W', 'WE', 'WEB', 'WEB', 'WEB', 'WEB', 'WEB', 'WEB', 'WE', 'W', '', 'A', 'AP', 'APP', 'APP', 'APP', 'APP', 'APP', 'AP', 'A', '', 'G', 'GA', 'GAM'];
-let displayIndex = 0;
-let heroTitle = document.getElementById('changing-title');
+const carouselText = ["GAME", "TOOL", "APP", "WEB"]
+	
 
-function titleAnimation() {
-	setInterval(() => {
-		if (heroTitle) {
-			heroTitle.innerHTML = changingTitles[displayIndex];
-		}
 
-		displayIndex ++;
-		
-		if (displayIndex >= changingTitles.length) {
-			displayIndex = 0;
-		}
-	}, 300);
+async function typeSentence(sentence, delay = 200) {
+	const letters = sentence.split("");
+	console.log(letters);
+	let i = 0;
+	while(i < letters.length) {
+	await waitForMs(delay);
+	console.log("adding " + letters[i]);
+	if (document.getElementById("feature-text"))
+	document.getElementById("feature-text").innerHTML += letters[i];
+	i++
+	}
+	return;
 }
 
+async function deleteSentence() {
+	const sentence = document.getElementById("feature-text").innerHTML;
+	const letters = sentence.split("");
+	while(letters.length > 0) {
+	await waitForMs(200);
+	letters.pop();
+	document.getElementById("feature-text").innerHTML = letters.join("");
+	}
+}
+
+async function carousel(carouselList) {
+	var i = 0;
+	while(true) {
+		await typeSentence(carouselList[i]);
+		await waitForMs(1500);
+		await deleteSentence();
+		await waitForMs(500);
+		i++
+		if(i >= carouselList.length) {i = 0;}
+	}
+}
+
+function waitForMs(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms))
+}
 
 export function Home() {
+
+	useEffect(() => {
+		carousel(carouselText);
+	})
 
 	return (
 		<div className="home-page" >
 			<div className="hero">
 				<div className="text-box">
-					<h1 id="changing-title" className="bold">GAME</h1>
+					<div className="typing-container">
+						<h1 id="feature-text" className="bold"> </h1>
+						<span className="cursor"/>
+					</div>
 					<h2>DEVELOPMENT & DESIGN<br/>STUDIO FOR HIRE</h2>
 					<br/><br/>
 					<h3>Do you have an idea?<br/>Let us help you make it a reality!</h3>	
@@ -46,8 +78,8 @@ export function Home() {
 						deserunt mollit anim id est laborum.
 					</p>
 					<div>
-						<button className="button">View on Steam</button>
-						<button className="button">Join our Discord</button>
+						{/* <button className="button">View on Steam</button>
+						<button className="button">Join our Discord</button> */}
 					</div>
 				</div>	
 			</div>
