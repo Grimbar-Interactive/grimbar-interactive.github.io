@@ -2,7 +2,6 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    /* background-color: #181E26; */
     position: fixed;
     grid-template-columns: 2fr 5fr 75px;
     grid-template-areas: "logos navbar return";
@@ -11,10 +10,14 @@
     height: 100px;
     transition: all 0.25s;  
     z-index: 10;
+    max-width: 1500px;
+    margin: 0 auto;
+    left: 50%; 
+    transform: translate(-50%, 0);
 }
 
 .nav-bar-translucent-background {
-    background-color: rgba(24, 30, 38, 0.50) !important;
+    background-color: rgba(24, 30, 38, 0.65) !important;
 }
 
 #logo-container {
@@ -51,7 +54,7 @@
     transition: all 0.125s;
     margin: 25px;
     position: fixed;
-    bottom: 0px;
+    top: calc(100vh - 100px);
     right: 0px
 }
 

@@ -1,6 +1,8 @@
 .services-page {
     background: linear-gradient(180deg, #181E26 0%, #41546C 100%);
     background-attachment: fixed;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .services-page .feature-banner {
@@ -27,7 +29,7 @@
 .contactContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 80vw;
+    width: 80%;
     margin: 100px auto 100px auto;
     align-items: center;
     color: #E6D4D4;

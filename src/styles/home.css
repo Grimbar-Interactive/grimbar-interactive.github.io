@@ -5,6 +5,8 @@
   font-weight: 500;
   color:#E6D4D4;
   text-align: left;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .home-page .hero {
@@ -39,7 +41,7 @@
 }
 
 .home-page .text-box {
-  padding: 20px;
+  padding: 40px;
   width: max-content;
   text-shadow: 2px 2px 4px  #181E26;
   align-items: end;

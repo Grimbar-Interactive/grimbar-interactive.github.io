@@ -23,7 +23,7 @@ body,
 #root {
   margin: 0;
   padding: 0;
-  background-color: #272e38; 
+  background-color: #181E26; 
 }
 
 /* include border and padding in element width and height */
@@ -98,12 +98,12 @@ p {
 }
 
 .feature-banner {
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: max-content;
-  min-height: 75vh;
+  /* min-height: 75vh; */
   padding: 75px;
   box-shadow: 0px 0px 20px 5px #181E26;
   display: flex;
