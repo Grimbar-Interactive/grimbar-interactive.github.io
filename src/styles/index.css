@@ -41,6 +41,12 @@ body,
 
 body {
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.home-page::-webkit-scrollbar {
+  display: none;
 }
 
 /* Typical Font Styling */
@@ -103,7 +109,6 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   height: max-content;
-  /* min-height: 75vh; */
   padding: 75px;
   box-shadow: 0px 0px 20px 5px #181E26;
   display: flex;
@@ -125,7 +130,7 @@ p {
   justify-content: space-between;
   align-content: space-between;
   width: 50%;
-  min-height: 60vh;
+  min-height: 500px;
 }
 
 .feature-banner h2 {

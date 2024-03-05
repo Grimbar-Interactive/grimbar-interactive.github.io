@@ -5,7 +5,7 @@
   font-weight: 500;
   color:#E6D4D4;
   text-align: left;
-  max-width: 1500px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
@@ -53,5 +53,7 @@
 
 #large-logo {
   height: 60vh;
+  width: 50%;
+  object-fit: contain;
 }
 

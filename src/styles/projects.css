@@ -7,13 +7,13 @@
   text-align: center;
   margin: 0px auto;
   color: #E6D4D4;
-  max-width: 1500px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
 .projectLibrary {
   width: 90%;
-  height: 18vw;
+  height: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -53,19 +53,18 @@
 }
 
 .projects-page .image:hover {
-  height: 13vw;
-  width: 21.66vw;
+  transform: scale(1.1)
 }
 
 .projects-page .imageUnfocus:hover {
-  height: 13vw;
-  width: 21.66vw;
+  height: 210px;
+  width: 78%;
   filter: grayscale(0%) blur(0px);
 }
 
 .image {
-  height: 12vw;
-  width: 20vw;
+  height: 225px;
+  width: 80%;
   transition: all 0.1s;
   justify-self: center;
   transition: all 0.2s;
@@ -75,8 +74,8 @@
 }
 
 .imageFocus {
-  height: 15vw;
-  width: 25vw;
+  height: 235px;
+  width: 82%;
   justify-self: center;
   transition: all 0.2s;
   padding: 10px;
@@ -85,8 +84,8 @@
 }
 
 .imageUnfocus {
-  height: 11vw;
-  width: 18.33vw;
+  height: 200px;
+  width: 75%;
   opacity: 50;
   justify-self: center;
   transition: all 0.2s;

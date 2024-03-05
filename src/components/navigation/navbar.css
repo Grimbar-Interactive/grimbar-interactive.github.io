@@ -10,14 +10,14 @@
     height: 100px;
     transition: all 0.25s;  
     z-index: 10;
-    max-width: 1500px;
+    max-width: 1700px;
     margin: 0 auto;
     left: 50%; 
     transform: translate(-50%, 0);
 }
 
 .nav-bar-translucent-background {
-    background-color: rgba(24, 30, 38, 0.65) !important;
+    background-color: rgba(24, 30, 38, 0.80) !important;
 }
 
 #logo-container {
@@ -54,7 +54,7 @@
     transition: all 0.125s;
     margin: 25px;
     position: fixed;
-    top: calc(100vh - 100px);
+    top: calc(100vh - 85px);
     right: 0px
 }
 
