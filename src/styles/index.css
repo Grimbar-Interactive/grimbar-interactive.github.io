@@ -142,11 +142,11 @@ p {
   font-family: 'Montserrat-Regular';
   text-shadow: 1px 1px 2px #63686d;
   backdrop-filter: blur(5px);
+  border-radius: 25px;
 }
 
 .dark p{
   background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 25px;
 }
 
 .feature-banner img {
