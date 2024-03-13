@@ -1,13 +1,11 @@
 .footer {
     width: 100%;
-    background-color: #24303f;
+    background-color: #181E26;
     color: #E6D4D4;
     display: flex;
     align-items: center;    
     justify-content: end;
     height: 75px;
-    max-width: 1700px;
-    margin: 0 auto;
     box-shadow: 0 0 20px 4px #181E26;
 }
 
@@ -15,6 +13,24 @@
     text-align: center;
     font-family: 'Montserrat-Light';
     margin-right: 50px;
+    font-size: 1rem;
+}
+
+.site-map-container {
+    position: absolute;
+    left: 50px;
+    width: 50vw;
+}
+
+.site-map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.site-map-container p {
+    margin: 5px 10px;
+    text-align: left;
 }
 
 .footer .footer-link {

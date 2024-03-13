@@ -1,21 +1,41 @@
 .home-page {
-  background: linear-gradient(135deg, #181E26 20%, #3c4655 100%);
-  background-attachment: fixed;
   font-family: 'Montserrat-Light';
   font-weight: 500;
   color:#E6D4D4;
   text-align: left;
+  /* max-width: 1700px;
+  margin: 0 auto; */
+}
+
+.home-page-content {
   max-width: 1700px;
   margin: 0 auto;
 }
 
 .home-page .hero {
   width: 100%;
-  height: 850px;
+  height: calc(100vh - 100px);
+  max-height: 850px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+  /* background-image: url('../../public/images/Homepage-Hero.png'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #181E26;
+  box-shadow: 0 0 100px 100px #181E26;
+  z-index: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .typing-container {
@@ -27,7 +47,7 @@
 .cursor {
   display: inline-block;
   width: 2px;
-  height: 7rem;
+  height: 5rem;
   background-color: #E6D4D4;
   margin-left: 8px;
   animation: blink 1s linear infinite;
@@ -42,18 +62,31 @@
 
 .home-page .text-box {
   padding: 40px;
-  width: max-content;
+  width: 50%;
   text-shadow: 2px 2px 4px  #181E26;
   align-items: end;
+
 }
 
 .home-page .text-box h3 {
   text-shadow: none;
 }
 
+.text-link {
+  cursor: pointer;
+  color: cadetblue;
+}
+
 #large-logo {
-  height: 60vh;
-  width: 50%;
-  object-fit: contain;
+  height: calc(100vh - 150px);
+  max-height: 800px;
+  width: 60%;
+  object-fit: cover;
+  margin-top: 50px;
+  /* filter: opacity(50%); */
+  mask-image: linear-gradient(to bottom right, transparent 30%, white);
+  mask-mode: alpha;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 

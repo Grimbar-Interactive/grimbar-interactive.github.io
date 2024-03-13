@@ -10,7 +10,7 @@ export default class GDCCalendarTool extends React.Component<{}, {}> {
 	render() {
 		return (
       <div>
-      <NavBarSimple/>
+      {/* <NavBarSimple/> */}
       <div className="home-page" id="gdc-calendar-tool">
         <div className="text-box">
           <h1>GDC Calendar Tool</h1>
@@ -33,7 +33,7 @@ export default class GDCCalendarTool extends React.Component<{}, {}> {
           <Link className="footer-link" key="Privacy Policy" to="/gdc-calendar-tool/privacy-policy">GDC Calendar Tool Privacy Policy</Link>
         </div>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
       </div>
 		)
 	}

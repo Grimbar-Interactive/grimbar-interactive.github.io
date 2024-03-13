@@ -14,8 +14,6 @@
     row-gap: 0px;
     height: 100px;
     transition: all 0.25s; 
-    max-width: 1700px;
-    margin: 0 auto;
 }
 
 .nav-bar-translucent-background {
@@ -42,6 +40,7 @@
     height: 35px;
     opacity: 100;
     transition: all 0.25s;
+    margin: 10px;
 }
 
 #icons {

@@ -20,14 +20,19 @@ ReactDOM.render(
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
           {/* <Route path="quest" element={<Quest />} /> */}
+          <Route path="gdc-calendar-tool/">
+            <Route path="" element={<GDCCalendarTool />} />
+            <Route path="privacy-policy" element={<GDCCTPrivacyPolicy />} />
+            <Route path="*" element={<GDCCalendarTool />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Route>
 
-        <Route path="gdc-calendar-tool/">
+        {/* <Route path="gdc-calendar-tool/">
           <Route path="" element={<GDCCalendarTool />} />
           <Route path="privacy-policy" element={<GDCCTPrivacyPolicy />} />
           <Route path="*" element={<GDCCalendarTool />} />
-        </Route>
+        </Route> */}
 
         {businessCards}
 
