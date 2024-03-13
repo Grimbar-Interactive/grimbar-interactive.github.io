@@ -3,8 +3,7 @@ import 'styles/home.css';
 import 'styles/home-mobile.css';
 
 
-const carouselText = ["GAME", "TOOL", "APP", "WEB"]
-	
+const carouselText = ["GAMES", "TOOLS", "APPS", "WEB"]
 
 
 async function typeSentence(sentence, delay = 200) {
@@ -12,11 +11,11 @@ async function typeSentence(sentence, delay = 200) {
 	console.log(letters);
 	let i = 0;
 	while(i < letters.length) {
-	await waitForMs(delay);
-	console.log("adding " + letters[i]);
-	if (document.getElementById("feature-text"))
-	document.getElementById("feature-text").innerHTML += letters[i];
-	i++
+		await waitForMs(delay);
+		console.log("adding " + letters[i]);
+		if (document.getElementById("feature-text"))
+		document.getElementById("feature-text").innerHTML += letters[i];
+		i++
 	}
 	return;
 }
@@ -25,9 +24,9 @@ async function deleteSentence() {
 	const sentence = document.getElementById("feature-text").innerHTML;
 	const letters = sentence.split("");
 	while(letters.length > 0) {
-	await waitForMs(200);
-	letters.pop();
-	document.getElementById("feature-text").innerHTML = letters.join("");
+		await waitForMs(200);
+		letters.pop();
+		document.getElementById("feature-text").innerHTML = letters.join("");
 	}
 }
 
@@ -61,11 +60,15 @@ export function Home() {
 						<h1 id="feature-text" className="bold"> </h1>
 						<span className="cursor"/>
 					</div>
-					<h2>DEVELOPMENT & DESIGN<br/>STUDIO FOR HIRE</h2>
-					<br/><br/>
-					<h3>Do you have an idea?<br/>Let us help you make it a reality!</h3>	
+					<br/>
+					<p>Grimbar Interactive is a design and development studio. 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Excepteur sint occaecat cupidatat non proident.</p>
+						<br/>
+					<h3>Do you have an idea?<br/>Let us help you <u>make it a reality!</u></h3>
 				</div>
-				<img id="large-logo" alt="Grimbar Interactive" src="./images/Grimbar_Interactive_Logo_Image_Only.png"/>
+				{/* <img id="large-logo" alt="Grimbar Interactive" src="./images/Grimbar_Interactive_Logo_Image_Only.png"/> */}
 			</div>
 			<div className="feature-banner dark" style={{backgroundImage: 'url("./images/games/turboTrials.png")'}}>
 				<div className="feature-banner-contents">

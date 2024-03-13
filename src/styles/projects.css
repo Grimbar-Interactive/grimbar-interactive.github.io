@@ -71,6 +71,7 @@
   margin: 20px;
   object-fit: cover;
   box-shadow: 0 0 20px 5px #181E26;
+  background: linear-gradient(180deg, #181E26 0%, #41546C 100%);
 }
 
 .imageFocus {
