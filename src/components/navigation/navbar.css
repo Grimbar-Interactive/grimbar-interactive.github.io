@@ -1,5 +1,5 @@
 #nav-bar {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 10;
     transition: all 0.25s; 
@@ -104,8 +104,8 @@ nav {
 
 .icon {
     display: none;
-    height: 50px;
-    margin: 25px;
+    height: 35px;
+    margin: 0 20px;
     grid-area: return;
     justify-self: end;
 }

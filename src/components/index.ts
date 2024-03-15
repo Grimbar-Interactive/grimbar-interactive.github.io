@@ -5,3 +5,4 @@ export * from './projects';
 export * from './business-card';
 export * from './quest';
 export * from './gdc-calendar-tool';
+export * from './services';

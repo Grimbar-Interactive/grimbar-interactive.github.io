@@ -30,9 +30,9 @@ export default class Projects extends React.Component<{}, ProjectsState> {
 			<div>
 				<div className="projects-page">
 					<ProjectsSection projectsArray={games} header='Games' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
-					<ProjectsSection projectsArray={tools} header='Tools' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
 					<ProjectsSection projectsArray={apps} header='Apps' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
 					<ProjectsSection projectsArray={websites} header='Websites' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
+					<ProjectsSection projectsArray={tools} header='Tools' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
 				</div>
 			</div>
 		)

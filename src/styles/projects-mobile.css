@@ -1,11 +1,11 @@
 @media only screen and (max-width: 1400px) {
-    .games-page {
+    .projects-page {
         padding-top: 100px;
     }
 }
 
 @media only screen and (max-width: 1000px) {  
-    .image {
+    /* .image {
         margin: 5px;
         height: 14vw;
         width: 23.33vw;
@@ -24,22 +24,26 @@
         filter: grayscale(0%) blur(0px);
     }
 
-    .games-page .image:hover {
+    .projects-page .image:hover {
         height: 16vw;
         width: 26.66vw;
       }
       
-    .games-page .imageUnfocus:hover {
+    .projects-page .imageUnfocus:hover {
         height: 16vw;
         width: 26.66vw;
-    }
+    } */
 
-    .games-page h1 {
+    .projects-page h1 {
         font-size: 40px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+    .projects-page {
+        padding-top: 50px;
+    }
+
     .image {
         margin: 30px auto;
         height: 30vw;
@@ -50,29 +54,34 @@
         padding: 10px;
         height: 35vw;
         width: 58.33vw;
+        margin: 30px auto;
     }
 
     .imageUnfocus {
         margin: 10px;
         height: 25vw;
         width: 41.66vw;
+        margin: 30px auto;
     }
 
-    .games-page .image:hover {
-        height: 34vw;
-        width: 56.66vw;
+    .projects-page .image:hover {
+        margin: 30px auto;
+        height: 30vw;
+        width: 50vw;
       }
       
-    .games-page .imageUnfocus:hover {
-        height: 34vw;
-        width: 56.66vw;
+    .projects-page .imageUnfocus:hover {
+        margin: 10px;
+        height: 25vw;
+        width: 41.66vw;
+        margin: 30px auto;
     }
 
-    .games-page h2 {
-        font-size: 20px;
+    .projects-page h2 {
+        font-size: 1.5rem !important;
       }
       
-    .games-page p {
+    .projects-page p {
         font-size: 14px;
     }
 

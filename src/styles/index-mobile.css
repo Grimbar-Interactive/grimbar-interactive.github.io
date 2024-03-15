@@ -1,0 +1,50 @@
+@media only screen and (max-width: 700px) {  
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3, h4 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+    
+    .hero {
+        height: max-content;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .feature-banner {
+        padding: 10px;
+        flex-direction: column-reverse;
+        max-height: none;
+    }
+
+    .feature-banner-contents {
+        width: 100%;
+        min-height: 0px;
+    }
+
+    .feature-banner img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .card-banner {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 25px auto;
+    }
+}

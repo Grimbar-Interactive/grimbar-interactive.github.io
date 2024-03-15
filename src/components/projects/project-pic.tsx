@@ -14,7 +14,7 @@ export default class ProjectPic extends React.Component <ProjectPicProps, {}> {
 
         return (
             <div key={this.props.i}>
-                <img className={imageClass} src={this.props.project.photoURL} alt={this.props.project.title} onClick={() => this.props.eventHandler(this.props.i)}/>
+                <div className={imageClass} style={{backgroundImage: `linear-gradient(40deg, #0000 30%, #fff2 50%, #0000 70%), url('${this.props.project.photoURL}')`}} onClick={() => this.props.eventHandler(this.props.i)}/>
             </div>
         )
     }

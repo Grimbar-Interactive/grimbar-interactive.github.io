@@ -19,18 +19,20 @@ export default class Footer extends React.Component {
         return (
             <div className="footer">
                 <div className='site-map-container'>
-                    <p><b><u>Site Map</u></b></p>
+                    {/* <p><b><u>Site Map</u></b></p>
                     <div className='site-map'>
                         <Link to='/' onClick={this.returnUp}><p>Home</p></Link>
                         <Link to='/services' onClick={this.returnUp}><p>Services</p></Link>
                         <Link to='/projects' onClick={this.returnUp}><p>Projects</p></Link>
                         <Link to='/about' onClick={this.returnUp}><p>About</p></Link>
-                        {/* <Link to='/business-card/jacob-dunbar' onClick={this.returnUp}><p>Jacob Dunbar</p></Link>
-                        <Link to='/business-card/amanda-dunbar' onClick={this.returnUp}><p>Amanda Dunbar</p></Link> */}
+                        <Link to='/business-card/jacob-dunbar' onClick={this.returnUp}><p>Jacob Dunbar</p></Link>
+                        <Link to='/business-card/amanda-dunbar' onClick={this.returnUp}><p>Amanda Dunbar</p></Link>
                         <Link to='/gdc-calendar-tool' onClick={this.returnUp}><p>GDC Calendar Tool</p></Link>
-                        {/* <Link to='/gdc-calendar-tool/privacy-policy' onClick={this.returnUp}><p>Privacy Policy</p></Link> */}
-                    </div>
+                        <Link to='/gdc-calendar-tool/privacy-policy' onClick={this.returnUp}><p>Privacy Policy</p></Link>
+                    </div> */}
+                    <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" title="brands and logotypes icons">Brands and logotypes icons created by Freepik - Flaticon</a>
                 </div>
+                
                 <p>Grimbar Interactive LLC est. 2022</p>
                 <div className="image-container">
                     <a href="https://www.linkedin.com/company/grimbar-interactive/" target="blank"><img src="./images/linkedin-square.png" alt="linkedin"/></a>   

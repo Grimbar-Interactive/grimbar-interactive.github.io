@@ -85,7 +85,7 @@ export function Home() {
 	return (
 		<div className="home-page" >
 			<div className="hero">
-				<div className="home-page-content">
+				<div className="page-content">
 					<div className="hero-content">
 						<div className="text-box">
 							<div className="typing-container">
@@ -93,18 +93,19 @@ export function Home() {
 								<span className="cursor"/>
 							</div>
 							<br/>
-							<p>Grimbar Interactive is a design and development studio. 
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Excepteur sint occaecat cupidatat non proident.</p>
-								<br/>
+							<p>
+							Grimbar Interactive is a for hire software design, development, and consulting studio 
+							specializing in game, app, and web development. We utilize our 
+							diverse set of tools and experience to bring a vision to life!	 
+							</p>
+							<br/>
 							<h3>Do you have an idea?<br/>Let us help you <u className="text-link" onClick={scrollToContact}>make it a reality!</u></h3>
 						</div>
 						<img id="large-logo" alt="Grimbar Interactive" src="./images/HeroLogo.png"/>
 					</div>
 				</div>
 			</div>
-			<div className="home-page-content">
+			<div className="page-content">
 				<div className="feature-banner dark" style={{backgroundImage: 'url("./images/games/turboTrials.png")'}}>
 					<div className="feature-banner-contents">
 						<h2>Turbo Trials</h2>
@@ -143,12 +144,10 @@ export function Home() {
 					<div className="feature-banner-contents">
 						<h2>Stitch Sculptor</h2>
 						<p>
-						Stitch Sculptor app is a tool for crocheters to create, edit, and share patterns with the assistance of immediate visual feedback.  
+						Stitch Sculptor app is a tool for crocheters to create, edit, and share patterns.  
 						Designing or editing a crochet pattern can be a long process, with a lot of guess work and trial and error.  
-						This app provides a visual simulation of the finished product that adjusts in real time as you edit the pattern, allowing the 
-						user to see how adjustments will effect the overall project without needing to physically crochet the different options and 
-						saving significant time in the pattern design and editing process.  It also includes a variety of other features that will help 
-						improve the process for crocheters at every level!
+						This app provides a visual simulation of the finished product that adjusts in real time as you edit the pattern, 
+						saving significant time in the pattern design and editing process. 
 						<br/><br/>
 						This project is currently in progress, continue to check back for updates!
 						</p>

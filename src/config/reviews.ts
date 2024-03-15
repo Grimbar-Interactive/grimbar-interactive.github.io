@@ -1,4 +1,4 @@
-import { ReviewCardType } from "components/reviews/reviewCard";
+import { ReviewCardType } from "components/services/reviewCard";
 
 export const clientReviews: ReviewCardType[] = [{
     client: 'Samurai Legends Team',

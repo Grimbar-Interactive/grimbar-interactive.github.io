@@ -14,7 +14,7 @@
 }
 
 @media only screen and (max-width: 1200px) {   
-    #nav-bar {
+    #nav-bar-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 400px;
         grid-template-areas: "logos return"
@@ -35,7 +35,7 @@
         grid-area: mobilenavbar;
         background-color: #181e26e0;
         text-align: right;
-        padding: 20px;
+        padding: 0px 15px;
         margin: 0;
         align-self: flex-start;
     }
@@ -44,14 +44,20 @@
         display: block;
         background-color: transparent;
         width: max-content;
-        margin-right: 10px;
+        margin-right: 0px;
         margin-left: auto;
         padding-left: 10px;
+        font-size: 1.25rem;
+        padding: 5px;
     }
 
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 700px) { 
+    #nav-bar, #nav-bar-container {
+        height: 60px;
+    }
+
     .icon {
         float: left;
     }
@@ -61,11 +67,13 @@
     }
 
     #grimbar-logo {
-        height: 55px;
+        height: 45px;
     }
 
     #grimbar-name {
-        height: 35px;
+        height: 25px;
     }
+
+    
 
 }

@@ -1,12 +1,16 @@
 @media only screen and (max-width: 600px) {   
     .footer p {
-        margin-right: 0px;
-        font-size: 12px;
+        margin-right: 10px;
+        font-size: 10px !important;
+    }
+
+    .footer a {
+        font-size: 10px !important;
     }
 
     .footer .image-container {
-        margin-right: 0px;
-        width: 50%;
+        margin-right: 60px;
+        width: 35%;
         text-align: end;
     }
     
@@ -15,5 +19,7 @@
         margin: 5px;
     }
 
-    
+    .site-map-container {
+        display: none;
+    }
 }

@@ -1,0 +1,40 @@
+@media only screen and (max-width: 700px) {  
+    .services-page .card-banner {
+        height: max-content;
+    }
+
+    .serviceCard {
+        width: 190px;
+    }
+
+    .contactContainer {
+        display: block;
+    }
+
+    .contactContainer img {
+        display: none;
+    }
+
+    form {
+        text-align: center;
+        margin: auto;
+    }
+
+    input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    textarea {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contactContainer .button {
+        margin: 15px 10px;
+    }
+
+    .reviewCard {
+        margin: 25px 0;
+    }
+}

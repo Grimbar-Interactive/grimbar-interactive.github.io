@@ -89,6 +89,34 @@ p {
   color: red;
 }
 
+.page-content {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 100px);
+  max-height: 850px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: #181E26;
+  box-shadow: 0 0 100px 100px #181E26;
+  z-index: 0;
+  margin-bottom: 150px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
 .button {
   background-color: transparent;
   border: 3px solid #272e38;
@@ -172,7 +200,7 @@ p {
 
 .card {
   flex-grow: 1;
-  width: 100px;
+  width: 275px;
   margin: 0 25px;
 }
 

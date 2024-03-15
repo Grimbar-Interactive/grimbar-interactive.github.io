@@ -119,7 +119,7 @@ export default class ProjectsSection extends React.Component<ProjectsSectionProp
 	render() {
 		if (this.state.screenSize === Size.Desktop) {
 			return (
-				<div onClick={this.hideInfo} id={Size.Desktop}>
+				<div onClick={this.hideInfo} id={Size.Desktop} className={this.props.header}>
 					<h1 className="bold">{this.props.header}</h1>
 					{this.renderRows()}
 				</div>

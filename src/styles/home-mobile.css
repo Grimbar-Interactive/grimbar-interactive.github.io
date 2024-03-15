@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1400px) {  
+/* @media only screen and (max-width: 1400px) {  
     .home-page {
         padding-top: 100px;
     }
@@ -10,7 +10,7 @@
     .home-page p {
         font-size: 30px;
     }
-}
+} */
 
 @media only screen and (max-width: 1200px) {
 
@@ -48,19 +48,19 @@
 
 @media only screen and (max-width: 700px) {   
     .home-page .text-box {
-        width: 100%;
-        padding: 0;
+        width: 90%;
+        padding: 0px;
     }
 
-    .home-page h1 {
-        font-size: 50px;
+    .typing-container {
+        height: 3rem;
     }
 
-    .home-page p {
-        font-size: 16px;
+    .cursor {
+        height: 3rem;
     }
 
-    .home-page .infoContainter {
-        width: 100%;
+    #large-logo {
+        display: none;
     }
 }

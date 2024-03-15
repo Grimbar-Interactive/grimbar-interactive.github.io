@@ -1,29 +1,76 @@
 .services-page {
-    background: linear-gradient(180deg, #181E26 0%, #41546C 100%);
-    background-attachment: fixed;
-    max-width: 1700px;
-    margin: 0 auto;
+    font-family: 'Montserrat-Light';
+    font-weight: 500;
+    color:#E6D4D4;
+    /* max-width: 1700px;
+    margin: 0 auto; */
 }
 
 .services-page .feature-banner {
     text-align: right;
 }
 
-.services-page .card {
+.services-page .hero {
+    height: calc(100vh - 350px);
+    margin-bottom: 150px;
+    padding-top: 100px;
+}
+
+.services-page #large-logo {
+    width: 40%;
+    padding-bottom: 100px;
+}
+
+.card-banner {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.services-page .card-banner {
+    height: 300px;
+}
+
+.serviceCard {
     background-color: #181E26;
     color: #E6D4D4;
     padding: 20px;
-    margin-bottom: 50px;
-    height: 375px;
+    height: 190px;
+    margin: 25px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     box-shadow: 0 0 20px 5px #181E26;
+    width: 15%;
+    transition: all 0.25s ease-in;
 }
 
-.services-page .card h4 {
-    margin: 0;
+.serviceCard img {
+    width: 80%;
+    height: 125px;
+    object-fit: contain;
+}
+
+.serviceCard p {
+    /* display: none; */
+    opacity: 0;
+    margin-top: -20px;
+}
+
+.serviceCard:hover {
+    height: 250px;
+    transition: all 0.25s ease-in;
+    animation-name: cardBounce;
+    animation-timing-function: linear;
+    animation-duration: 0.75s;
+}
+
+.serviceCard:hover p {
+    opacity: 100;
+    margin-top: 20px;
 }
 
 .contactContainer {
@@ -80,8 +127,7 @@ textarea {
 }
 
 .reviews { 
-    background-color: #E6D4D4;
-    color:#181E26;
+    color: #E6D4D4;
     text-align: center;
     padding: 50px;
 }
@@ -90,15 +136,16 @@ textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 1800px;
+    /* max-height: 1300px; */
     margin: 25px auto;
     max-width: fit-content;
 }
 
 .reviewCard {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.509);
+    color: #181E26;
     box-shadow: 0 0 20px 5px #181E26;
-    width: 350px;
+    /* width: 28%; */
     margin: 50px;
     padding: 15px;
 }
@@ -106,4 +153,20 @@ textarea {
 .reviewCard img {
     height: 100px;
     width: 100px;
+}
+
+/* @keyframes cardBounce {
+    0% { transform: scale(100%) }
+    25% { transform: scale(105%) }
+    50% { transform: scale(95%) }
+    75% { transform: scale(100%) }
+} */
+
+@keyframes cardBounce {
+    0% { transform: rotate(0deg) }
+    15% { transform: rotate(5deg) }
+    30% { transform: rotate(0deg) }
+    45% { transform: rotate(-5deg) }
+    60% { transform: rotate(0deg) }
+    75% { transform: rotate(5deg) }
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import validator from 'validator';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import 'styles/index.css';
+import 'styles/index-mobile.css';
 import { App, Home, About, Error, Projects, Services } from 'routes';
 import { BusinessCard, GDCCalendarTool, GDCCTPrivacyPolicy, } from 'components';
 import { teamMembers } from 'config';
