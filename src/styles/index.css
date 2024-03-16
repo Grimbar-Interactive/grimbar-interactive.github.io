@@ -28,6 +28,7 @@ body,
   background-attachment: fixed;
   background-repeat: no-repeat;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 /* include border and padding in element width and height */

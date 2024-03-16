@@ -1,6 +1,6 @@
 .projects-page {
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 75px;
+  padding-bottom: 25px;
   justify-content: center;
   text-align: center;
   margin: 0px auto;
@@ -11,16 +11,16 @@
 
 .Games, .Apps, .Websites, .Tools {
   /* background-color: #41546ca5; */
-  background: linear-gradient(-170deg,#ffffff8d 0%, #41546C 100%);
+  background: linear-gradient(-170deg,#ffffff00 0%, #41546C 100%);
   padding-bottom: 50px;
   box-shadow: 0 0 20px 5px #181E26;
   width: 85%;
-  margin: 0 auto 150px auto;
+  margin: 0 auto 50px auto;
 }
 
 .projectLibrary {
   width: 90%;
-  height: 300px;
+  height: 250px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -35,7 +35,7 @@
 
 .projects-page h1 {
   text-align: center;
-  font-family: 'Montserrat-Regular';
+  font-family: 'Montserrat-Bold';
   font-size: 3.5rem;
   text-shadow: 4px 4px 4px  #181E26;
   padding-top: 50px;
@@ -55,11 +55,30 @@
   text-align: left;
   width: 85%;
   text-align: left;
-  margin: 0 auto;
+  margin: 10px auto 0px auto;
   padding: 20px;
-  padding-top: 15px;
   background-color: #181E26;
   box-shadow: 0 0 20px 5px #181E26;
+}
+
+.projectInfo h4 {
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.projectInfo p {
+  margin-bottom: 0px;
+}
+
+.projectInfo img {
+  height: 40px;
+  width: 40px;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  height: min-content;
 }
 
 .projects-page .image:hover {
@@ -88,15 +107,14 @@
 }
 
 .imageFocus {
-  height: 230px;
-  width: 350px;
+  height: 215px;
+  width: 328px;
   justify-self: center;
   transition: all 0.2s;
-  box-shadow: 0 0 20px 5px #181E26;
+  box-shadow: 0 0 20px 5px #FFFFFF;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border: 15px solid #181E26;
 }
 
 .imageUnfocus {

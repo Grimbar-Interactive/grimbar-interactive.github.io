@@ -2,7 +2,7 @@ import { ServicesCard } from 'components';
 import ReviewCard from 'components/services/reviewCard';
 import { clientReviews } from 'config/reviews';
 import { offeredServices } from 'config/services';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import 'styles/services.css';
 import 'styles/services-mobile.css'
 
@@ -36,6 +36,12 @@ export function Services() {
         alert(result.status);
     };
 
+	const myRef = useRef(null);
+
+    const scrollToContact = () => {
+		myRef.current.scrollIntoView();
+	}
+
     return (
         <div className="services-page">
             <div className="hero">
@@ -44,12 +50,12 @@ export function Services() {
                         <div className="text-box">
                             <p>
                                 In addition to working on our own projects, we are available
-                                for hire and can provide services such as <span className='bold'>design</span>,
-                                <span className='bold'> prototyping</span>, and <span className='bold'>development</span>.
+                                for hire and offer <span className='bold'>design</span>,
+                                <span className='bold'> prototyping</span>, and <span className='bold'>development</span> services.
                                 <br/><br/>
                                 Below are some of the technologies we work with most commonly.
                                 <br/><br/>
-                                Interested in working together?  Please reach out, we would
+                                Interested in working together?  Please <u className="text-link" onClick={scrollToContact}>reach out</u>, we would
                                 love to discus your project with you!
                             </p>
                         </div>
@@ -77,7 +83,7 @@ export function Services() {
                         <h4>Kajabi Development & Management</h4>
                     </div> */}
                 </div>
-                <div className="contactContainer light">
+                <div className="contactContainer light" ref={myRef}>
                     <div>
                         <h2 className="bold">Ready to get started on that project?</h2>
                         <p>We would love to discus it with you!  Fill out the form below and we will be in touch shortly.</p>

@@ -15,7 +15,7 @@ export const tools: ProjectType[] = [{
     photoURL: '/images/tools/gdcCalendarTool.png',
     platforms: [],
 },{
-    title: 'Grant Proposal Budgeting Tool - Work in Progress',
+    title: 'Grant Proposal Budgeting Tool',
     client: 'University at Albany',
     description: 'We are currently in the process of designing and building a budgeting tool in Excel for University at Albany.  This tool will assist faculty members when creating their budgets for agency grant proposals.',
     mainURL: '',

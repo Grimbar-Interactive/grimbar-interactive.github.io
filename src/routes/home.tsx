@@ -160,25 +160,24 @@ export function Home() {
 					<img alt="Stitch Sculptor" src="./images/apps/stitchSculptor.png"/>
 				</div>
 				<div className="contactContainer light" ref={myRef}>
-				<img alt="projectCollage" src="./images/projectCollage.png"/>
-				<div>
-					<h2 className="bold">Ready to get started on that project?</h2>
-					<p>We would love to discus it with you!  Fill out the form below and we will be in touch shortly.</p>
-					<form onSubmit={handleSubmit}>
-						<div>
-							<input type="text" id="name" placeholder='Name' required />
-						</div>
-						<div>
-							<input type="email" id="email" placeholder='Email' required />
-						</div>
-						<div>
-							<textarea id="message" rows={5} placeholder='Message' required />
-						</div>
-						<button className="button" type="submit">{status}</button>
-					</form>
+					<img alt="projectCollage" src="./images/projectCollage.png"/>
+					<div>
+						<h2 className="bold">Ready to get started on that project?</h2>
+						<p>We would love to discus it with you!  Fill out the form below and we will be in touch shortly.</p>
+						<form onSubmit={handleSubmit}>
+							<div>
+								<input type="text" id="name" placeholder='Name' required />
+							</div>
+							<div>
+								<input type="email" id="email" placeholder='Email' required />
+							</div>
+							<div>
+								<textarea id="message" rows={5} placeholder='Message' required />
+							</div>
+							<button className="button" type="submit">{status}</button>
+						</form>
+					</div>
 				</div>
-				
-			</div>
 			</div>
 
 		</div>

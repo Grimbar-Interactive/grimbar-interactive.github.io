@@ -85,4 +85,12 @@
         font-size: 14px;
     }
 
+    .projectHeader {
+        flex-direction: column;
+    }
+
+    .projectInfo img {
+      height: 30px;
+      width: 30px;
+    }
 }
