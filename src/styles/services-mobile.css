@@ -36,5 +36,10 @@
 
     .reviewCard {
         margin: 25px 0;
+        width: 100%;
+    }
+
+    .reviewGallery {
+        max-height: none;
     }
 }

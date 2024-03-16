@@ -51,14 +51,14 @@
 }
 
 #return-up {
-    height: 50px;
+    height: 30px;
     color: #E6D4D4;
     opacity: 0;
     transition: all 0.125s;
-    margin: 25px;
+    margin: 15px;
     position: fixed;
-    top: calc(100vh - 85px);
-    right: 0px
+    top: calc(100vh - 70px);
+    right: 20px;
 }
 
 .return-up-visible {
