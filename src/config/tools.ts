@@ -1,16 +1,16 @@
 import { ProjectType } from 'components';
 
 export const tools: ProjectType[] = [{
-    title: 'Unity Framework Tool Kits',
+    title: 'Unity Toolkit Packages',
     client: '',
-    description: 'Reboot of existing website for a family practice doctor. This included reworking the information from the original website to give it a more streamlined and modern design, as well and making the site responsive to a variety of screen sizes including mobile. The development work for this was done using React (TypeScript), HTML5, and CSS3.',
-    mainURL: 'http://www.thevillagedoctor.net',
-    photoURL: '/images/websites/thevillagedoctor.jpg',
+    description: 'A variety of MIT-licensed packages to ease the development of Unity projects. These packages are fairly opinionated, with a strong focus on editor-friendly dependency management and easy UI development founded on a scriptable object-based architecture.',
+    mainURL: 'https://www.github.com/Grimbar-Interactive/unity-variables',
+    photoURL: '/images/tools/unity-toolkit.png',
     platforms: [],
 },{
     title: 'Game Developers Conference Scheduling Chrome Extension',
     client: '',
-    description: "A chrome extension created to assist GDC attendees with their conference scheduling.  This extension connects to the google calendar of your choice and provides buttons on the GDC session view site to add sessions of interest to your calendar with a single click.",
+    description: "A chrome extension created to assist GDC attendees with their conference scheduling.  This extension connects to the Google calendar of your choice and provides buttons on the GDC session viewer site to add sessions of interest to your calendar with a single click.",
     mainURL: 'https://chromewebstore.google.com/detail/gdc-calendar-tool/pcegnhfgcahkoihgmecbplanamokaede?pli=1',
     photoURL: '/images/tools/gdcCalendarTool.png',
     platforms: [],

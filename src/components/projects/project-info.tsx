@@ -19,7 +19,7 @@ export default class ProjectInfo extends React.Component<ProjectInfoProps, {}> {
 						{platforms}
 					</div>
 				</div>
-				<h4>{this.props.project.client !== '' ? `Client:  ${this.props.project.client}` : ''}</h4>
+				<h4>{this.props.project.client !== '' ? `Client - ${this.props.project.client}` : ''}</h4>
 				<p>{this.props.project.description}</p>
 				{website}
 			</div>

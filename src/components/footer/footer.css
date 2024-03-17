@@ -3,10 +3,13 @@
     background-color: #181E26;
     color: #E6D4D4;
     display: flex;
-    align-items: center;    
-    justify-content: end;
     height: 75px;
     box-shadow: 0 0 20px 4px #181E26;
+    justify-content: right;
+}
+
+.footer .layoutHorizontal {
+    flex-direction: row !important;
 }
 
 .footer p {
@@ -14,12 +17,6 @@
     font-family: 'Montserrat-Light';
     margin-right: 50px;
     font-size: 1rem;
-}
-
-.site-map-container {
-    position: absolute;
-    left: 50px;
-    width: 50vw;
 }
 
 .site-map {
@@ -35,11 +32,6 @@
 
 .footer .footer-link {
     margin-right: 50px;
-}
-
-.footer .image-container {
-    float: right;
-    margin-right: 100px;
 }
 
 .footer img {

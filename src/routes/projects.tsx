@@ -27,8 +27,8 @@ export default class Projects extends React.Component<{}, ProjectsState> {
 
 	render() {
 		return (
-			<div>
-				<div className="projects-page">
+			<div className="projects-page">
+				<div className="content-width">
 					<ProjectsSection projectsArray={games} header='Games' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
 					<ProjectsSection projectsArray={apps} header='Apps' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />
 					<ProjectsSection projectsArray={websites} header='Websites' selectedSection={this.state.selectedSection} selectedCallback={this.sectionSelected} />

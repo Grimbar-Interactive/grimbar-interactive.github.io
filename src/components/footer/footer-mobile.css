@@ -1,25 +1,15 @@
-@media only screen and (max-width: 600px) {   
-    .footer p {
-        margin-right: 10px;
-        font-size: 10px !important;
-    }
-
-    .footer a {
-        font-size: 10px !important;
-    }
-
-    .footer .image-container {
-        margin-right: 60px;
-        width: 35%;
-        text-align: end;
-    }
-    
-    .footer img {
-        height: 30px;
-        margin: 5px;
-    }
-
+@media only screen and (max-width: 1200px) {
     .site-map-container {
+        display: none;
+    }
+
+    .footer .content-width {
+        justify-content: center !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #grimbar-footer-text {
         display: none;
     }
 }

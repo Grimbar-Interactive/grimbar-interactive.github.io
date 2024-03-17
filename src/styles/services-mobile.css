@@ -1,5 +1,5 @@
-@media only screen and (max-width: 1000px) {  
-    .services-page .card-banner {
+@media only screen and (max-width: 1200px) {  
+    .services-page .content-block {
         height: max-content;
     }
 
@@ -9,6 +9,7 @@
 
     .contactContainer {
         display: block;
+        text-align: center;
     }
 
     .contactContainer img {
@@ -21,7 +22,7 @@
     }
 
     input {
-        width: 100%;
+        width: 500px;
         margin: 10px 0;
     }
 
@@ -41,5 +42,11 @@
 
     .reviewGallery {
         max-height: none;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    input {
+        width: 100%;
     }
 }

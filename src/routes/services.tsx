@@ -45,48 +45,30 @@ export function Services() {
     return (
         <div className="services-page">
             <div className="hero">
-                <div className="page-content">
-                    <div className="hero-content">
-                        <div className="text-box">
-                            <p>
-                                In addition to working on our own projects, we are available
-                                for hire and offer <span className='bold'>design</span>,
-                                <span className='bold'> prototyping</span>, and <span className='bold'>development</span> services.
-                                <br/><br/>
-                                Below are some of the technologies we work with most commonly.
-                                <br/><br/>
-                                Interested in working together?  Please <u className="text-link" onClick={scrollToContact}>reach out</u>, we would
-                                love to discus your project with you!
-                            </p>
-                        </div>
-                        <img id="large-logo" alt="Grimbar Interactive" src="./images/HeroLogo.png"/>
+                <div className="hero-content content-width">
+                    <div className="text-box">
+                        <p>
+                            In addition to working on our own projects, we are available
+                            for hire and offer <span className='bold'>design</span>,
+                            <span className='bold'> prototyping</span>, and <span className='bold'>development</span> services.
+                            <br/><br/>
+                            Below are the main services that we provide.
+                            <br/><br/>
+                            Interested in working together?  Please <u className="text-link" onClick={scrollToContact}>reach out</u>, we would
+                            love to discuss your project with you!
+                        </p>
                     </div>
+                    <img id="large-logo" alt="Grimbar Interactive" src="./images/HeroLogo.png"/>
                 </div>
             </div>
-            <div className="page-content">
-                <div className="card-banner">
+            <div className="content-width">
+                <div id="services-cards" className="content-block centerText">
                     {services}
-                    {/* <div className='card'>
-                        <img alt="Unity" src="./images/services/unity.png" className="png"/>
-                        <h4>Unity Development</h4>
-                    </div>
-                    <div className='card'>
-                        <img alt="Figma" src="./images/services/figma.png" className="png"/>
-                        <h4>Figma Design & Prototype</h4>
-                    </div>
-                    <div className='card'>
-                        <img alt="React" src="./images/services/react.png" className="png"/>
-                        <h4>React Development</h4>
-                    </div>
-                    <div className='card'>
-                        <img alt="Kajabi" src="./images/services/kajabi.png" className="png"/>
-                        <h4>Kajabi Development & Management</h4>
-                    </div> */}
                 </div>
-                <div className="contactContainer light" ref={myRef}>
+                <div className="contactContainer light content-width" ref={myRef}>
                     <div>
-                        <h2 className="bold">Ready to get started on that project?</h2>
-                        <p>We would love to discus it with you!  Fill out the form below and we will be in touch shortly.</p>
+                        <h2 className="bold">Ready to get started?</h2>
+                        <p>We would love to discuss your project with you!<br/>Fill out the form below and we will be in touch shortly.</p>
                         <form onSubmit={handleSubmit}>
                             <div>
                                 <input type="text" id="name" placeholder='Name' required />

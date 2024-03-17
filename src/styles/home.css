@@ -3,8 +3,6 @@
   font-weight: 500;
   color:#E6D4D4;
   text-align: left;
-  /* max-width: 1700px;
-  margin: 0 auto; */
 }
 
 .typing-container {
@@ -30,13 +28,6 @@
   100% {opacity: 0;}
 }
 
-.home-page .text-box {
-  padding: 40px;
-  width: 50%;
-  text-shadow: 2px 2px 4px  #181E26;
-  align-items: end;
-}
-
 .home-page .text-box h3 {
   text-shadow: none;
 }
@@ -47,13 +38,15 @@
 }
 
 #large-logo {
-  height: 70%;
-  width: 60%;
+  height: auto;
+  width: 45%;
   object-fit: cover;
-  margin-top: 50px;
+  margin: 50px auto 0px; /* Shifting image down a bit */
   mask-image: linear-gradient(to bottom right, transparent 30%, white);
   mask-mode: alpha;
   mask-position: center;
   mask-repeat: no-repeat;
+  position: absolute;
+  right: calc(7.5% + 30px);
 }
 

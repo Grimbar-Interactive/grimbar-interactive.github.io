@@ -8,10 +8,6 @@
   height: calc(100vh - 75px)
 }
 
-.home-page .text-box p {
-  font-size: 24px;
-}
-
 .home-page a {
   color:cadetblue;
 }

@@ -99,7 +99,7 @@ class NavButton extends React.Component<NavButtonProps> {
 
 	render() {
 		return (
-			<Link key={this.props.buttonName} to={this.props.url} className="navbutton" onClick={() => this.onButtonPressed()}>{this.props.buttonName}</Link>
+			<Link key={this.props.buttonName} to={this.props.url} className="navbutton" onClick={() => this.onButtonPressed()}>{this.props.buttonName.toUpperCase()}</Link>
 		);
 	}
 }

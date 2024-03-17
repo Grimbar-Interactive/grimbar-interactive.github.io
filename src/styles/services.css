@@ -12,8 +12,8 @@
 
 .services-page .hero {
     height: calc(100vh - 350px);
+    padding-top: 80px;
     margin-bottom: 0px;
-    padding-top: 100px;
 }
 
 .services-page #large-logo {
@@ -21,16 +21,13 @@
     padding-bottom: 100px;
 }
 
-.card-banner {
-    width: 85%;
-    margin: 50px auto 0px auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.services-page .content-block {
+    height: 300px;
 }
 
-.services-page .card-banner {
-    height: 300px;
+#services-cards {
+    display: flex;
+    flex-direction: row;
 }
 
 .serviceCard {
@@ -41,10 +38,12 @@
     margin: 25px 5px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
     align-items: center;
     justify-content: start;
     box-shadow: 0 0 20px 5px #181E26;
-    width: 15%;
+    /* width: 15%; */
     transition: all 0.25s ease-in;
 }
 
@@ -71,6 +70,7 @@
 .serviceCard:hover p {
     opacity: 100;
     margin-top: 20px;
+    transition: all 0.25s ease-in;
 }
 
 .contactContainer {

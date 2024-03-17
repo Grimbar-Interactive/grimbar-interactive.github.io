@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {  
+@media only screen and (max-width: 1024px) {
     h1 {
         font-size: 3rem;
     }
@@ -14,25 +14,24 @@
     p {
         font-size: 1rem !important;
     }
-    
-    .hero {
-        height: max-content;
-        padding-top: 100px;
-    }
+}
 
-    .hero-content {
-        flex-direction: column;
+@media only screen and (max-width: 768px) {
+    .hero-content .text-box {
+        margin-left: 10%;
     }
 
     .feature-banner {
-        padding: 10px;
+        padding: 30px;
         flex-direction: column-reverse;
         max-height: none;
     }
 
     .feature-banner-contents {
+        display: flex;
         width: 100%;
         min-height: 0px;
+        justify-content: center;
     }
 
     .feature-banner img {
@@ -40,11 +39,28 @@
         margin-bottom: 50px;
     }
 
-    .card-banner {
+    #tt-feature p {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .layoutHorizontal {
         flex-direction: column;
     }
 
-    .card {
-        margin: 25px auto;
+    .content-width {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero-content {
+        justify-content: center;
+        padding: 0px 10px;
+    }
+
+    .hero-content .text-box {
+        margin: 0px;
+        width: 100%;
     }
 }

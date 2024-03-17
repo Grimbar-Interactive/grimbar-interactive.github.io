@@ -10,8 +10,8 @@ export const enum Platform {
 
 export const games: ProjectType[] = [{
     title: 'Grumpy Goats',
-    client: 'Rebel Games',
-    description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
+    client: 'Verge Games',
+    description: 'Grumpy Goats is a physics-based tower destruction mobile game based on the original Grumpy Goats Flash game. We were brought in to complete a ground-up rebuild of the app\'s core gameplay and interface, as well as implement advertising and in-app purchases.',
     mainURL: '',
     photoURL: '/images/games/grumpyGoats.png',
     platforms: [
@@ -22,7 +22,7 @@ export const games: ProjectType[] = [{
 },{
     title: 'Battle Bees Royale',
     client: 'Eastedge Studios',
-    description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
+    description: 'Battle Bees Royale is a multiplayer, battle royale mobile game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
     mainURL: '',
     photoURL: '/images/games/battle-bees.jpg',
     platforms: [
@@ -32,19 +32,15 @@ export const games: ProjectType[] = [{
         { platform: Platform.Steam, url: 'https://store.steampowered.com/app/1792000/Battle_Bees_Royale/' }
     ]
 },
-// {
-//     title: 'Samurai Legends',
-//     client: 'Samurai Legends Team',
-//     description: 'Battle Bees Royale is a multiplayer, mobile, top-down, battle royale game where bee blimps battle against each other in a post-human world! We were contracted by Eastedge Studios to develop the Unity game client and PlayFab integration.',
-//     mainURL: 'https://www.battlebees.com/',
-//     photoURL: '/images/games/samuraiLegends.png',
-//     platforms: [
-//         { platform: Platform.Web, url: '' },
-//         { platform: Platform.Android, url: 'https://play.google.com/store/apps/details?id=com.eastedgestudios.ehbeeroyale' },
-//         { platform: Platform.iOS, url: 'https://apps.apple.com/us/app/battle-bees-royale/id1455237724' },
-//         { platform: Platform.Steam, url: 'https://store.steampowered.com/app/1792000/Battle_Bees_Royale/' }
-//     ]
-// }, 
+{
+    title: 'Samurai Rising',
+    client: 'Samurai Legends Team',
+    description: 'Samurai Rising was a multiplayer card battler WebGL game built using Unity. We helped develop the core gameplay and deck selection mechanics and completed a full redevelopment of the game\'s server logic to improve security.',
+    mainURL: '',
+    photoURL: '/images/games/samurai-rising.jpg',
+    platforms: [
+    ]
+}, 
 {
     title: 'Skewerz',
     client: 'Eastedge Studios',
@@ -98,7 +94,7 @@ export const games: ProjectType[] = [{
 }, {
     title: 'ProcrastiTyper',
     client: '',
-    description: 'A typing game that will put you to the test. You left your paper to the last minute, can you finish it in time while staying on topic?',
+    description: 'A short typing game that will put your focus to the test. You left your paper to the last minute, can you finish it in time while staying on topic?',
     mainURL: '',
     photoURL: '/images/games/procrastityper.jpg',
     platforms: [

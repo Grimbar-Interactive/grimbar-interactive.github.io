@@ -48,6 +48,7 @@
         margin: 30px auto;
         height: 30vw;
         width: 50vw;
+        max-width: none;
     }
     
     .imageFocus {
@@ -55,6 +56,7 @@
         height: 35vw;
         width: 58.33vw;
         margin: 30px auto;
+        max-width: none;
     }
 
     .imageUnfocus {
@@ -62,6 +64,7 @@
         height: 25vw;
         width: 41.66vw;
         margin: 30px auto;
+        max-width: none;
     }
 
     .projects-page .image:hover {

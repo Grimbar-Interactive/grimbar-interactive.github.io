@@ -2,7 +2,7 @@
     width: 100vw;
     position: fixed;
     z-index: 10;
-    transition: all 0.25s; 
+    transition: all 0.25s;
 }
 
 #nav-bar-container {
@@ -12,8 +12,11 @@
     grid-template-areas: "logos navbar return";
     display: grid;
     row-gap: 0px;
-    height: 100px;
-    transition: all 0.25s; 
+    height: 80px;
+    transition: all 0.25s;
+    width: 85%;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .nav-bar-translucent-background {
@@ -31,13 +34,13 @@
 }
 
 #grimbar-logo {
-    height: 75px;
-    margin: 10px;
+    height: 60px;
+    margin: 4px 0px;
     transition: all 0.25s;
 }
 
 #grimbar-name {
-    height: 35px;
+    height: 30px;
     opacity: 100;
     transition: all 0.25s;
     margin: 10px;
@@ -71,12 +74,12 @@ nav {
 }
 
 .navbutton {
-    margin: 0px 15px;
+    margin: 0px 0px -5px 40px;
     border: none;
     font-family: 'Montserrat-ExtraLight';
     background-color: inherit;
     color: #E6D4D4;
-    font-size: 25px;
+    font-size: 18px;
     display: inline-block;
     padding: 20px 0px;
     text-decoration: none;
@@ -110,6 +113,12 @@ nav {
     justify-self: end;
 }
 
+#desktopNav {
+    margin-right: -55px;
+}
+
 #mobileNav {
     display: none;
+    background: linear-gradient(-170deg,#41546C 0%, #FFFFFF00 100%);
+    box-shadow: 0 0 20px 5px #181E26;
 }

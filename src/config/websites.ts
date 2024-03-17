@@ -10,7 +10,7 @@ export const websites: ProjectType[] = [{
 },{
     title: 'Personal Portfolio Website',
     client: '',
-    description: "Amanda's personal portfolio website, built using React(TypeScript) as well as a node.js server.  This site is fully responsive so it will work on any sized device.",
+    description: "Amanda's personal portfolio website, built using React (TypeScript) as well as a Node.js server.  This site is fully responsive so it will work on any sized device.",
     mainURL: 'https://www.amandadunbar.dev',
     photoURL: '/images/websites/amandadunbar.png',
     platforms: [],

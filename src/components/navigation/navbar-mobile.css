@@ -1,24 +1,11 @@
-@media only screen and (max-width: 1400px) {    
-    #nav-bar {
-        height: 100px;
-    }
+@media only screen and (max-width: 768px) {
 
-    #grimbar-logo {
-        height: 75px;
-    }
-
-    #grimbar-name {
-        height: 50px;
-    }
-
-}
-
-@media only screen and (max-width: 1200px) {   
     #nav-bar-container {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 400px;
+        grid-template-rows: 80px 400px;
         grid-template-areas: "logos return"
                             "mobilenavbar mobilenavbar";
+        /* margin-right: 0px; */
     }
 
     .icon {
@@ -53,12 +40,6 @@
     #return-up {
         right: 0px;
     }
-}
-
-@media only screen and (max-width: 700px) { 
-    #nav-bar, #nav-bar-container {
-        height: 60px;
-    }
 
     .icon {
         float: left;
@@ -69,13 +50,13 @@
         bottom: 100px;
     }
 
-    #grimbar-logo {
+    /* #grimbar-logo {
         height: 45px;
     }
 
     #grimbar-name {
         height: 25px;
-    }
+    } */
 
     
 
