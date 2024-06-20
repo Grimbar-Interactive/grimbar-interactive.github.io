@@ -32,7 +32,7 @@ export const teamMembers: TeamMemberType[] = [{
   name: 'Luna & Aurora',
   position: 'Coheads of Office Morale',
   info1: 'Luna and Rory take their role of maintaining office morale very seriously!',
-  info2: 'From keeping a close eye on our monitors, keeping our desk chairs warm, and helping out with typing every once in a while, they never too far from the action!',
+  info2: 'From keeping a close eye on our monitors, keeping our desk chairs warm, and helping out with typing every once in a while, they are never too far from the action!',
   photoURL: '/images/team/Luna_Rory2.jpg',
   photoClass: 'photo2',
   textClass: 'text2',
