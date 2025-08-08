@@ -164,8 +164,8 @@ export function Home() {
 					<img alt="projectCollage" src="./images/projectCollage.png"/>
 					<div>
 						<h2 className="bold">Ready to get started?</h2>
-						<p>We would love to discuss your project with you!<br/>Fill out the form below and we will be in touch shortly.</p>
-						<form onSubmit={handleSubmit}>
+						<p>We would love to discuss your project with you!<br/>Email us at buisness@grimbar.dev and we will be in touch shortly.</p>
+						{/* <form onSubmit={handleSubmit}>
 							<div>
 								<input type="text" id="name" placeholder='Name' required />
 							</div>
@@ -176,7 +176,7 @@ export function Home() {
 								<textarea id="message" rows={5} placeholder='Message' required />
 							</div>
 							<button className="button" type="submit">{status}</button>
-						</form>
+						</form> */}
 					</div>
 				</div>
 			</div>

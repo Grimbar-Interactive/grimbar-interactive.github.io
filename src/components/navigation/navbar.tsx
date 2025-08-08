@@ -55,7 +55,7 @@ export default class NavBar extends React.Component<{}, NavBarState> {
 
 	render() {
 		var buttons = [
-			// this.renderButton('Home', '/'),
+			this.renderButton('Home', '/'),
 			this.renderButton('Services', '/services'),
 			this.renderButton('Projects', '/projects'),
 			this.renderButton('About', '/about'),
