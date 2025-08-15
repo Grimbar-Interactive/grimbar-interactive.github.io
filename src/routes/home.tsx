@@ -108,7 +108,7 @@ export function Home() {
 						<h2 className="bold">TURBO TRIALS</h2>
 						<p>
 							Turbo Trials is a fast-paced, multiplayer "battle-karting" game pitting contestants
-							against each other in arenas across the galaxy!<br/><br/>The game is still in active development, so stay tuned!
+							against each other in arenas across the galaxy!<br/><br/>The game is pending development, so stay tuned!
 						</p>
 						{/* <div>
 							<button className="button">View on Steam</button>
@@ -164,7 +164,7 @@ export function Home() {
 					<img alt="projectCollage" src="./images/projectCollage.png"/>
 					<div>
 						<h2 className="bold">Ready to get started?</h2>
-						<p>We would love to discuss your project with you!<br/>Email us at buisness@grimbar.dev and we will be in touch shortly.</p>
+						<p>We would love to discuss your project with you!<br/>Email us at business@grimbar.dev and we will be in touch shortly.</p>
 						{/* <form onSubmit={handleSubmit}>
 							<div>
 								<input type="text" id="name" placeholder='Name' required />

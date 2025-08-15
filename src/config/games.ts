@@ -96,7 +96,7 @@ export const games: ProjectType[] = [{
     client: '',
     description: 'A short typing game that will put your focus to the test. You left your paper to the last minute, can you finish it in time while staying on topic?',
     mainURL: '',
-    photoURL: '/images/games/procrastityper.jpg',
+    photoURL: '/images/games/procrastityper.gif',
     platforms: [
         { platform: Platform.Itch, url: 'https://jacobfdunbar.itch.io/procrastityper' }
     ]
